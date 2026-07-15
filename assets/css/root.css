@@ -1,8 +1,8 @@
 body {
-    background-color: var(--white);
-    color: var(--text-primary);
+    background-color: var(--theme-background-color);
+    color: var(--theme-text);
     font-family: "Roboto";
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
 }
@@ -13,24 +13,38 @@ html {
 }
 
 :root {
-    --theme-background-color: #f3f4f5;
-    --bg-light: #f9f9fa;
-    --white: #ffffff;
-    --black: #000000;
-    --text-primary: #111827;
-    --text-secondary: #4b5563;
-    --btn-bg-secondary: #808080;
+    --theme-background-color: #FBFBFB;
+    --bg-theme: #161212;
+
+    --bg-white: #ffffff;
+    --bg-black: #000000;
+    --bg-orange: #FF7D44;
+    --bg-primary: #D74315;
+    --bg-light-primary1: #FFEBE6;
+    --bg-light-primary2: #FFF1ED;
+    --bg-light-primary3: #FFF9F7;
+
+    --text-white: #ffffff;
+    --text-black: #000000;
+    --theme-text: #161212;
+    --text-primary: #D74315;
+    --text-secondary: #797979;
+
     --text-disabled: #9ca3af;
+    --btn-focus-box-shadow: 0 0 0 0.2rem rgba(215, 67, 21, .4);
 
     /* Transition */
     --transition: .4s ease;
 
-    /* Border */
-    --border: #DEE2E6;
+    /* Border Radius */
+    --radius10: 10px;
+    --radius16: 16px;
+    --radius20: 20px;
+    --radius24: 24px;
+    --radius30: 30px;
+    --radius50: 50%;
 
-    /* Radius */
-    --radius: 12px;
-    --btn-radius: 8px;
+    --btn-radius: 10px;
 }
 
 /* ========================================
@@ -39,7 +53,7 @@ HEADINGS
 
 h1,
 .h1 {
-    font-size: 64px;
+    font-size: 76px;
     line-height: 1.2;
     font-weight: 800;
 }
@@ -48,12 +62,12 @@ h2,
 .h2 {
     font-size: 48px;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 h3,
 .h3 {
-    font-size: 32px;
+    font-size: 36px;
     line-height: 1;
     font-weight: 700;
 }
@@ -62,28 +76,28 @@ h4,
 .h4 {
     font-size: 24px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h5,
 .h5 {
     font-size: 20px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 h6,
 .h6 {
     font-size: 18px;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 p,
 .p {
     font-size: 16px;
-    line-height: 1.2;
-    font-weight: 600;
+    line-height: 1.1;
+    font-weight: 400;
 }
 
 
@@ -91,15 +105,38 @@ p,
 SUBTITLE
 ========================================================= */
 
-.subtitle1 {
+.subtitle {
     font-size: 14px;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    text-transform: uppercase;
+    background-color: var(--text-white);
+    border: 1px solid #ECECEC;
+    border-radius: var(--radius30);
+    -webkit-border-radius: var(--radius30);
+    -moz-border-radius: var(--radius30);
+    -ms-border-radius: var(--radius30);
+    -o-border-radius: var(--radius30);
 }
 
 .caption {
     font-size: 12px;
 }
 
+.minidot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius50);
+    -webkit-border-radius: var(--radius50);
+    -moz-border-radius: var(--radius50);
+    -ms-border-radius: var(--radius50);
+    -o-border-radius: var(--radius50);
+    background-color: var(--bg-primary);
+}
 
 /* =========================================================
 FONT-WIGHT
@@ -131,11 +168,11 @@ COLOR CLASSNAME
 ========================================================= */
 
 .text_primary {
-    color: var(--primary-main);
+    color: var(--text-primary);
 }
 
 .text_theme {
-    color: var(--text-primary);
+    color: var(--theme-text);
 }
 
 .text_secondary {
@@ -143,13 +180,13 @@ COLOR CLASSNAME
 }
 
 a {
-    color: var(--text-primary);
+    color: var(--theme-text);
     display: inline-block;
 }
 
 a:hover,
 a:active {
-    color: var(--text-primary);
+    color: var(--theme-text);
     text-decoration: none;
 }
 
@@ -238,43 +275,45 @@ BUTTON
 .btn {
     font-size: 14px;
     line-height: normal;
-    font-weight: 600;
-    border: none;
-    padding: 10px 20px;
+    font-weight: 700;
+    padding: 14px 34px;
     text-align: center;
     cursor: pointer;
-    border: 1px solid transparent;
-    box-shadow: none;
-    border-radius: var(--btn-radius);
-    -webkit-border-radius: var(--btn-radius);
-    -moz-border-radius: var(--btn-radius);
-    -ms-border-radius: var(--btn-radius);
-    -o-border-radius: var(--btn-radius);
+
+    border-radius: var(--radius10);
+    -webkit-border-radius: var(--radius10);
+    -moz-border-radius: var(--radius10);
+    -ms-border-radius: var(--radius10);
+    -o-border-radius: var(--radius10);
+
     transition: var(--transition);
     -webkit-transition: var(--transition);
     -moz-transition: var(--transition);
     -ms-transition: var(--transition);
     -o-transition: var(--transition);
+
+    color: var(--text-primary);
+    border: 1px solid transparent;
 }
 
-.btn:hover,
+
+/* .btn:hover,
 .btn:active,
 .btn:focus,
 .btn:focus-visible {
-    color: var(--white);
+    color: var(--text-white);
     border-color: transparent !important;
     box-shadow: none !important;
     outline: none !important;
-    background-color: var(--primary-main);
-}
+} */
 
 .btn-check:checked+.btn-primary,
 :not(.btn-check)+.btn-primary:active,
 .btn-primary:first-child:active,
 .btn-primary.active,
 .btn-primary.show {
-    color: var(--white);
-    background-color: var(--primary-dark);
+    color: var(--text-white);
+    background-color: var(--bg-primary);
 }
 
 .btn-check:checked+.btn:focus-visible,
@@ -286,55 +325,40 @@ BUTTON
 }
 
 .btn-primary {
-    background: var(--primary-main);
-    color: var(--white);
+    background: var(--bg-primary);
+    color: var(--text-white);
 }
 
 .btn-primary:hover,
 .btn-primary:active {
-    background: var(--primary-dark);
+    background: var(--bg-primary);
 }
 
 .btn-secondary {
-    background: var(--btn-bg-secondary);
-    color: var(--white);
-    border: none;
+    background: var(--bg-white);
+    color: var(--theme-text);
+    border-color: #ECECEC;
 }
 
 .btn-secondary:hover,
 .btn-secondary:active,
 .btn-secondary:focus,
 .btn-secondary:focus-visible {
-    background: var(--grey-700);
-    color: var(--white);
+    background: var(--bg-white);
+    color: var(--theme-text);
 }
 
-.btn-light {
-    background: var(--grey-300);
-    color: var(--grey-800);
-    border: none;
+.btn-black {
+    background: var(--bg-theme);
+    color: var(--text-white);
 }
 
-.btn-light:hover,
-.btn-light:active,
-.btn-light:focus,
-.btn-light:focus-visible {
-    background: var(--grey-700);
-    color: var(--white);
-}
-
-.btn-danger {
-    background: var(--danger);
-    color: var(--white);
-    border: none;
-}
-
-.btn-danger:hover,
-.btn-danger:active,
-.btn-danger:focus,
-.btn-danger:focus-visible {
-    background: rgba(220, 53, 69, 0.8);
-    color: var(--white);
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus,
+.btn-black:focus-visible {
+    background: var(--bg-theme);
+    color: var(--text-white);
 }
 
 .btn:disabled,
@@ -344,13 +368,13 @@ BUTTON
     pointer-events: none;
 }
 
-.btn.disabled,
+/* .btn.disabled,
 .btn:disabled,
 fieldset:disabled .btn {
     color: var(--white);
     background-color: var(--primary-main);
     border-color: var(--primary-main);
-}
+} */
 
 .btn-loading {
     position: relative;
@@ -374,27 +398,4 @@ fieldset:disabled .btn {
     to {
         transform: rotate(360deg);
     }
-}
-
-.submit-btn {
-    background-color: var(--primary-main);
-    color: var(--white);
-}
-
-.btn-close:focus,
-.btn-close:focus-visible {
-    outline: 0;
-    box-shadow: none;
-}
-
-
-.btn-lighter-grey {
-    background: var(--grey-600);
-    color: var(--white);
-}
-
-.btn-lighter-grey:hover,
-.btn-lighter-grey:active {
-    background: var(--grey-500);
-    color: var(--white);
 }
