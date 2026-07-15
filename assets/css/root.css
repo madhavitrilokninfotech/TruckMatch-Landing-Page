@@ -274,11 +274,13 @@ BUTTON
 
 .btn {
     font-size: 14px;
-    line-height: normal;
+    line-height: 1.3;
     font-weight: 700;
     padding: 14px 34px;
     text-align: center;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 
     border-radius: var(--radius10);
     -webkit-border-radius: var(--radius10);
