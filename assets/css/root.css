@@ -1,0 +1,400 @@
+body {
+    background-color: var(--white);
+    color: var(--text-primary);
+    font-family: "Roboto";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body,
+html {
+    height: 100%;
+}
+
+:root {
+    --theme-background-color: #f3f4f5;
+    --bg-light: #f9f9fa;
+    --white: #ffffff;
+    --black: #000000;
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    --btn-bg-secondary: #808080;
+    --text-disabled: #9ca3af;
+
+    /* Transition */
+    --transition: .4s ease;
+
+    /* Border */
+    --border: #DEE2E6;
+
+    /* Radius */
+    --radius: 12px;
+    --btn-radius: 8px;
+}
+
+/* ========================================
+HEADINGS
+======================================== */
+
+h1,
+.h1 {
+    font-size: 64px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+h2,
+.h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+h3,
+.h3 {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+h4,
+.h4 {
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+h5,
+.h5 {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+h6,
+.h6 {
+    font-size: 18px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+p,
+.p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 600;
+}
+
+
+/* =========================================================
+SUBTITLE
+========================================================= */
+
+.subtitle1 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.caption {
+    font-size: 12px;
+}
+
+
+/* =========================================================
+FONT-WIGHT
+========================================================= */
+
+.fw-400 {
+    font-weight: 400;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-600 {
+    font-weight: 600;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+
+/* =========================================================
+COLOR CLASSNAME
+========================================================= */
+
+.text_primary {
+    color: var(--primary-main);
+}
+
+.text_theme {
+    color: var(--text-primary);
+}
+
+.text_secondary {
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--text-primary);
+    display: inline-block;
+}
+
+a:hover,
+a:active {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+a,
+*:hover,
+*:focus,
+*:active :focus {
+    text-decoration: none;
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(193 193 193);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    height: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(193 193 193) transparent;
+}
+
+a,
+i,
+input {
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+a img,
+img {
+    border: none;
+    outline: none !important;
+    outline-offset: 0 !important;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Utilities CSS */
+
+.ellipsis-1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.ellipsis-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+
+/* =========================================================
+BUTTON
+========================================================= */
+
+.btn {
+    font-size: 14px;
+    line-height: normal;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    box-shadow: none;
+    border-radius: var(--btn-radius);
+    -webkit-border-radius: var(--btn-radius);
+    -moz-border-radius: var(--btn-radius);
+    -ms-border-radius: var(--btn-radius);
+    -o-border-radius: var(--btn-radius);
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus,
+.btn:focus-visible {
+    color: var(--white);
+    border-color: transparent !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: var(--primary-main);
+}
+
+.btn-check:checked+.btn-primary,
+:not(.btn-check)+.btn-primary:active,
+.btn-primary:first-child:active,
+.btn-primary.active,
+.btn-primary.show {
+    color: var(--white);
+    background-color: var(--primary-dark);
+}
+
+.btn-check:checked+.btn:focus-visible,
+:not(.btn-check)+.btn:active:focus-visible,
+.btn:first-child:active:focus-visible,
+.btn.active:focus-visible,
+.btn.show:focus-visible {
+    box-shadow: var(--btn-focus-box-shadow) !important;
+}
+
+.btn-primary {
+    background: var(--primary-main);
+    color: var(--white);
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    background: var(--primary-dark);
+}
+
+.btn-secondary {
+    background: var(--btn-bg-secondary);
+    color: var(--white);
+    border: none;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus,
+.btn-secondary:focus-visible {
+    background: var(--grey-700);
+    color: var(--white);
+}
+
+.btn-light {
+    background: var(--grey-300);
+    color: var(--grey-800);
+    border: none;
+}
+
+.btn-light:hover,
+.btn-light:active,
+.btn-light:focus,
+.btn-light:focus-visible {
+    background: var(--grey-700);
+    color: var(--white);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: var(--white);
+    border: none;
+}
+
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus,
+.btn-danger:focus-visible {
+    background: rgba(220, 53, 69, 0.8);
+    color: var(--white);
+}
+
+.btn:disabled,
+.btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.btn.disabled,
+.btn:disabled,
+fieldset:disabled .btn {
+    color: var(--white);
+    background-color: var(--primary-main);
+    border-color: var(--primary-main);
+}
+
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+}
+
+.btn-loading::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    margin-left: 8px;
+    display: inline-block;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: btnSpin 0.7s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes btnSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.submit-btn {
+    background-color: var(--primary-main);
+    color: var(--white);
+}
+
+.btn-close:focus,
+.btn-close:focus-visible {
+    outline: 0;
+    box-shadow: none;
+}
+
+
+.btn-lighter-grey {
+    background: var(--grey-600);
+    color: var(--white);
+}
+
+.btn-lighter-grey:hover,
+.btn-lighter-grey:active {
+    background: var(--grey-500);
+    color: var(--white);
+}
