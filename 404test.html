@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Route Closed | TruckMatch Preview</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /*==============================================================================
+          1. VARIABLES & INITIAL RESET
+        ==============================================================================*/
+        
+         :root {
+            --bg-dark: #0F1115;
+            --bg-dark-accent: #14161D;
+            --primary-orange: #F26522;
+            --secondary-orange: #FF8A3D;
+            --orange-glow: rgba(242, 101, 34, 0.35);
+            --orange-glow-light: rgba(242, 101, 34, 0.15);
+            --text-white: #FFFFFF;
+            --text-muted: #9DA3AF;
+            --glass-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --font-primary: 'Roboto', sans-serif;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+        /*==============================================================================
+          2. BACKGROUND LAYER SYSTEMS
+        ==============================================================================*/
+        
+        .bg-system {
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .bg-grid {
+            position: absolute;
+            inset: 0;
+            background-size: 50px 50px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px), linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            mask-image: radial-gradient(circle at 50% 50%, black 60%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at 50% 50%, black 60%, transparent 100%);
+        }
+        
+        .glow-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.4;
+            mix-blend-mode: screen;
+        }
+        
+        .blob-1 {
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary-orange) 0%, transparent 70%);
+            top: -200px;
+            right: -100px;
+            animation: blobMoveOne 20s infinite ease-in-out;
+        }
+        
+        .blob-2 {
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, #1F3C5C 0%, transparent 70%);
+            bottom: -100px;
+            left: -100px;
+            animation: blobMoveTwo 25s infinite ease-in-out;
+        }
+        /* Environmental Clouds */
+        
+        .cloud-system {
+            position: absolute;
+            inset: 0;
+        }
+        
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.015);
+            border-radius: 100px;
+            filter: blur(8px);
+        }
+        
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: inherit;
+            border-radius: 50%;
+        }
+        
+        .cloud-1 {
+            width: 300px;
+            height: 80px;
+            top: 15%;
+            left: -350px;
+            animation: cloudDrift 35s linear infinite;
+        }
+        
+        .cloud-1::before {
+            width: 120px;
+            height: 120px;
+            top: -50px;
+            left: 40px;
+        }
+        
+        .cloud-1::after {
+            width: 150px;
+            height: 150px;
+            top: -70px;
+            right: 40px;
+        }
+        
+        .cloud-2 {
+            width: 250px;
+            height: 60px;
+            top: 40%;
+            left: -300px;
+            animation: cloudDrift 45s linear infinite;
+            animation-delay: -10s;
+            opacity: 0.7;
+        }
+        
+        .cloud-2::before {
+            width: 100px;
+            height: 100px;
+            top: -40px;
+            left: 30px;
+        }
+        
+        .cloud-2::after {
+            width: 120px;
+            height: 120px;
+            top: -50px;
+            right: 30px;
+        }
+        
+        .cloud-3 {
+            width: 350px;
+            height: 90px;
+            top: 70%;
+            left: -400px;
+            animation: cloudDrift 55s linear infinite;
+            animation-delay: -25s;
+            opacity: 0.5;
+        }
+        
+        .cloud-3::before {
+            width: 140px;
+            height: 140px;
+            top: -60px;
+            left: 50px;
+        }
+        
+        .cloud-3::after {
+            width: 170px;
+            height: 170px;
+            top: -80px;
+            right: 50px;
+        }
+        /* Floating Spark Particles */
+        
+        .spark {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background-color: var(--primary-orange);
+            border-radius: 50%;
+            opacity: 0.6;
+            box-shadow: 0 0 10px var(--primary-orange);
+            animation: sparkFloat 8s infinite ease-in;
+        }
+        /*==============================================================================
+          3. TYPOGRAPHY & LEFT COLUMN HERO CONTENT
+        ==============================================================================*/
+        
+        .error-wrapper {
+            position: relative;
+            z-index: 5;
+            min-height: 100vh;
+        }
+        
+        .relative-content {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .error-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--orange-glow-light);
+            border: 1px solid rgba(242, 101, 34, 0.3);
+            color: var(--primary-orange);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 28px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(242, 101, 34, 0.1);
+        }
+        
+        .badge-pulse {
+            width: 6px;
+            height: 6px;
+            background-color: var(--primary-orange);
+            border-radius: 50%;
+            animation: microPulse 1.8s infinite;
+        }
+        
+        .main-headline {
+            font-size: clamp(2.5rem, 5vw, 4.2rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 24px;
+        }
+        
+        .accent-text {
+            color: var(--primary-orange);
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .description {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            font-weight: 300;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            max-width: 480px;
+        }
+        /* CTA Buttons Styling */
+        
+        .btn-primary-custom,
+        .btn-secondary-custom {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 36px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-orange) 100%);
+            color: var(--text-white);
+            box-shadow: 0 8px 30px rgba(242, 101, 34, 0.35);
+        }
+        
+        .btn-primary-custom::before,
+        .btn-secondary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -150%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.25), transparent);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+        }
+        
+        .btn-primary-custom:hover::before,
+        .btn-secondary-custom:hover::before {
+            left: 150%;
+        }
+        
+        .btn-primary-custom:hover {
+            color: var(--text-white);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(242, 101, 34, 0.5);
+        }
+        
+        .btn-secondary-custom {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: var(--text-white);
+        }
+        
+        .btn-secondary-custom:hover {
+            color: var(--primary-orange);
+            border-color: rgba(242, 101, 34, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        /*==============================================================================
+          4. RIGHT COLUMN INTERACTIVE CANVAS
+        ==============================================================================*/
+        
+        .interactive-canvas {
+            position: relative;
+            width: 100%;
+            height: 580px;
+            border-radius: 24px;
+            background: radial-gradient(circle at 50% 50%, rgba(20, 22, 29, 0.4) 0%, rgba(15, 17, 21, 0.7) 100%);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+        /* Glassmorphic Suspend Card */
+        
+        .floating-glass-card {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            width: 250px;
+            padding: 20px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            z-index: 40;
+            animation: smoothFloatCard 6s infinite ease-in-out;
+            transition: transform 0.1s ease-out;
+        }
+        
+        .glass-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+        
+        .status-indicator {
+            width: 7px;
+            height: 7px;
+            background-color: var(--secondary-orange);
+            border-radius: 50%;
+            box-shadow: 0 0 8px var(--secondary-orange);
+            animation: microPulse 1.2s infinite;
+        }
+        
+        .floating-glass-card h4 {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--text-white);
+            margin: 0;
+        }
+        
+        .floating-glass-card p {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.5;
+            margin: 0;
+        }
+        /* Warning Beacons */
+        
+        .warning-lights {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            display: flex;
+            gap: 12px;
+            z-index: 30;
+        }
+        
+        .beacon {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: var(--primary-orange);
+        }
+        
+        .beacon-1 {
+            animation: beaconPulse 1s infinite alternate;
+        }
+        
+        .beacon-2 {
+            animation: beaconPulse 1s infinite alternate 0.5s;
+        }
+        /*==============================================================================
+          5. CONSTRUCTION CRANE
+        ==============================================================================*/
+        
+        .crane-assembly {
+            position: absolute;
+            right: 5%;
+            bottom: 0;
+            width: 460px;
+            height: 480px;
+            z-index: 20;
+            transform-origin: bottom center;
+            transition: transform 0.1s ease-out;
+        }
+        
+        .crane-base {
+            position: absolute;
+            bottom: 0;
+            left: 100px;
+            width: 60px;
+            height: 20px;
+            background: #1B1E24;
+            border-top: 3px solid var(--primary-orange);
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .crane-tower {
+            position: absolute;
+            bottom: 18px;
+            left: 118px;
+            width: 24px;
+            height: 380px;
+            background: repeating-linear-gradient( 0deg, #1D2026, #1D2026 25px, var(--primary-orange) 25px, var(--primary-orange) 28px);
+            border-left: 2px solid var(--primary-orange);
+            border-right: 2px solid var(--primary-orange);
+            box-shadow: 0 0 15px rgba(242, 101, 34, 0.15);
+        }
+        
+        .tower-bracing {
+            position: absolute;
+            inset: 0;
+            background-image: repeating-linear-gradient( 45deg, transparent, transparent 15px, var(--primary-orange) 15px, var(--primary-orange) 17px);
+            opacity: 0.7;
+        }
+        
+        .crane-arm {
+            position: absolute;
+            top: 75px;
+            left: -140px;
+            width: 440px;
+            height: 18px;
+            background: linear-gradient(90deg, #1D2026 0%, var(--primary-orange) 40%, var(--secondary-orange) 100%);
+            border-radius: 3px;
+            transform-origin: 282px center;
+            animation: armSwing 6s infinite ease-in-out;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        
+        .arm-counterweight {
+            position: absolute;
+            left: 10px;
+            top: -8px;
+            width: 35px;
+            height: 34px;
+            background: #3A3F4A;
+            border: 2px solid #545B6B;
+            border-radius: 4px;
+        }
+        
+        .trolley {
+            position: absolute;
+            right: 60px;
+            top: 15px;
+            width: 30px;
+            height: 10px;
+            background: #1B1E24;
+            border-radius: 2px;
+        }
+        
+        .crane-cable {
+            position: absolute;
+            left: 14px;
+            top: 10px;
+            width: 2px;
+            height: 150px;
+            background: rgba(255, 255, 255, 0.25);
+            transform-origin: top center;
+            animation: naturalCableSway 6s infinite ease-in-out;
+        }
+        
+        .hook {
+            position: absolute;
+            bottom: -10px;
+            left: -4px;
+            width: 10px;
+            height: 10px;
+            border: 2px solid var(--primary-orange);
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+        }
+        /* Suspended 404 Panel */
+        
+        .hanging-404-sign {
+            position: absolute;
+            bottom: -110px;
+            left: -74px;
+            width: 150px;
+            height: 110px;
+            perspective: 1000px;
+        }
+        
+        .sign-inner {
+            width: 100%;
+            height: 100%;
+            background: rgba(20, 22, 29, 0.7);
+            border: 1.5px solid var(--primary-orange);
+            border-radius: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 0 0 25px rgba(242, 101, 34, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            animation: signRotate 6s infinite ease-in-out;
+        }
+        
+        .sign-inner h2 {
+            font-size: 42px;
+            font-weight: 900;
+            color: var(--text-white);
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 0 0 15px rgba(242, 101, 34, 0.6);
+        }
+        
+        .sign-sub {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: var(--primary-orange);
+        }
+        /*==============================================================================
+          6. LOGISTICS TRUCK & CURVED ROAD PATH
+        ==============================================================================*/
+        
+        .animated-route-svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 25;
+            /* Increased from 10 to 25 to sit on top of crane-assembly (z-index 20) */
+            pointer-events: none;
+        }
+        
+        #truckPath {
+            stroke: var(--primary-orange);
+            stroke-width: 3px;
+            stroke-linecap: round;
+            stroke-dasharray: 12, 10;
+            opacity: 0.5;
+            animation: pathTravelFlow 1.5s linear infinite;
+        }
+        
+        .wheel {
+            /* Spin animation styling removed to keep wheels stationary */
+        }
+        
+        .exhaust-smoke {
+            animation: exhaustTrail 0.8s infinite ease-out;
+        }
+        /*==============================================================================
+          7. KEYFRAME ANIMATIONS LAYER
+        ==============================================================================*/
+        
+        @keyframes blobMoveOne {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(-80px, 40px) scale(1.15);
+            }
+        }
+        
+        @keyframes blobMoveTwo {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(80px, -50px) scale(1.2);
+            }
+        }
+        
+        @keyframes cloudDrift {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(2300px);
+            }
+        }
+        
+        @keyframes sparkFloat {
+            0% {
+                transform: translateY(100vh) scale(0.5);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-10vh) scale(1.2);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes microPulse {
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.4);
+                opacity: 0.6;
+            }
+        }
+        
+        @keyframes beaconPulse {
+            0% {
+                opacity: 0.3;
+                filter: drop-shadow(0 0 0px var(--primary-orange));
+            }
+            100% {
+                opacity: 1;
+                filter: drop-shadow(0 0 8px var(--primary-orange));
+            }
+        }
+        
+        @keyframes smoothFloatCard {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        @keyframes armSwing {
+            0%,
+            100% {
+                transform: rotate(-3deg);
+            }
+            50% {
+                transform: rotate(3deg);
+            }
+        }
+        
+        @keyframes naturalCableSway {
+            0%,
+            100% {
+                transform: rotate(-4deg);
+            }
+            50% {
+                transform: rotate(4deg);
+            }
+        }
+        
+        @keyframes signRotate {
+            0%,
+            100% {
+                transform: rotateY(-8deg) rotateX(2deg);
+            }
+            50% {
+                transform: rotateY(8deg) rotateX(-2deg);
+            }
+        }
+        
+        @keyframes pathTravelFlow {
+            from {
+                stroke-dashoffset: 0;
+            }
+            to {
+                stroke-dashoffset: -44;
+            }
+        }
+        
+        @keyframes exhaustTrail {
+            0% {
+                transform: translate(0px, 0px) scale(1);
+                opacity: 0.3;
+            }
+            100% {
+                transform: translate(-30px, -15px) scale(3.5);
+                opacity: 0;
+            }
+        }
+        /* Entry Transitions */
+        
+        .scene-fade-left {
+            animation: fadeLeftIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        
+        .scene-fade-right {
+            animation: fadeRightIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+        }
+        
+        @keyframes fadeLeftIn {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes fadeRightIn {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        /*==============================================================================
+          8. HIGHLY OPTIMIZED RESPONSIVE GRID
+        ==============================================================================*/
+        
+        @media (max-width: 991.98px) {
+            .error-wrapper {
+                padding: 40px 0;
+            }
+            .interactive-canvas {
+                height: 480px;
+            }
+            .crane-assembly {
+                transform: scale(0.85);
+                transform-origin: bottom center;
+                right: -10px;
+            }
+            .floating-glass-card {
+                top: 20px;
+                left: 20px;
+            }
+        }
+        
+        @media (max-width: 767.98px) {
+            .main-headline {
+                font-size: 3rem;
+            }
+            .interactive-canvas {
+                height: 400px;
+            }
+            .crane-assembly {
+                transform: scale(0.68);
+                right: -50px;
+            }
+            .floating-glass-card {
+                width: 210px;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 479.98px) {
+            .main-headline {
+                font-size: 2.3rem;
+            }
+            .interactive-canvas {
+                height: 340px;
+            }
+            .crane-assembly {
+                transform: scale(0.55);
+                right: -90px;
+            }
+            .floating-glass-card {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg-system">
+        <div class="bg-grid"></div>
+        <div class="glow-blob blob-1"></div>
+        <div class="glow-blob blob-2"></div>
+
+        <div class="cloud-system">
+            <div class="cloud cloud-1"></div>
+            <div class="cloud cloud-2"></div>
+            <div class="cloud cloud-3"></div>
+        </div>
+
+        <div class="particle-container" id="particleContainer"></div>
+    </div>
+
+    <main class="error-wrapper d-flex align-items-center">
+        <div class="container relative-content">
+            <div class="row align-items-center min-vh-100 py-5">
+
+                <div class="col-lg-5 text-lg-start text-center mb-5 mb-lg-0 scene-fade-left">
+                    <span class="error-badge">
+                        <span class="badge-pulse"></span> ERROR 404
+                    </span>
+
+                    <h1 class="main-headline">
+                        Oops! This <span class="accent-text">Route</span> Is Closed.
+                    </h1>
+
+                    <p class="description">
+                        The page you are looking for doesn't exist, has been temporarily rerouted, or is currently under construction by our engineering crew.
+                    </p>
+
+                    <div class="cta-group d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+                        <a href="#" class="btn-primary-custom" data-magnetic>
+                            <span>Back to Home</span>
+                        </a>
+                        <a href="#" class="btn-secondary-custom" data-magnetic>
+                            <span>Contact Support</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-7 scene-fade-right">
+                    <div class="interactive-canvas" id="interactiveCanvas">
+
+                        <div class="floating-glass-card" id="glassCard">
+                            <div class="glass-header">
+                                <span class="status-indicator"></span>
+                                <h4>RECONSTRUCTING</h4>
+                            </div>
+                            <p>Cargo Route TM-404: Access denied. Re-routing engines initiated.</p>
+                        </div>
+
+                        <div class="warning-lights">
+                            <div class="beacon beacon-1"></div>
+                            <div class="beacon beacon-2"></div>
+                        </div>
+
+                        <div class="crane-assembly" id="parallaxCrane">
+                            <div class="crane-base"></div>
+                            <div class="crane-tower">
+                                <div class="tower-bracing"></div>
+                            </div>
+
+                            <div class="crane-arm">
+                                <div class="arm-counterweight"></div>
+                                <div class="trolley">
+                                    <div class="crane-cable">
+                                        <div class="hook"></div>
+
+                                        <div class="hanging-404-sign">
+                                            <div class="sign-inner">
+                                                <h2>404</h2>
+                                                <span class="sign-sub">ROUTE LOST</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <svg class="animated-route-svg" viewBox="0 0 800 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="truckPath" d="M -100,290 C 150,290 100,190 350,190 C 600,190 550,290 900,290" />
+                            
+                            <!-- Upgraded Vector Logistics Truck Node inside SVG space -->
+                            <g id="logisticTruck">
+                                <g transform="translate(-50, -42)">
+                                    <!-- Cabin -->
+                                    <path d="M65,12 h22 a5,5 0 0 1 5,5 v20 h-27 z" fill="#EAEFF8" />
+                                    <path d="M72,17 h10 a3,3 0 0 1 3,3 v6 h-13 z" fill="#1F242E" />
+                                    <circle cx="92" cy="31" r="2.5" fill="#FFE28A" />
+                                    
+                                    <!-- Cargo Bed -->
+                                    <rect x="0" y="0" width="65" height="37" rx="4" fill="url(#orangeGrad)" />
+                                    <!-- Cargo Container Lines -->
+                                    <line x1="10" y1="4" x2="10" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                                    <line x1="20" y1="4" x2="20" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                                    <line x1="30" y1="4" x2="30" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                                    <line x1="40" y1="4" x2="40" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                                    <line x1="50" y1="4" x2="50" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
+                                    
+                                    <!-- Wheels (Spinning disabled) -->
+                                    <g class="wheel">
+                                        <circle cx="18" cy="40" r="9" fill="#17191E" stroke="#363B47" stroke-width="3" />
+                                        <circle cx="18" cy="40" r="4" fill="#6C7584" />
+                                    </g>
+                                    <g class="wheel">
+                                        <circle cx="78" cy="40" r="9" fill="#17191E" stroke="#363B47" stroke-width="3" />
+                                        <circle cx="78" cy="40" r="4" fill="#6C7584" />
+                                    </g>
+                                    
+                                    <!-- Exhaust Smoke Particle System -->
+                                    <circle class="exhaust-smoke" cx="-6" cy="32" r="3" fill="rgba(255, 255, 255, 0.2)" />
+                                </g>
+                            </g>
+                            
+                            <!-- Definitions Layer for Gradients -->
+                            <defs>
+                                <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="var(--primary-orange)" />
+                                    <stop offset="100%" stop-color="var(--secondary-orange)" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // 1. Generate Floating Dust/Spark Particles
+            const particleContainer = document.getElementById('particleContainer');
+            const sparkCount = 20;
+
+            for (let i = 0; i < sparkCount; i++) {
+                const spark = document.createElement('div');
+                spark.classList.add('spark');
+                spark.style.left = `${Math.random() * 100}%`;
+                spark.style.animationDelay = `${Math.random() * 8}s`;
+                spark.style.animationDuration = `${6 + Math.random() * 6}s`;
+                const scale = 0.5 + Math.random() * 1.5;
+                spark.style.transform = `scale(${scale})`;
+                particleContainer.appendChild(spark);
+            }
+
+            // 2. High-Performance SVG Road Path Truck Mapping
+            const path = document.getElementById('truckPath');
+            const truck = document.getElementById('logisticTruck');
+            const pathLength = path.getTotalLength();
+            let travelPercent = 0;
+            const travelSpeed = 0.00065; // Adjust speed smooth rate
+
+            function animateTruck() {
+                travelPercent += travelSpeed;
+                if (travelPercent > 1) travelPercent = 0;
+
+                const currentDistance = travelPercent * pathLength;
+                const currentPoint = path.getPointAtLength(currentDistance);
+
+                // Math to rotate truck alignment based on path direction (tangent angle)
+                const nextPoint = path.getPointAtLength(Math.min(currentDistance + 2, pathLength));
+                const angleY = nextPoint.y - currentPoint.y;
+                const angleX = nextPoint.x - currentPoint.x;
+                const rotationAngle = Math.atan2(angleY, angleX) * (180 / Math.PI);
+
+                // Directly manipulating the translate layout relative to SVG viewBox coordinate rules
+                truck.setAttribute('transform', `translate(${currentPoint.x}, ${currentPoint.y}) rotate(${rotationAngle})`);
+
+                requestAnimationFrame(animateTruck);
+            }
+
+            if (path && truck) {
+                requestAnimationFrame(animateTruck);
+            }
+
+            // 3. Magnetic Hover Button Interaction
+            const magneticElements = document.querySelectorAll('[data-magnetic]');
+
+            magneticElements.forEach(btn => {
+                btn.addEventListener('mousemove', (e) => {
+                    const boundingBox = btn.getBoundingClientRect();
+                    const relX = e.clientX - boundingBox.left - (boundingBox.width / 2);
+                    const relY = e.clientY - boundingBox.top - (boundingBox.height / 2);
+                    btn.style.transform = `translate3d(${relX * 0.35}px, ${relY * 0.35}px, 0)`;
+                });
+
+                btn.addEventListener('mouseleave', () => {
+                    btn.style.transform = 'translate3d(0, 0, 0)';
+                });
+            });
+
+            // 4. Parallax Canvas Movement
+            const interactiveCanvas = document.getElementById('interactiveCanvas');
+            const crane = document.getElementById('parallaxCrane');
+            const glassCard = document.getElementById('glassCard');
+
+            if (interactiveCanvas && window.innerWidth > 991) {
+                interactiveCanvas.addEventListener('mousemove', (e) => {
+                    const canvasRect = interactiveCanvas.getBoundingClientRect();
+                    const normalizedX = ((e.clientX - canvasRect.left) / canvasRect.width) * 2 - 1;
+                    const normalizedY = ((e.clientY - canvasRect.top) / canvasRect.height) * 2 - 1;
+
+                    if (crane) {
+                        crane.style.transform = `translate3d(${normalizedX * -15}px, ${normalizedY * -10}px, 0)`;
+                    }
+                    if (glassCard) {
+                        glassCard.style.transform = `translate3d(${normalizedX * 18}px, ${normalizedY * 12}px, 0)`;
+                    }
+                });
+
+                interactiveCanvas.addEventListener('mouseleave', () => {
+                    if (crane) crane.style.transform = 'translate3d(0, 0, 0)';
+                    if (glassCard) glassCard.style.transform = 'translate3d(0, 0, 0)';
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

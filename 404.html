@@ -1,1 +1,616 @@
-    
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title>404 - Page Not Found</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+         :root {
+            --bg: #0f1015;
+            --card: #17181f;
+            --orange: #ff6b1a;
+            --orange2: #ff8d2f;
+            --text: #ffffff;
+            --muted: #9ea3af;
+            --line: #2a2d37;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            overflow: hidden;
+            color: var(--text);
+            position: relative;
+        }
+        /* Animated Gradient */
+        
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 107, 26, .18), transparent 40%), radial-gradient(circle at 80% 70%, rgba(255, 107, 26, .12), transparent 35%), linear-gradient(135deg, #0f1015, #13151d, #0f1015);
+            animation: bgMove 12s linear infinite;
+            z-index: -3;
+        }
+        
+        @keyframes bgMove {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        /* Grid */
+        
+        .grid {
+            position: fixed;
+            left: -50%;
+            bottom: -100%;
+            width: 200%;
+            height: 200%;
+            background-image: linear-gradient(rgba(255, 255, 255, .04) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, .04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            transform: perspective(900px) rotateX(80deg);
+            animation: gridMove 14s linear infinite;
+            z-index: -2;
+            opacity: .4;
+        }
+        
+        @keyframes gridMove {
+            to {
+                transform: perspective(900px) rotateX(80deg) translateY(60px);
+            }
+        }
+        /* Mouse Glow */
+        
+        .cursorGlow {
+            position: fixed;
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            pointer-events: none;
+            background: radial-gradient(circle, rgba(255, 107, 26, .30), transparent 70%);
+            transform: translate(-50%, -50%);
+            mix-blend-mode: screen;
+            z-index: -1;
+        }
+        /* Main */
+        
+        .wrapper {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        
+        .card404 {
+            width: min(1100px, 100%);
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .06);
+            backdrop-filter: blur(18px);
+            border-radius: 30px;
+            padding: 70px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 80px rgba(255, 107, 26, .10);
+        }
+        
+        .content {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        /* =====================================
+404 NUMBER
+===================================== */
+        
+        .error-code {
+            position: relative;
+            display: inline-block;
+            font-size: 190px;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: 8px;
+            color: transparent;
+            -webkit-text-stroke: 3px rgba(255, 255, 255, .15);
+            user-select: none;
+            margin-bottom: 30px;
+        }
+        
+        .error-code::before {
+            content: "404";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color: var(--orange);
+            overflow: hidden;
+            animation: liquidFill 5s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 107, 26, .8), 0 0 40px rgba(255, 107, 26, .5), 0 0 80px rgba(255, 107, 26, .4);
+        }
+        
+        @keyframes liquidFill {
+            0% {
+                clip-path: inset(100% 0 0 0);
+            }
+            25% {
+                clip-path: inset(70% 0 0 0);
+            }
+            50% {
+                clip-path: inset(40% 0 0 0);
+            }
+            75% {
+                clip-path: inset(10% 0 0 0);
+            }
+            100% {
+                clip-path: inset(100% 0 0 0);
+            }
+        }
+        /* =====================================
+TITLE
+===================================== */
+        
+        .title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.8;
+        }
+        /* =====================================
+BUTTON
+===================================== */
+        
+        .home-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 48px;
+            margin-top: 40px;
+            border-radius: 60px;
+            background: linear-gradient(135deg, var(--orange), var(--orange2));
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: .4s;
+        }
+        
+        .home-btn:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(255, 107, 26, .35);
+            color: #fff;
+        }
+        
+        .home-btn::before {
+            content: "";
+            position: absolute;
+            left: -120%;
+            top: 0;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, .7), transparent);
+            transform: skewX(-25deg);
+            transition: .7s;
+        }
+        
+        .home-btn:hover::before {
+            left: 150%;
+        }
+        /* =====================================
+FLOATING BLOBS
+===================================== */
+        
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: .18;
+            animation: blobMove 12s ease-in-out infinite;
+        }
+        
+        .blob1 {
+            width: 260px;
+            height: 260px;
+            background: var(--orange);
+            left: -80px;
+            top: -80px;
+        }
+        
+        .blob2 {
+            width: 300px;
+            height: 300px;
+            background: #ff8d2f;
+            right: -120px;
+            bottom: -120px;
+            animation-delay: 3s;
+        }
+        
+        @keyframes blobMove {
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(50px, -40px);
+            }
+        }
+        /* =====================================
+NEON GEOMETRY
+===================================== */
+        
+        .shape {
+            position: absolute;
+            border: 2px solid rgba(255, 107, 26, .4);
+            box-shadow: 0 0 15px rgba(255, 107, 26, .6);
+            animation: rotateShape 18s linear infinite;
+        }
+        
+        .circle {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            top: 8%;
+            left: 8%;
+        }
+        
+        .square {
+            width: 60px;
+            height: 60px;
+            top: 15%;
+            right: 10%;
+            transform: rotate(45deg);
+        }
+        
+        .hexagon {
+            width: 70px;
+            height: 70px;
+            left: 12%;
+            bottom: 15%;
+            clip-path: polygon( 25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
+        }
+        
+        @keyframes rotateShape {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        /* =====================================
+LIGHT RAYS
+===================================== */
+        
+        .rays {
+            position: absolute;
+            left: 50%;
+            top: 45%;
+            width: 700px;
+            height: 700px;
+            transform: translate(-50%, -50%);
+            background: conic-gradient( transparent, rgba(255, 107, 26, .20), transparent, rgba(255, 107, 26, .15), transparent);
+            filter: blur(40px);
+            animation: spin 20s linear infinite;
+            opacity: .5;
+        }
+        
+        @keyframes spin {
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+        /* =====================================
+POWER CABLE
+===================================== */
+        
+        .cable {
+            position: relative;
+            width: 720px;
+            height: 10px;
+            margin: 40px auto;
+            background: #2a2d37;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .energy {
+            position: absolute;
+            left: -200px;
+            top: 0;
+            width: 180px;
+            height: 100%;
+            background: linear-gradient( 90deg, transparent, #fff, var(--orange), #fff, transparent);
+            filter: blur(3px);
+            animation: energy 1.5s linear infinite;
+        }
+        
+        @keyframes energy {
+            100% {
+                left: 100%;
+            }
+        }
+        /* =====================================
+PLUG
+===================================== */
+        
+        .plug {
+            position: absolute;
+            right: -5px;
+            top: -18px;
+            width: 70px;
+            height: 46px;
+            background: linear-gradient(135deg, var(--orange), #ff9a4d);
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(255, 107, 26, .45);
+            animation: plugShake 3s infinite;
+        }
+        
+        .plug::before,
+        .plug::after {
+            content: "";
+            position: absolute;
+            right: -10px;
+            width: 12px;
+            height: 8px;
+            background: #fff;
+            border-radius: 3px;
+        }
+        
+        .plug::before {
+            top: 12px;
+        }
+        
+        .plug::after {
+            bottom: 12px;
+        }
+        
+        @keyframes plugShake {
+            0%,
+            100% {
+                transform: rotate(0);
+            }
+            25% {
+                transform: rotate(-3deg);
+            }
+            75% {
+                transform: rotate(3deg);
+            }
+        }
+        /* =====================================
+SPARKS
+===================================== */
+        
+        .spark {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--orange), 0 0 30px var(--orange);
+            opacity: 0;
+        }
+        /* =====================================
+RESPONSIVE
+===================================== */
+        
+        @media(max-width:991px) {
+            .error-code {
+                font-size: 130px;
+            }
+            .title {
+                font-size: 32px;
+            }
+            .card404 {
+                padding: 45px;
+            }
+            .cable {
+                width: 420px;
+            }
+        }
+        
+        @media(max-width:768px) {
+            .error-code {
+                font-size: 90px;
+            }
+            .title {
+                font-size: 26px;
+            }
+            .subtitle {
+                font-size: 15px;
+            }
+            .card404 {
+                padding: 30px;
+            }
+            .cable {
+                width: 260px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- =====================================
+BACKGROUND
+===================================== -->
+
+    <div class="grid"></div>
+
+    <div class="cursorGlow"></div>
+
+    <!-- Floating Blobs -->
+
+    <div class="blob blob1"></div>
+
+    <div class="blob blob2"></div>
+
+    <!-- Neon Shapes -->
+
+    <div class="shape circle"></div>
+
+    <div class="shape square"></div>
+
+    <div class="shape hexagon"></div>
+
+    <!-- Light Rays -->
+
+    <div class="rays"></div>
+
+    <!-- Floating Particles -->
+
+    <div id="particleWrapper"></div>
+
+    <!-- =====================================
+MAIN SECTION
+===================================== -->
+
+    <section class="wrapper">
+
+        <div class="card404">
+
+            <!-- Glass Reflection -->
+
+            <div class="glass"></div>
+
+            <div class="content">
+
+                <!-- Logo -->
+
+                <div class="mb-4">
+
+                    <img src="images/logo.png" alt="Logo" style="height:60px;">
+
+                </div>
+
+                <!-- 404 -->
+
+                <h1 class="error-code">
+
+                    404
+
+                </h1>
+
+                <!-- Animated Cable -->
+
+                <div class="cable">
+
+                    <div class="energy"></div>
+
+                    <div class="plug"></div>
+
+                </div>
+
+                <h2 class="title">
+
+                    Oops! Page Not Found
+
+                </h2>
+
+                <p class="subtitle">
+
+                    The page you're looking for doesn't exist or has been moved. Let's get you back to the homepage.
+
+                </p>
+
+                <a href="index.html" class="home-btn">
+
+Go Back Home
+
+</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =====================================
+SPARK CONTAINER
+===================================== -->
+
+    <div id="sparkContainer"></div>
+
+    <!-- =====================================
+PARTICLE CANVAS
+===================================== -->
+
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Bootstrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* =====================================
+                                                                                                CURSOR GLOW
+                                                                                                ===================================== */
+
+        const glow = document.querySelector(".cursorGlow");
+
+        document.addEventListener("mousemove", (e) => {
+
+            glow.style.left = e.clientX + "px";
+
+            glow.style.top = e.clientY + "px";
+
+        });
+
+        /* =====================================
+        FLOATING PARTICLES
+        ===================================== */
+
+        const wrapper = document.getElementById("particleWrapper");
+
+        for (let i = 0; i < 50; i++) {
+
+            const p = document.createElement("span");
+
+            p.className = "spark";
+
+            p.style.left = Math.random() * 100 + "vw";
+
+            p.style.top = Math.random() * 100 + "vh";
+
+            p.style.animationDuration = 5 + Math.random() * 5 + "s";
+
+            wrapper.appendChild(p);
+
+        }
+    </script>
+
+</body>
+
+</html>
