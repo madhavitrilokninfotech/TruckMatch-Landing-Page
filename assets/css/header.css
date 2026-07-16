@@ -19,12 +19,15 @@
 }
 
 .header-main {
-    position: absolute;
+    position: fixed;
     width: 100%;
     right: 0;
     top: 30px;
     left: 0;
+    z-index: 999;
 }
+
+.header-main.fixHeader {}
 
 .navbar-container {
     padding: 0 50px;
@@ -34,7 +37,7 @@
     justify-content: end;
     margin-left: auto;
     align-items: center;
-    padding: 10px;
+    padding: 8px 8px 8px 30px;
     background-color: rgba(255, 255, 255, 65%);
     backdrop-filter: blur(8px);
     border-radius: 50px;
@@ -45,7 +48,7 @@
 }
 
 .header-logo {
-    padding: 10px 34px;
+    padding: 16px 30px;
     background-color: rgba(255, 255, 255, 65%);
     backdrop-filter: blur(8px);
     border-radius: 50px;
@@ -54,6 +57,8 @@
 .header-logo a {
     display: inline-block;
     width: auto;
+    z-index: 1;
+    position: relative;
 }
 
 .h-logo {

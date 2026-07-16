@@ -1,45 +1,91 @@
 /* Hero banner */
 .hero-banner-main {
     position: relative;
+}
+
+.hero-banner-inner {
+    position: relative;
     z-index: 1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-    min-height: calc(100vh - 50px);
-    /* padding: 100px 0; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    /* min-height: 100svh; */
 }
 
 .banner-sec {
     position: relative;
     z-index: 1;
     overflow-x: hidden;
-    background: #000;
+    background: var(--bg-black);
     padding-top: 100px;
     min-height: calc(100vh - 140px);
     display: table;
     width: 100%;
 }
 
-.banner-video video {
+.video-main {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+.video-main video {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-    display: block;
 }
 
-.banner-video::after {
+.video-main::after {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 0;
+    inset: 0;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.5) 6%,
+            rgba(0, 0, 0, 1) 98%);
+    pointer-events: none;
+}
+
+.hero-banner-main .container-fluid {
+    padding: 0 50px;
+}
+
+.hero-content-wrap {
+    padding: 200px 0 100px;
+    min-height: 100svh;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+}
+
+.h-banner-title {
+    color: var(--text-white);
+    letter-spacing: -1.6px;
+    margin: 16px 0 0;
+}
+
+.hero-desc {
+    color: var(--text-white);
+    letter-spacing: 0.1px;
+}
+
+.h-banner-features {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    border-top: 1px solid var(--text-white);
+    padding-top: 20px;
+    margin: 36px 0 0;
+}
+
+.h-feature-item {
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 200;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
 }

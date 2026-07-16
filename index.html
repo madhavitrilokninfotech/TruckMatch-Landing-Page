@@ -33,7 +33,7 @@
   <div class="page-wrapper">
     <!-- Header -->
     <header class="site-header">
-      <div class="header-main nav-area header-bg-white">
+      <div class="header-main nav-area">
         <div class="header-inner-main">
           <div class="navbar-container">
             <nav class="navbar navbar-expand-lg p-0">
@@ -103,70 +103,76 @@
     </header>
 
     <!-- Main Content -->
-    <div class="page-wrapper">
+    <div class="page-wrapper flex-grow-0 flex-shrink-1">
 
       <section class="hero-banner-main">
-        <video autoplay muted loop playsinline preload="auto" poster="">
-          <source src="./assets/images/truckmatch-hero-banner.mp4" type="video/mp4">
-        </video>
+        <div class="hero-banner-inner">
+          <div class="container-fluid">
+            <div class="hero-content-wrap">
+              <div class="row align-items-end">
+                <div class="col-xl-8 col-lg-6 col-sm-12">
+                  <div class="hero-content left">
+                    <div class="subtitle">
+                      <span class="minidot"></span>
+                      <span>
+                        Welcome to <span class="text_theme">truck</span>match
+                      </span>
+                    </div>
 
-        <div class="container-fluid">
-          <div class="hero-content-wrap">
-            <div class="row">
-              <div class="col-xl-8 col-lg-6 col-sm-12">
-                <div class="hero-content left">
-                  <div class="subtitle">
-                    <span class="minidot"></span>
-                    Welcome to <span class="text_theme">truck</span>match
+                    <h1 class="h-banner-title">Powering <span class="text_primary">Smarter Construction</span><br>
+                      Transport Operations</h1>
+
                   </div>
-
-                  <h1 class="h-banner-title">Powering <span class="text_primary">Smarter Construction</span><br>
-                    Transport Operations</h1>
-
+                </div>
+                <div class="col-xl-4 col-lg-6 col-sm-12">
+                  <div class="hero-content right">
+                    <p class="hero-desc mb-2 mb-sm-4">
+                      TruckMatch connects construction companies, truck operators, and drivers through one intelligent
+                      platform. Using smart matching technology and real-time coordination, we simplify transport
+                      operations, reduce delays, and keep projects moving efficiently.
+                    </p>
+                    <button class="btn btn-primary mxw-fit">get in touch</button>
+                  </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-lg-6 col-sm-12">
-                <div class="hero-content right">
-                  <p class="hero-desc mb-2">
-                    TruckMatch connects construction companies, truck operators, and drivers through one intelligent
-                    platform. Using smart matching technology and real-time coordination, we simplify transport
-                    operations, reduce delays, and keep projects moving efficiently.
-                  </p>
-                  <button class="btn btn-primary">get in touch</button>
-                </div>
-              </div>
+
+              <ul class="h-banner-features">
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Smart Job Matching
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Verified Truck Operators
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Real-Time Dispatch Tracking
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Faster Load Assignment
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Construction-Focused Network
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Reliable Driver Connections
+                </li>
+                <li class="h-feature-item">
+                  <img src="./assets/images/feature.svg" alt="feature">
+                  Seamless Fleet Coordination
+                </li>
+              </ul>
             </div>
+          </div>
 
-            <ul class="h-banner-features">
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Smart Job Matching
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Verified Truck Operators
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Real-Time Dispatch Tracking
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Faster Load Assignment
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Construction-Focused Network
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Reliable Driver Connections
-              </li>
-              <li class="h-feature-item">
-                <img src="./assets/images/feature.svg" alt="feature">
-                Seamless Fleet Coordination
-              </li>
-            </ul>
+          <div class="video-main">
+            <video autoplay muted loop playsinline preload="auto" poster="">
+              <source src="./assets/images/truckmatch-hero-banner.mp4" type="video/mp4">
+            </video>
           </div>
         </div>
       </section>
@@ -177,6 +183,7 @@
   </div>
 
   <!-- Custom JS -->
+  <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/custom.js"></script>
 </body>

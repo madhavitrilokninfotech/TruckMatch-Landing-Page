@@ -54,14 +54,14 @@ HEADINGS
 h1,
 .h1 {
   font-size: 76px;
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 800;
 }
 
 h2,
 .h2 {
   font-size: 48px;
-  line-height: 1.2;
+  line-height: 1.1;
   font-weight: 700;
 }
 
@@ -96,7 +96,7 @@ h6,
 p,
 .p {
   font-size: 16px;
-  line-height: 1.1;
+  line-height: 1.6;
   font-weight: 400;
 }
 
@@ -107,6 +107,7 @@ SUBTITLE
 .subtitle {
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.1;
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -264,13 +265,17 @@ ul {
   word-break: break-all;
 }
 
+.mxw-fit {
+  max-width: fit-content !important;
+}
+
 /* =========================================================
 BUTTON
 ========================================================= */
 
 .btn {
   font-size: 14px;
-  line-height: 1.2;
+  line-height: 1.4;
   font-weight: 700;
   padding: 14px 34px;
   text-align: center;
@@ -294,15 +299,27 @@ BUTTON
   border: 1px solid transparent;
 }
 
-/* .btn:hover,
+.btn:hover,
 .btn:active,
 .btn:focus,
 .btn:focus-visible {
-color: var(--text-white);
-border-color: transparent !important;
-box-shadow: none !important;
-outline: none !important;
-} */
+  color: var(--text-white);
+  border-color: transparent !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.btn:focus-visible {
+  background-color: var(--bg-primary);
+}
+
+[type=button],
+[type=reset],
+[type=submit],
+button {
+  -webkit-appearance: unset;
+}
+
 
 .btn-check:checked+.btn-primary,
 :not(.btn-check)+.btn-primary:active,
@@ -341,8 +358,12 @@ outline: none !important;
 .btn-secondary:active,
 .btn-secondary:focus,
 .btn-secondary:focus-visible {
-  background: var(--bg-white);
   color: var(--theme-text);
+}
+
+.btn-secondary:focus-visible {
+  background: var(--bg-white);
+
 }
 
 .btn-black {
@@ -356,6 +377,10 @@ outline: none !important;
 .btn-black:focus-visible {
   background: var(--bg-theme);
   color: var(--text-white);
+}
+
+.btn-black:focus-visible {
+  background: var(--bg-theme);
 }
 
 .btn:disabled,
