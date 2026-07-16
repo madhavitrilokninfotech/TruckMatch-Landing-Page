@@ -1,0 +1,45 @@
+/* Hero banner */
+.hero-banner-main {
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    min-height: calc(100vh - 50px);
+    /* padding: 100px 0; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-sec {
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    background: #000;
+    padding-top: 100px;
+    min-height: calc(100vh - 140px);
+    display: table;
+    width: 100%;
+}
+
+.banner-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.banner-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+}
