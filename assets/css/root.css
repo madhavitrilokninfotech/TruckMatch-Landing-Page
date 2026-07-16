@@ -53,29 +53,29 @@ HEADINGS
 
 h1,
 .h1 {
-  font-size: 76px;
+  font-size: clamp(36px, 4vw, 76px);
   line-height: 1.1;
   font-weight: 800;
 }
 
 h2,
 .h2 {
-  font-size: 48px;
+  font-size: clamp(30px, 3.5vw, 48px);
   line-height: 1.1;
   font-weight: 700;
 }
 
 h3,
 .h3 {
-  font-size: 36px;
-  line-height: 1;
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: 1.1;
   font-weight: 700;
 }
 
 h4,
 .h4 {
-  font-size: 24px;
-  line-height: 1;
+  font-size: clamp(20px, 1.8vw, 24px);
+  line-height: 1.2;
   font-weight: 600;
 }
 
@@ -106,7 +106,7 @@ SUBTITLE
 
 .subtitle {
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1;
   display: inline-flex;
   align-items: center;
@@ -179,6 +179,10 @@ COLOR CLASSNAME
   color: var(--text-secondary);
 }
 
+.text_white {
+  color: var(--text-white);
+}
+
 a {
   color: var(--theme-text);
   display: inline-block;
@@ -215,6 +219,16 @@ a,
 
 ::-webkit-scrollbar-track {
   background: transparent;
+}
+
+::-moz-selection {
+  color: var(--bg-white);
+  background: var(--bg-primary);
+}
+
+::selection {
+  color: var(--bg-white);
+  background: var(--bg-primary);
 }
 
 /* Firefox */

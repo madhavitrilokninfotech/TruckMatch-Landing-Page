@@ -1,3 +1,17 @@
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.header-height {
+    padding-top: 98px;
+}
+
+.container {
+    max-width: 1440px;
+}
+
 /* Hero banner */
 .hero-banner-main {
     position: relative;
@@ -6,7 +20,6 @@
 .hero-banner-inner {
     position: relative;
     z-index: 1;
-    /* min-height: 100svh; */
 }
 
 .banner-sec {
@@ -50,9 +63,7 @@
 }
 
 .hero-content-wrap {
-    padding: 200px 0 100px;
-    min-height: 100svh;
-    min-height: 100vh;
+    padding: 370px 0 100px;
     display: flex;
     flex-flow: column;
     justify-content: end;
@@ -72,7 +83,7 @@
 .h-banner-features {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 4px 20px;
     justify-content: space-between;
     flex-wrap: wrap;
     overflow: hidden;

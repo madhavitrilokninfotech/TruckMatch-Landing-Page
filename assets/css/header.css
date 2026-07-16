@@ -62,7 +62,7 @@
 }
 
 .h-logo {
-    max-width: 200px;
+    max-width: clamp(120px, 14vw, 200px);
 }
 
 .header-right {
