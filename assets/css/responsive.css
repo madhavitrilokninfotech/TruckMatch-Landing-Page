@@ -1,0 +1,131 @@
+@media(max-width:1699px) {}
+
+@media (max-width:1599px) {
+    /**** FAQs ****/
+    .fta-title {
+        font-size: 22px;
+        margin-top: 18px;
+    }
+    .faqs-ta-wrap .accordion-button {
+        font-size: 22px;
+    }
+    .faqs-ta-wrap .accordion-item {
+        padding: 20px 0px;
+    }
+    .faqs-ta-wrap .accordion-button::before {
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+    }
+    .faqs-ta-wrap .nav-link {
+        font-size: 18px;
+    }
+    .faqs-ta-wrap .accordion-body {
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    .faqs-ta-main {
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 1499px) {
+    /**** FAQs ****/
+    .faqs-ta-wrap .accordion-button {
+        font-size: 20px;
+    }
+    .faqs-ta-wrap .accordion-item {
+        padding: 18px 0px;
+    }
+    .faqs-ta-wrap .accordion-body {
+        font-size: 15px;
+    }
+    .fta-title {
+        font-size: 20px;
+    }
+    .faqs-ta-wrap .nav-link {
+        font-size: 16px;
+    }
+    .faqs-ta-wrap .accordion-button::before {
+        background-size: 22px 22px;
+        width: 22px;
+        height: 22px;
+    }
+}
+
+@media (max-width: 1399px) {
+    /**** FAQs ****/
+    .fta-title {
+        font-size: 18px;
+    }
+    .faqs-ta-wrap .nav-link {
+        font-size: 15px;
+    }
+    .faqs-ta-wrap .accordion-item {
+        padding: 16px 0px;
+    }
+    .faqs-ta-wrap .accordion-button {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1299px) {}
+
+@media (max-width: 1199px) {}
+
+
+/*=========================================================
+// Medium devices (tablets, less than 992px)
+===========================================================*/
+
+@media (max-width: 991px) {
+    /**** FAQs ****/
+    .faqs-ta-left {
+        width: 23%;
+    }
+    .faqs-ta-right {
+        width: 77%;
+    }
+    .fta-title {
+        margin-top: 15px;
+    }
+    .faqs-ta-main {
+        padding-bottom: 40px;
+    }
+}
+
+
+/*=========================================================
+// Small devices (landscape phones, less than 768px)
+===========================================================*/
+
+@media (max-width: 767px) {
+    /**** FAQs ****/
+    .faqs-ta-left {
+        width: 100%;
+    }
+    .faqs-ta-left .nav-pills {
+        flex-direction: row!important;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    .faqs-ta-wrap .nav-item {
+        margin-right: 15px;
+    }
+    .faqs-ta-right {
+        width: 100%;
+    }
+    .faqs-cp-txt {
+        padding-bottom: 20px;
+    }
+}
+
+
+/*=========================================================
+Extra small devices (portrait phones, less than 576px)
+===========================================================*/
+
+@media (max-width: 576px) {}
+
+@media (max-width: 380px) {}
