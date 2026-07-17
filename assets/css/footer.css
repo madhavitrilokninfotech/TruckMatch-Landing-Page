@@ -188,6 +188,10 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     opacity: 1;
 }
 
+.newsletter-form .form-control.border::placeholder {
+    color: var(--input-placeholder);
+}
+
 .newsletter-form .form-control.border {
     border: 1px solid rgba(121, 121, 121, 30%) !important;
     background: rgba(136, 136, 136, 0.1);

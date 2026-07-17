@@ -12,7 +12,42 @@ $(window).scroll(function (e) {
 });
 
 
-/************************ Current Year *****************************/
 $(document).ready(function () {
-    $("#currentYear").text(new Date().getFullYear());
+
+    /************************ Current Year *****************************/
+    // $("#currentYear").text(new Date().getFullYear());
+
+
+
+    /************************ Slick Slider Hero Features *****************************/
+    $('.h-banner-features').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 6000,
+        cssEase: 'linear',
+        arrows: false,
+        dots: false,
+        infinite: true,
+        pauseOnHover: false,
+        pauseOnFocus: false,
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    variableWidth: true
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 2,
+                    variableWidth: true
+                }
+            }
+        ]
+    });
 });

@@ -1,9 +1,54 @@
 @media(max-width:1699px) {}
 
+@media(min-width:1700px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
 @media (max-width:1599px) {
 
     /* root */
- 
+    :root {
+        --radius10: 8px;
+    }
+
+    p,
+    .p {
+        font-size: 14px;
+    }
+
+    .btn {
+        padding: 12px 26px;
+    }
+
+    /* end */
+
+    /* Hero banner */
+    .subtitle {
+        font-size: 12px;
+        line-height: 1;
+        padding: 8px 14px;
+    }
+
+    .h-banner-title {
+        margin: 10px 0 0;
+    }
+
+    .h-banner-features {
+        padding-top: 18px;
+        margin: 30px 0 0;
+    }
+
+    .h-feature-item {
+        font-size: 12px;
+    }
+
+    .hero-content-wrap {
+        padding: 330px 0 80px;
+    }
+
+    /* end */
 
     /**** FAQs ****/
     .fta-title {
@@ -71,6 +116,20 @@
 
 @media (max-width: 1399px) {
 
+    /* Root */
+    .btn {
+        font-size: 13px;
+        padding: 14px 24px;
+        letter-spacing: 0.8px;
+    }
+
+    /* end */
+
+    /* Hero css */
+
+
+    /* end */
+
     /**** FAQs ****/
     .fta-title {
         font-size: 18px;
@@ -91,7 +150,43 @@
 
 @media (max-width: 1299px) {}
 
-@media (max-width: 1199px) {}
+@media (max-width: 1199px) {
+
+    /* Hero css */
+    .hero-content.right {
+        max-width: 700px;
+    }
+
+    .hero-content-wrap {
+        padding: 100px 0 60px;
+        min-height: 500px;
+        height: calc(100svh - 80px);
+    }
+
+    .h-feature-item img {
+        height: 15px;
+    }
+
+    .h-feature-item {
+        padding: 0 16px;
+    }
+
+    .subtitle {
+        padding: 8px 10px;
+        gap: 6px;
+    }
+
+    .hero-desc {
+        padding: 30px 0 10px;
+    }
+
+    .h-banner-features {
+        padding-top: 25px;
+    }
+
+    /* end */
+
+}
 
 
 /*=========================================================

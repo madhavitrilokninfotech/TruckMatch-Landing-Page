@@ -8,20 +8,16 @@
     padding-top: 98px;
 }
 
-.container {
-    max-width: 1440px;
-}
-
 .sec-padding {
     padding-top: 80px;
     padding-bottom: 80px;
 }
 
-
 /* Hero banner */
 
 .hero-banner-main {
     position: relative;
+    overflow: hidden;
 }
 
 .hero-banner-inner {
@@ -90,20 +86,34 @@
     align-items: center;
     gap: 4px 20px;
     justify-content: space-between;
-    flex-wrap: wrap;
+    white-space: nowrap;
     overflow: hidden;
     border-top: 1px solid var(--text-white);
     padding-top: 20px;
     margin: 36px 0 0;
 }
 
+.h-banner-features.slick-initialized {
+    display: flex !important;
+}
+
+.h-banner-features .slick-track {
+    display: flex;
+    align-items: center;
+}
+
+.h-banner-features .slick-list {
+    overflow: hidden;
+}
+
 .h-feature-item {
     color: var(--text-white);
     font-size: 16px;
     font-weight: 200;
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     gap: 5px;
+    padding: 0 20px;
 }
 
 
