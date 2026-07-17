@@ -134,10 +134,6 @@
     margin-top: 25px;
 }
 
-.faqs-ta-main {
-    padding-bottom: 80px;
-}
-
 .faqs-ta-left {
     width: 21%;
 }
@@ -231,128 +227,108 @@
 }
 
 
-/**** FAQs ****/
+/**** Get in Touch Section ****/
 
-
-/* .fta-title {
-    font-size: 24px;
-    font-weight: 600;
-    color: #000000;
-    margin-bottom: 20px;
-    margin-top: 25px;
+.connect-wrapper {
+    /* position: relative; */
+    /* background-color: #F7F8FA; */
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
-.faqs-ta-main {
-    padding-bottom: 80px;
-}
-
-.faqs-ta-left {
-    width: 21%;
-}
-
-.faqs-ta-right {
-    width: 79%;
-}
-
-.faqs-ta-wrap .nav-link {
-    text-align: left;
-    font-size: 20px;
-    color: #555555;
-    padding: 0;
-    border-radius: 0px;
-}
-
-.faqs-ta-wrap .nav-item {
-    margin-bottom: 15px;
-}
-
-.faqs-ta-wrap .nav-link.active,
-.faqs-ta-wrap .show>.nav-link {
-    color: var(--text-primary);
-    background-color: transparent;
-}
-
-.faqs-ta-wrap .accordion.accordion-flush .accordion-item {
-    padding: 22px 28px;
-    background-color: #ffffff;
-    border-radius: 12px;
-    margin-bottom: 16px;
-    border: 2px solid #E5E7EB;
-    border-left: 2px solid #E5E7EB;
-    transition: background-color 250ms ease, border-color 250ms ease;
-}
-
-.faqs-ta-wrap .accordion-item:has(.accordion-button:not(.collapsed)) {
-    background-color: #FDF0ED;
-    border-color: #F3D9D2;
-    border-left: 4px solid #EE4023;
-}
-
-.faqs-ta-wrap .accordion-button {
-    color: var(--text-black);
-    font-size: 18px;
-    font-weight: 600;
-    padding: 0px 55px 0px 0px;
-    background-color: transparent;
-    box-shadow: none;
+.connect-sec .container {
     position: relative;
+    z-index: 1;
+}
+
+.connect-sec .faqs-title-v1 {
+    margin-bottom: 40px;
+}
+
+.connect-sec .sub-form-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.connect-sec .sub-form-card p {
+    color: #6C7278;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.connect-sec .sub-form-group .sub-form-control {
+    /* height: 56px; */
+    border-radius: 12px;
+    border: 1px solid #d9dde5;
+    background: #fff;
+    padding: 16px 18px;
+    font-size: 14px;
+    box-shadow: none;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.connect-sec .sub-form-group .sub-form-control::placeholder {
+    color: var(--theme-text);
+}
+
+.connect-sec .sub-form-group .sub-form-control:focus {
+    border-color: var(--text-primary);
+    box-shadow: none;
+    outline: none;
+}
+
+
+/* "Tell us about your requirements" textarea-style field */
+
+.connect-btn {
     border: none;
+    border-radius: 12px;
+    padding: 14px 34px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+    transition: 0.3s;
+    color: var(--text-white);
+    background-color: var(--bg-primary);
 }
 
-.faqs-ta-wrap .accordion-body {
-    padding: 0px 40px 0px 0px;
-    font-size: 15px;
-    color: var(--text-secondary);
-    font-weight: normal;
-    margin-top: 12px;
-    line-height: 1.6;
+.connect-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--bg-black);
 }
 
-.faqs-ta-wrap .accordion-button::before {
-    content: "";
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background-color: #F1F2F4;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    transition: background-color 250ms ease;
+.connect-sec .connect-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    max-height: 655px;
+    display: flex;
 }
 
-.faqs-ta-wrap .accordion-button:not(.collapsed)::before {
-    background-color: #EE4023;
-}
-
-.faqs-ta-wrap .accordion-button::after {
-    content: "";
+.connect-sec .connect-image .sub-img {
+    width: 100%;
+    height: 100%;
     display: block;
-    position: absolute;
-    top: 50%;
-    right: 13px;
-    width: 8px;
-    height: 8px;
-    margin-top: -6px;
-    border-right: 2px solid #6B7280;
-    border-bottom: 2px solid #6B7280;
-    transform: rotate(45deg);
-    transition: transform 250ms ease, border-color 250ms ease;
+    border-radius: 24px;
+    object-fit: cover;
 }
 
-.faqs-ta-wrap .accordion-button:not(.collapsed)::after {
-    border-color: #ffffff;
-    transform: rotate(225deg);
-    margin-top: -3px;
+.connect-sec .sub-form-group select.sub-form-control {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("../images/con-ta-cl.svg");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    background-size: 10px;
+    cursor: pointer;
+    padding-right: 45px;
+    color: var(--theme-text);
 }
 
-.faqs-ta-wrap .tab-content>.tab-pane {
-    visibility: hidden;
-    opacity: 0;
-    transition: all 400ms linear;
+.connect-sec .sub-form-group select.sub-form-control:invalid,
+.connect-sec .sub-form-group select.sub-form-control option[value=""] {
+    color: var(--theme-text);
 }
-
-.faqs-ta-wrap .tab-content>.active {
-    visibility: visible;
-    opacity: 1;
-} */
