@@ -85,6 +85,16 @@
     padding-right: 0;
     padding-left: 0;
     font-weight: 400;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.header-main .header-inner-main .header-inner .header-menu ul li a:hover,
+.header-main .header-inner-main .header-inner .header-menu ul li a.active {
+    color: var(--text-primary);
 }
 
 .btn.header-primary-btn {
