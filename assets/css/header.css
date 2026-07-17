@@ -177,7 +177,7 @@
 }
 
 .h-logo {
-    max-width: clamp(120px, 14vw, 200px);
+    max-width: clamp(120px, 11vw, 200px);
 }
 
 .header-right {
@@ -195,6 +195,7 @@
 .header-main .header-inner-main .header-inner .header-menu ul li a {
     position: relative;
     font-size: 18px;
+    line-height: normal;
     color: var(--theme-text);
     margin: 0 20px;
     padding-right: 0;
@@ -216,14 +217,39 @@
     background-color: var(--bg-primary);
     color: var(--text-white);
     padding: 15px 40px;
-    border-radius: 50px;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    -ms-border-radius: 50px;
-    -o-border-radius: 50px;
+    border-radius: var(--radius50px);
+    -webkit-border-radius: var(--radius50px);
+    -moz-border-radius: var(--radius50px);
+    -ms-border-radius: var(--radius50px);
+    -o-border-radius: var(--radius50px);
 }
 
+@media (max-width: 1599px) {
+    .btn.header-primary-btn {
+        padding: 14px 30px;
+    }
 
+    .header-main .header-inner-main .header-inner .header-menu ul li a {
+        font-size: 16px;
+        margin: 0 16px;
+    }
+
+    .header-main .header-inner-main .header-inner {
+        padding: 6px 6px 6px 20px;
+    }
+
+    .header-logo {
+        padding: 11px 30px;
+    }
+}
+
+@media (max-width: 1499px) {}
+
+@media (max-width: 1399px) {}
+
+@media (max-width: 1299px) {}
+
+@media (max-width: 1199px) {}
 
 @media (max-width: 991px) {
     .header-main .header-inner-main .header-inner {
@@ -286,3 +312,9 @@
         padding: 16px 16px;
     }
 }
+
+@media (max-width: 767px) {}
+
+@media (max-width: 576px) {}
+
+@media (max-width: 380px) {}
