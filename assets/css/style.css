@@ -163,6 +163,7 @@
     background-position: center top;
     background-size: cover;
     overflow: hidden;
+    z-index: 1;
 }
 
 .faqs-sec-wrap {
@@ -341,10 +342,5 @@ select.custom-select {
     background-size: 10px;
     cursor: pointer;
     padding-right: 45px;
-    color: var(--theme-text);
-}
-
-.connect-wrapper .sub-form-group select.sub-form-control:invalid,
-.connect-wrapper .sub-form-group select.sub-form-control option[value=""] {
     color: var(--theme-text);
 }
