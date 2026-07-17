@@ -31,6 +31,7 @@ html {
     --text-primary: #d74315;
     --text-secondary: #797979;
     --text-disabled: #9ca3af;
+    --input-placeholder: #ffffff73;
     --btn-focus-box-shadow: 0 0 0 0.2rem rgba(215, 67, 21, 0.4);
     /* Transition */
     --transition: 0.4s ease;
@@ -45,6 +46,9 @@ html {
     --radius50px: 50px;
     --radius50: 50%;
     --btn-radius: 10px;
+
+    /* Border Color */
+    --borderColor: #ECECEC;
 }
 
 
@@ -438,4 +442,42 @@ border-color: var(--primary-main);
     to {
         transform: rotate(360deg);
     }
+}
+
+
+/* Input css */
+.form-control.border {
+    background-color: var(--bg-white);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px solid var(--borderColor);
+    color: var(--theme-text);
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    padding: 15px 20px;
+    border-radius: var(--radius10);
+    -webkit-border-radius: var(--radius10);
+    -moz-border-radius: var(--radius10);
+    -ms-border-radius: var(--radius10);
+    -o-border-radius: var(--radius10);
+}
+
+.form-control.border::placeholder {
+    font-size: 16px;
+    color: var(--input-placeholder);
+}
+
+.form-control.border:focus {
+    color: var(--text-white);
+    border-color: var(--bg-primary) !important;
+    box-shadow: none;
+}
+
+.form-control.border:focus-visible {
+    outline: none !important;
 }

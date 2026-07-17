@@ -24,6 +24,7 @@
 .f-menu {
     display: flex;
     flex-direction: column;
+    height: stretch;
 }
 
 .new-footer-menu .f-menu:nth-child(1) {
@@ -131,7 +132,7 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     margin-bottom: 26px;
 }
 
-.f-social-icon {
+.greadientbox {
     position: relative;
     overflow: hidden;
     z-index: 1;
@@ -150,7 +151,7 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     -o-transition: var(--transition);
 }
 
-.f-social-icon::before {
+.greadientbox::before {
     content: "";
     position: absolute;
     inset: 0;
@@ -163,10 +164,36 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     z-index: -1;
 }
 
-.f-social-icon:hover {
+.greadientbox:hover {
     border-color: transparent;
 }
 
-.f-social-icon:hover::before {
+.greadientbox:hover::before {
     opacity: 1;
+}
+
+.newsletter-form {
+    margin: 30px 0 0;
+}
+
+.newsletter-form .newsletter-btn {
+    display: flex;
+    min-height: 52px;
+    min-width: 52px;
+    margin-left: 10px;
+    border-color: transparent;
+}
+
+.newsletter-form .newsletter-btn.greadientbox::before {
+    opacity: 1;
+}
+
+.newsletter-form .form-control.border {
+    border: 1px solid rgba(121, 121, 121, 30%) !important;
+    background: rgba(136, 136, 136, 0.1);
+    color: var(--text-white);
+}
+
+.newsletter-form .form-control.border:focus {
+    border-color: var(--bg-white) !important;
 }
