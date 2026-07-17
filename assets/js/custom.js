@@ -1,5 +1,5 @@
 
-/************************ Header Sticky *****************************/
+/************************ Header Fixed *****************************/
 function fixedHeader() {
     var sticky = $(".header-main"),
         scroll = $(window).scrollTop();
@@ -9,4 +9,10 @@ function fixedHeader() {
 fixedHeader();
 $(window).scroll(function (e) {
     fixedHeader();
-}); 
+});
+
+
+/************************ Current Year *****************************/
+$(document).ready(function () {
+    $("#currentYear").text(new Date().getFullYear());
+});
