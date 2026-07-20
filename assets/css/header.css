@@ -177,7 +177,7 @@
 }
 
 .h-logo {
-    max-width: clamp(120px, 11vw, 200px);
+    max-width: clamp(140px, 11vw, 200px);
 }
 
 .header-right {
@@ -370,7 +370,7 @@
     .header-main .header-inner-main .header-inner {
         padding: 0;
         margin: 0;
-        width: calc(100% - 156px);
+        width: calc(100% - 176px);
         background: transparent;
         backdrop-filter: none;
     }
@@ -383,14 +383,19 @@
     .header-main .header-inner-main .header-inner .header-menu .header-menu-inner {
         display: flex;
         flex-direction: column;
-        justify-content: space-around !important;
+        justify-content: start;
+        padding-top: 100px;
     }
 
     .header-main .header-right .navbar-toggler {
         outline: none !important;
         box-shadow: none;
-        background: transparent;
-        margin: 10px 0;
+        background-color: rgba(255, 255, 255, 65%);
+        backdrop-filter: blur(2px);
+        padding: 6px 8px;
+        border-radius: 50px;
+        width: 42px;
+        height: 42px;
     }
 
     .header-main button.navbar-toggler {
@@ -453,7 +458,7 @@
 
     .header-main .header-right {
         padding-left: 0px;
-        padding-right: 18px;
+        padding-right: 6px;
         width: 100%;
     }
 
@@ -483,6 +488,7 @@
     .header-main .header-inner-main .header-inner .header-menu ul li a {
         width: 100%;
         padding: 16px 16px;
+        margin: 0 auto;
         font-size: 18px;
     }
 
@@ -490,14 +496,55 @@
         backdrop-filter: none;
     }
 
-    .header-main nav.navbar:before,
-    .header-main nav.navbar::after {
-        display: none;
-    }
 }
 
 @media (max-width: 767px) {}
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
+
+    .navbar-container,
+    .hero-banner-main .container-fluid {
+        padding: 0 16px;
+    }
+
+    .header-height {
+        padding-top: 60px;
+    }
+
+    .header-logo {
+        padding: 2px 16px;
+    }
+
+    .h-logo {
+        max-width: 120px;
+    }
+
+    .header-main button.navbar-toggler .icon-bar+.icon-bar {
+        margin-top: 5px;
+    }
+
+    .header-main button.navbar-toggler span.icon-bar {
+        width: 25px;
+    }
+
+    .header-main button.navbar-toggler.collapsed span.icon-bar:nth-child(1),
+    .header-main .header-inner .header-right button.navbar-toggler.collapsed span.icon-bar:nth-child(3) {
+        width: 16px;
+    }
+
+    .header-main .header-right .navbar-toggler {
+        width: 40px;
+        height: 40px;
+        padding: 2px 8px;
+    }
+
+    .header-main button.navbar-toggler span.icon-bar:nth-child(1) {
+        top: 8px;
+    }
+
+    .header-main button.navbar-toggler span.icon-bar:nth-child(3) {
+        top: -8px;
+    }
+}
 
 @media (max-width: 380px) {}

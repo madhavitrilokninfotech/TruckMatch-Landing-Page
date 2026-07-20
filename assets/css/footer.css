@@ -1,5 +1,6 @@
 .site-footer {
     margin: 6px;
+    overflow: hidden;
 }
 
 .new-footer-main {

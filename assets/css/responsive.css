@@ -159,8 +159,8 @@
 
     .hero-content-wrap {
         padding: 100px 0 60px;
-        min-height: 500px;
-        height: calc(100svh - 80px);
+        min-height: 600px;
+        height: 80svh;
     }
 
     .h-feature-item img {
@@ -194,6 +194,11 @@
 ===========================================================*/
 
 @media (max-width: 991px) {
+
+    /* Hero css */
+    .header-height {
+        padding-top: 65px;
+    }
 
     /**** FAQs ****/
     .faqs-ta-left {
@@ -250,6 +255,51 @@
 Extra small devices (portrait phones, less than 576px)
 ===========================================================*/
 
-@media (max-width: 576px) {}
+@media (max-width: 576px) {
 
-@media (max-width: 380px) {}
+    /* Root */
+    :root {
+        --radius10: 6px;
+    }
+
+    .btn {
+        font-size: 12px;
+        padding: 12px 18px;
+    }
+
+    .subtitle {
+        padding: 8px 8px;
+        font-size: 11px;
+    }
+
+    .minidot {
+        width: 7px;
+        height: 7px;
+    }
+
+    /* Hero css */
+
+    .hero-content-wrap {
+        padding: 100px 0 30px;
+        height: 80svh;
+        min-height: 500px;
+    }
+
+    .hero-desc {
+        padding: 20px 0 0px;
+    }
+
+    .h-banner-features {
+        margin: 25px 0 0;
+        padding-bottom: 25px;
+    }
+
+}
+
+@media (max-width: 360px) {
+
+    h1,
+    .h1 {
+        font-size: 32px;
+    }
+}
