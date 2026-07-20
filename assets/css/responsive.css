@@ -123,6 +123,11 @@
         letter-spacing: 0.8px;
     }
 
+    .container {
+        padding: 0 50px;
+        max-width: 100%;
+    }
+
     /* end */
 
     /* Hero css */
@@ -151,6 +156,11 @@
 @media (max-width: 1299px) {}
 
 @media (max-width: 1199px) {
+
+    /* root */
+    .container {
+        padding: 0 40px;
+    }
 
     /* Hero css */
     .hero-content.right {
@@ -194,6 +204,11 @@
 ===========================================================*/
 
 @media (max-width: 991px) {
+
+    /* root */
+    .container {
+        padding: 0 30px;
+    }
 
     /* Hero css */
     .header-height {
@@ -275,6 +290,10 @@ Extra small devices (portrait phones, less than 576px)
     .minidot {
         width: 7px;
         height: 7px;
+    }
+
+    .container {
+        padding: 0 16px;
     }
 
     /* Hero css */
