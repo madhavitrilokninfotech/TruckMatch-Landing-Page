@@ -11,6 +11,14 @@ $(window).scroll(function (e) {
     fixedHeader();
 });
 
+$(".navbar-toggler").click(function () {
+    $("body").toggleClass("no-scroll");
+});
+
+$(".header-menu a").click(function () {
+    $("body").removeClass("no-scroll");
+});
+
 
 $(document).ready(function () {
 
