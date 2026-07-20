@@ -25,6 +25,7 @@ html {
     --bg-light-primary2: #fff1ed;
     --bg-light-primary3: #fff9f7;
     --bg-light-primary4: #FFF8F6;
+    --bg-light-primary5: #F7CEC2;
     --text-white: #ffffff;
     --text-black: #000000;
     --theme-text: #161212;
@@ -328,6 +329,7 @@ BUTTON
 .btn:active,
 .btn:focus,
 .btn:focus-visible {
+    transform: translateY(-2px);
     color: var(--text-white);
     border-color: transparent !important;
     box-shadow: none !important;
@@ -370,21 +372,20 @@ button {
 .btn-primary:hover,
 .btn-primary:active {
     background: var(--bg-primary);
-    transform: translateY(-2px);
     background-color: var(--bg-black);
 }
 
 .btn-secondary {
     background: var(--bg-white);
     color: var(--theme-text);
-    border-color: #ececec;
+    border-color: var(--text-gray3);
 }
 
 .btn-secondary:hover,
 .btn-secondary:active,
-.btn-secondary:focus,
-.btn-secondary:focus-visible {
-    color: var(--theme-text);
+.btn-secondary:focus {
+    color: var(--text-white);
+    background-color: var(--text-gray2);
 }
 
 .btn-secondary:focus-visible {
@@ -489,4 +490,21 @@ border-color: var(--primary-main);
 
 textarea {
     font-style: italic;
+}
+
+.clip-right-top {
+    position: relative;
+    clip-path: polygon( 0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);
+}
+
+.clip-right-top img::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90px;
+    height: 90px;
+    background-color: #ffffff;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+    border-top-right-radius: var(--radius20);
 }

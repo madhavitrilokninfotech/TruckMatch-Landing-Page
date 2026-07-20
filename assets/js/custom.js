@@ -1,4 +1,3 @@
-
 /************************ Header Fixed *****************************/
 function fixedHeader() {
     var sticky = $(".header-main"),
@@ -7,38 +6,37 @@ function fixedHeader() {
     else sticky.removeClass("fixHeader");
 }
 fixedHeader();
-$(window).scroll(function (e) {
+$(window).scroll(function(e) {
     fixedHeader();
 });
 
 
-$('.navbar-nav li a').on('click', function () {
+$('.navbar-nav li a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
-$(".navbar-toggler").click(function () {
+$(".navbar-toggler").click(function() {
     $("body").toggleClass("no-scroll");
 });
 
-$(".header-menu a").click(function () {
+$(".header-menu a").click(function() {
     $("body").removeClass("no-scroll");
 });
 
-$('.header-btn-main a').on('click', function () {
+$('.header-btn-main a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
 
 const navLinks = $("#menu-main-menu a");
-navLinks.on("click", function (e) {
+navLinks.on("click", function(e) {
     const fullHref = $(this).attr("href");
     const targetHash = fullHref.includes("#") ? fullHref.substring(fullHref.indexOf("#")) : null;
 
     if (targetHash && $(targetHash).length) {
         e.preventDefault(); // Stop full page reload
 
-        $("html, body").stop(true).animate(
-            { scrollTop: $(targetHash).offset().top - 80 },
+        $("html, body").stop(true).animate({ scrollTop: $(targetHash).offset().top - 80 },
             600
         );
 
@@ -48,10 +46,10 @@ navLinks.on("click", function (e) {
 });
 
 // Scroll highlight logic
-$(window).on("scroll", function () {
+$(window).on("scroll", function() {
     const scrollPosition = $(window).scrollTop();
 
-    navLinks.each(function () {
+    navLinks.each(function() {
         const fullHref = $(this).attr("href");
         const targetHash = fullHref.includes("#") ? fullHref.substring(fullHref.indexOf("#")) : null;
         const targetSection = $(targetHash);
@@ -69,7 +67,7 @@ $(window).on("scroll", function () {
 });
 
 
-$(document).ready(function () {
+$(document).ready(function() {
 
     /************************ Current Year *****************************/
     // $("#currentYear").text(new Date().getFullYear());
@@ -90,8 +88,7 @@ $(document).ready(function () {
         pauseOnHover: false,
         pauseOnFocus: false,
         variableWidth: true,
-        responsive: [
-            {
+        responsive: [{
                 breakpoint: 992,
                 settings: {
                     slidesToShow: 3,
@@ -107,4 +104,20 @@ $(document).ready(function () {
             }
         ]
     });
+});
+
+
+$('.profess-slick-slider').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: false,
+    responsive: [{
+        breakpoint: 768,
+        settings: {
+            slidesToShow: 1
+        }
+    }]
 });

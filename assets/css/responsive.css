@@ -7,106 +7,83 @@
 }
 
 @media (max-width:1599px) {
-
     /* root */
-    :root {
+     :root {
         --radius10: 8px;
     }
-
     p,
     .p {
         font-size: 14px;
     }
-
     .btn {
         padding: 12px 26px;
     }
-
     /* end */
-
     /* Hero banner */
     .subtitle {
         font-size: 12px;
         line-height: 1;
         padding: 8px 14px;
     }
-
     .h-banner-title {
         margin: 10px 0 0;
     }
-
     .h-banner-features {
         padding-top: 18px;
         margin: 30px 0 0;
     }
-
     .h-feature-item {
         font-size: 12px;
     }
-
     .hero-content-wrap {
         padding: 330px 0 80px;
     }
-
     /* end */
-
     /**** FAQs ****/
     .fta-title {
         font-size: 22px;
         margin-top: 18px;
     }
-
     .faqs-ta-wrap .accordion-button {
         font-size: 22px;
     }
-
     .faqs-ta-wrap .accordion-item {
         padding: 20px 0px;
     }
-
     .faqs-ta-wrap .accordion-button::before {
         background-size: 25px 25px;
         width: 25px;
         height: 25px;
     }
-
     .faqs-ta-wrap .nav-link {
         font-size: 18px;
     }
-
     .faqs-ta-wrap .accordion-body {
         font-size: 16px;
         margin-top: 10px;
     }
-
     .faqs-ta-main {
         padding-bottom: 60px;
     }
 }
 
 @media (max-width: 1499px) {
-
     /**** FAQs ****/
     .faqs-ta-wrap .accordion-button {
         font-size: 20px;
     }
-
     .faqs-ta-wrap .accordion-item {
         padding: 18px 0px;
     }
-
     .faqs-ta-wrap .accordion-body {
         font-size: 15px;
     }
-
     .fta-title {
         font-size: 20px;
     }
-
     .faqs-ta-wrap .nav-link {
         font-size: 16px;
     }
-
     .faqs-ta-wrap .accordion-button::before {
         background-size: 22px 22px;
         width: 22px;
@@ -115,39 +92,29 @@
 }
 
 @media (max-width: 1399px) {
-
     /* Root */
     .btn {
         font-size: 13px;
         padding: 14px 24px;
         letter-spacing: 0.8px;
     }
-
     .container {
         padding: 0 50px;
         max-width: 100%;
     }
-
     /* end */
-
     /* Hero css */
-
-
     /* end */
-
     /**** FAQs ****/
     .fta-title {
         font-size: 18px;
     }
-
     .faqs-ta-wrap .nav-link {
         font-size: 15px;
     }
-
     .faqs-ta-wrap .accordion-item {
         padding: 16px 0px;
     }
-
     .faqs-ta-wrap .accordion-button {
         font-size: 18px;
     }
@@ -156,46 +123,36 @@
 @media (max-width: 1299px) {}
 
 @media (max-width: 1199px) {
-
     /* root */
     .container {
         padding: 0 40px;
     }
-
     /* Hero css */
     .hero-content.right {
         max-width: 700px;
     }
-
     .hero-content-wrap {
         padding: 100px 0 60px;
         min-height: 600px;
         height: 80svh;
     }
-
     .h-feature-item img {
         height: 15px;
     }
-
     .h-feature-item {
         padding: 0 16px;
     }
-
     .subtitle {
         padding: 8px 10px;
         gap: 6px;
     }
-
     .hero-desc {
         padding: 30px 0 10px;
     }
-
     .h-banner-features {
         padding-top: 25px;
     }
-
     /* end */
-
 }
 
 
@@ -204,30 +161,24 @@
 ===========================================================*/
 
 @media (max-width: 991px) {
-
     /* root */
     .container {
         padding: 0 30px;
     }
-
     /* Hero css */
     .header-height {
         padding-top: 65px;
     }
-
     /**** FAQs ****/
     .faqs-ta-left {
         width: 23%;
     }
-
     .faqs-ta-right {
         width: 77%;
     }
-
     .fta-title {
         margin-top: 15px;
     }
-
     .faqs-ta-main {
         padding-bottom: 40px;
     }
@@ -239,27 +190,22 @@
 ===========================================================*/
 
 @media (max-width: 767px) {
-
     /**** FAQs ****/
     .faqs-ta-left {
         width: 100%;
     }
-
     .faqs-ta-left .nav-pills {
         flex-direction: row !important;
         flex-wrap: nowrap;
         overflow-x: auto;
         white-space: nowrap;
     }
-
     .faqs-ta-wrap .nav-item {
         margin-right: 15px;
     }
-
     .faqs-ta-right {
         width: 100%;
     }
-
     .faqs-cp-txt {
         padding-bottom: 20px;
     }
@@ -271,52 +217,41 @@ Extra small devices (portrait phones, less than 576px)
 ===========================================================*/
 
 @media (max-width: 576px) {
-
     /* Root */
-    :root {
+     :root {
         --radius10: 6px;
     }
-
     .btn {
         font-size: 12px;
         padding: 12px 18px;
     }
-
     .subtitle {
         padding: 8px 8px;
         font-size: 11px;
     }
-
     .minidot {
         width: 7px;
         height: 7px;
     }
-
     .container {
         padding: 0 16px;
     }
-
     /* Hero css */
-
     .hero-content-wrap {
         padding: 100px 0 30px;
         height: 80svh;
         min-height: 500px;
     }
-
     .hero-desc {
         padding: 20px 0 0px;
     }
-
     .h-banner-features {
         margin: 25px 0 0;
         padding-bottom: 25px;
     }
-
 }
 
 @media (max-width: 360px) {
-
     h1,
     .h1 {
         font-size: 32px;
