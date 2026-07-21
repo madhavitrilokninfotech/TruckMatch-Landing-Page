@@ -297,6 +297,9 @@ ul {
     max-width: fit-content !important;
 }
 
+.border1{
+    border: 1px solid var(--borderColor);
+}
 
 /* =========================================================
 BUTTON

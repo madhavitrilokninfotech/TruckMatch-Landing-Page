@@ -188,6 +188,8 @@
 
 .about-card-wrap {
     position: relative;
+    height: 100%;
+    overflow: hidden;
     padding: 50px;
     border-radius: var(--radius30);
     -webkit-border-radius: var(--radius30);
@@ -196,6 +198,152 @@
     -o-border-radius: var(--radius30);
 }
 
+.about-card-img img {
+    border-radius: var(--radiuys30);
+    -webkit-border-radius: var(--radiuys30);
+    -moz-border-radius: var(--radiuys30);
+    -ms-border-radius: var(--radiuys30);
+    -o-border-radius: var(--radiuys30);
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    min-height: 500px;
+}
+
+.about-us-wrap .support-card {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background-color: rgba(255, 255, 255, 10%);
+    backdrop-filter: blur(16px);
+    padding: 30px;
+    border-radius: var(--radius16);
+    -webkit-border-radius: var(--radius16);
+    -moz-border-radius: var(--radius16);
+    -ms-border-radius: var(--radius16);
+    -o-border-radius: var(--radius16);
+}
+
+.about-card-wrap.middle {
+    background-color: var(--bg-light-primary4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.about-card-wrap.orange {
+    background-color: var(--bg-orange);
+    display: flex;
+    flex-direction: column;
+}
+
+.ab-col-1 {
+    width: 33.33333333%;
+    flex: 0 0 auto;
+}
+
+.ab-col-2 {
+    width: 28%;
+    flex: 0 0 auto;
+}
+
+.ab-col-3 {
+    width: 38%;
+    flex: 0 0 auto;
+}
+
+.about-card-wrap.middle .h5 {
+    line-height: 1.3;
+}
+
+.about-us-wrap .company-image {
+    text-align: right;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.about-us-wrap .company-image img {
+    max-width: 220px;
+}
+
+.about-us-wrap .about-features {
+    margin: 24px 0;
+}
+
+.about-us-wrap .about-features .h-feature-item {
+    padding: 5px 0;
+    gap: 10px;
+}
+
+.about-btn-bottom {
+    margin-top: auto;
+}
+
+/**** How It Works Section ****/
+.how-it-works-wrap {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.how-it-works-wrap::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background-image: url(../images/bg-how-it-works.webp);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    opacity: 2%;
+}
+
+.cm-tabs .nav-link {
+    color: var(--text-secondary);
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    padding: 15px 25px;
+    border: 1px solid transparent;
+    border-radius: var(--radius12);
+    -webkit-border-radius: var(--radius12);
+    -moz-border-radius: var(--radius12);
+    -ms-border-radius: var(--radius12);
+    -o-border-radius: var(--radius12);
+}
+
+.cm-tabs .work-tab-v {
+    width: 18px;
+    height: 18px;
+}
+
+.cm-tabs.nav-pills .nav-link.active,
+.cm-tabs.nav-pills .show>.nav-link {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+    font-weight: 500;
+}
+
+.cm-tabs {
+    border: 1px solid var(--borderColor);
+    padding: 3px;
+    border-radius: var(--radius16);
+}
+
+.cm-tab-content {
+    display: block;
+    padding: 40px 0 0;
+}
+
+.work-tabs {
+    margin-top: 60px;
+    text-align: center;
+}
 
 /* divide css */
 

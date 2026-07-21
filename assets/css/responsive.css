@@ -166,7 +166,8 @@
         min-height: 600px;
         height: 80svh;
     }
-    .h-feature-item img {
+    .h-feature-item img,
+    .h-feature-item svg{
         height: 15px;
     }
     .h-feature-item {

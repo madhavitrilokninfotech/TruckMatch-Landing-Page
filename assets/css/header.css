@@ -224,6 +224,13 @@
     -o-border-radius: var(--radius50px);
 }
 
+.header-primary-btn:hover,
+.header-primary-btn:active,
+.header-primary-btn:focus,
+.header-primary-btn:focus-visible {
+    transform: none;
+}
+
 .no-scroll {
     overflow: hidden;
 }
