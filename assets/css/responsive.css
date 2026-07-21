@@ -314,6 +314,15 @@
 
 @media (max-width: 767px) {
 
+    /* Built For Construction company */
+    .built-for-company .c-img-text-box-wrap.bottom1 {
+        flex-direction: column;
+    }
+
+    .built-for-company .c-img-text-box-wrap.bottom1 .c-img-text-wrap {
+        flex: 0 0 auto;
+    }
+
     /**** FAQs ****/
     .faqs-ta-left {
         width: 100%;

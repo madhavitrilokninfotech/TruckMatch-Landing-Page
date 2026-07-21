@@ -33,6 +33,7 @@ html {
     --text-secondary: #797979;
     --text-disabled: #9ca3af;
     --input-placeholder: #ffffff73;
+    --dark-gray: #4D585F;
     --text-gray1: #E5E7EB;
     --text-gray2: #3C4449;
     --text-gray3: #ECECEC;
@@ -51,7 +52,7 @@ html {
     --radius50: 50%;
     --btn-radius: 10px;
     /* Border Color */
-    --borderColor: #ECECEC;
+    --borderColor: #EAEAEA;
 }
 
 
@@ -194,6 +195,10 @@ COLOR CLASSNAME
     color: var(--text-white);
 }
 
+.text_dark_gray {
+    color: var(--dark-gray);
+}
+
 a {
     color: var(--theme-text);
     display: inline-block;
@@ -297,7 +302,7 @@ ul {
     max-width: fit-content !important;
 }
 
-.border1{
+.border1 {
     border: 1px solid var(--borderColor);
 }
 
@@ -310,6 +315,7 @@ BUTTON
     line-height: 1.2;
     font-weight: 700;
     padding: 14px 34px;
+    display: inline-block;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
@@ -402,9 +408,8 @@ button {
 
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus,
-.btn-black:focus-visible {
-    background: var(--bg-theme);
+.btn-black:focus{
+    background-color: var(--bg-theme);
     color: var(--text-white);
 }
 
@@ -497,7 +502,7 @@ textarea {
 
 .clip-right-top {
     position: relative;
-    clip-path: polygon( 0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);
 }
 
 .clip-right-top img::after {
