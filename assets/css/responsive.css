@@ -65,6 +65,36 @@
     .faqs-ta-main {
         padding-bottom: 60px;
     }
+    /* end */
+    /* autralia wide */
+    .about-contact-icon {
+        width: 40px;
+        height: 40px;
+    }
+    .about-contact-label {
+        font-size: 14px;
+    }
+    .about-contact-value {
+        font-size: 18px;
+    }
+    .about-stat-icon {
+        width: 50px;
+        height: 50px;
+    }
+    .about-stat-num {
+        font-size: 26px;
+    }
+    .about-stat-label {
+        font-size: 14px;
+    }
+    .about-contact-item {
+        margin-bottom: 40px;
+    }
+    .about-stats-row {
+        padding-top: 40px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    /* end */
 }
 
 @media (max-width: 1499px) {
@@ -182,6 +212,20 @@
     .faqs-ta-main {
         padding-bottom: 40px;
     }
+    /* autralia wide */
+    .about-map-wrap {
+        margin-top: 40px;
+    }
+    .about-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-contact-value {
+        font-size: 16px;
+    }
+    .about-stat-num {
+        font-size: 22px;
+    }
+    /* end */
 }
 
 
@@ -249,6 +293,14 @@ Extra small devices (portrait phones, less than 576px)
         margin: 25px 0 0;
         padding-bottom: 25px;
     }
+    /* autralia wide */
+    .about-stats-row {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-contact-item {
+        margin-bottom: 20px;
+    }
+    /* end */
 }
 
 @media (max-width: 360px) {
