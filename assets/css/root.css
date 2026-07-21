@@ -306,6 +306,7 @@ ul {
     border: 1px solid var(--borderColor);
 }
 
+
 /* =========================================================
 BUTTON
 ========================================================= */
@@ -515,4 +516,32 @@ textarea {
     background-color: #ffffff;
     clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
     border-top-right-radius: var(--radius20);
+}
+
+.clip-shape {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 70%;
+    height: 30px;
+    clip-path: polygon( 0% 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+}
+
+.clip-shape--red {
+    background-color: var(--bg-light-primary2);
+}
+
+.clip-shape--sec {
+    background-color: var(--theme-background-color);
+}
+
+.clip-shapev1 {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    width: 70%;
+    height: 30px;
+    clip-path: polygon( 50px 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
 }

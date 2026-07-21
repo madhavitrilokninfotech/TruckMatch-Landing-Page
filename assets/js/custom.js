@@ -106,18 +106,37 @@ $(document).ready(function() {
     });
 });
 
-
+/************************ Trusted by Professionals *****************************/
 $('.profess-slick-slider').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
+    // responsive: [{
+    //     breakpoint: 768,
+    //     settings: {
+    //         slidesToShow: 1
+    //     }
+    // }]
     responsive: [{
-        breakpoint: 768,
-        settings: {
-            slidesToShow: 1
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 1
+            }
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2
+            }
+        },
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
         }
-    }]
+    ]
 });
