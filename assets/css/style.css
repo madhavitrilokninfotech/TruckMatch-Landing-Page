@@ -302,6 +302,9 @@
 }
 
 .cm-tabs .nav-link {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     color: var(--text-secondary);
     font-weight: 400;
     display: inline-flex;
@@ -324,9 +327,18 @@
 
 .cm-tabs.nav-pills .nav-link.active,
 .cm-tabs.nav-pills .show>.nav-link {
-    background-color: var(--bg-primary);
+    background-color: transparent;
     color: var(--text-white);
+    border-color: transparent;
     font-weight: 500;
+}
+
+.cm-tabs .nav-link.active:before {
+    content: "";
+    background-color: var(--bg-primary);
+    inset: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .cm-tabs {
@@ -337,12 +349,67 @@
 
 .cm-tab-content {
     display: block;
+    overflow: hidden;
     padding: 40px 0 0;
+}
+
+.how-it-works-wrap .cm-tab-content {
+    min-height: 240px;
 }
 
 .work-tabs {
     margin-top: 60px;
     text-align: center;
+}
+
+.timeline-item {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.timeline-title {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.timeline-number {
+    width: 58px;
+    height: 58px;
+    background: var(--bg-light-primary1);
+    color: var(--text-primary);
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 22px;
+    border-radius: var(--radius50);
+    -webkit-border-radius: var(--radius50);
+    -moz-border-radius: var(--radius50);
+    -ms-border-radius: var(--radius50);
+    -o-border-radius: var(--radius50);
+}
+
+.timeline {
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    top: calc(100% - 84%);
+    border-top: 2px dashed var(--bg-primary);
+    z-index: -1;
+    opacity: 40%;
+}
+
+.how-it-works-wrap .timeline .gap20 {
+    gap: 20px;
 }
 
 /* divide css */
