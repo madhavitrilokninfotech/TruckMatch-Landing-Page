@@ -77,6 +77,11 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     gap: 12px;
 }
 
+.f-menu .f-text span {
+    display: block;
+    word-break: break-word;
+}
+
 .new-footer-upper .social-link {
     display: flex;
     align-items: center;

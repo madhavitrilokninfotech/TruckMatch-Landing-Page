@@ -760,10 +760,6 @@ Extra small devices (portrait phones, less than 576px)
     }
 
     /* About us */
-    .about-row-wrap {
-        margin: 20px 0;
-    }
-
     .about-card-wrap {
         padding: 18px;
         height: auto;
@@ -803,6 +799,11 @@ Extra small devices (portrait phones, less than 576px)
 
     .review-stars img {
         width: 14px;
+    }
+
+    .about-us-wrap .sec-heading .head-title {
+        line-height: 1.4;
+        font-size: 25px;
     }
 
     /* How its work */
@@ -862,6 +863,7 @@ Extra small devices (portrait phones, less than 576px)
     .tm-for-verticle {
         gap: 15px;
     }
+
 
     /* autralia wide */
     .about-stats-row {
