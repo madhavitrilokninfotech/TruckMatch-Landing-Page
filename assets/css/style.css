@@ -810,13 +810,23 @@
 
 /**** Why Choose Us Section ****/
 
-.why-choose-sec {
+
+/* .why-choose-sec {
     position: relative;
     background-image: url(../images/faqs-bg-img.png);
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
     overflow: hidden;
+} */
+
+
+/* 
+.why-choose-sec::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../images/wcu-left-bg-img.png);
 }
 
 .why-choose-sec:before {
@@ -894,10 +904,110 @@
 .wc-btn-group {
     display: flex;
     gap: 14px;
+} */
+
+.why-choose-sec {
+    position: relative;
+    overflow: hidden;
+}
+
+.why-choose-sec::before,
+.why-choose-sec::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.why-choose-sec::before {
+    left: 0;
+    background-image: url(../images/wcu-left-bg-img.png);
+    background-position: left top;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.why-choose-sec::after {
+    right: 0;
+    background-image: url(../images/wcu-right-bg-img.png);
+    background-position: right top;
+    background-size: contain;
+    opacity: 0.5;
+}
+
+.why-choose-sec .container {
+    position: relative;
+    z-index: 1;
+}
+
+.why-choose-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius20);
+}
+
+.why-choose-image .wc-img {
+    width: 100%;
+    height: 100%;
+    min-height: auto;
+    object-fit: cover;
+    border-radius: var(--radius20);
+    display: block;
+    max-height: 840px;
+}
+
+.wc-desc {
+    color: var(--text-gray2);
+    font-size: 18px;
+    margin: 20px 0 40px;
+    max-width: 910px;
+}
+
+.wc-check-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px;
+}
+
+.wc-check-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+    color: var(--theme-text);
+    margin-bottom: 20px;
+}
+
+.wc-check-icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.wc-cta-title {
+    color: var(--theme-text);
+    margin-bottom: 16px;
+}
+
+.wc-btn-group {
+    display: flex;
+    gap: 14px;
 }
 
 
-/**** Trusted Partner / About Section ****/
+/**** Australia Wide ****/
 
 .about-sec-main {
     position: relative;
@@ -928,6 +1038,12 @@
     align-items: center;
     justify-content: center;
     font-size: 22px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+}
+
+.about-contact-icon .con-icon {
+    width: 18px;
+    height: 18px;
 }
 
 .about-contact-text {
@@ -983,6 +1099,12 @@
     align-items: center;
     justify-content: center;
     font-size: 34px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.09);
+}
+
+.about-stat-icon .stat-icon {
+    width: 30px;
+    height: 30px;
 }
 
 .about-stat-text {
@@ -1035,6 +1157,11 @@ section.profess-sec-main {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.testi-quote-icon .quote-icon {
+    width: 75px;
+    height: 75px;
 }
 
 .avtar-group {
@@ -1190,7 +1317,8 @@ section.profess-sec-main {
 
 /**** FAQs ****/
 
-.faqs-sec-main {
+
+/* .faqs-sec-main {
     position: relative;
     background-image: url(../images/faqs-bg-img.png);
     background-repeat: no-repeat;
@@ -1198,6 +1326,42 @@ section.profess-sec-main {
     background-size: cover;
     overflow: hidden;
     z-index: 1;
+} */
+
+.faqs-sec-main {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.faqs-sec-main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/faqs-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.connect-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 27%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/con-bg-img.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.5;
+    z-index: -1;
 }
 
 .faqs-sec-wrap {

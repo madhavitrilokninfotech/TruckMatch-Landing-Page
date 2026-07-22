@@ -303,7 +303,7 @@ ul {
 }
 
 .border1 {
-    border: 1px solid var(--borderColor) ;
+    border: 1px solid var(--borderColor);
 }
 
 
@@ -542,7 +542,7 @@ textarea {
     bottom: -2px;
     right: 0;
     width: 70%;
-    height: 30px;
-    clip-path: polygon(50px 0%, 100% 0%, 100% 100%, 0% 100%);
-    z-index: 0;
+    height: 35px;
+    clip-path: polygon( 50px 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 1;
 }
