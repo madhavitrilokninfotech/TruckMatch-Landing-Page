@@ -1,4 +1,24 @@
-@media(max-width:1699px) {}
+@media(max-width:1699px) {
+
+    /* About us */
+    .about-us-wrap .about-features .h-feature-item svg {
+        height: 15px;
+    }
+
+    .about-card-wrap {
+        padding: 30px;
+    }
+
+    .about-us-wrap .support-card {
+        bottom: 30px;
+        left: 30px;
+        padding: 20px;
+    }
+
+    .about-card-img img {
+        min-height: 400px;
+    }
+}
 
 @media(min-width:1700px) {
     .container {
@@ -7,30 +27,45 @@
 }
 
 @media (max-width:1599px) {
+
     /* root */
-     :root {
+    :root {
         --radius10: 8px;
+        --radius12: 10px;
+        --radius16: 12px;
         --radius20: 20px;
         --radius30: 24px;
     }
+
     h5,
     .h5 {
         font-size: 18px;
     }
+
     p,
     .p {
         font-size: 14px;
     }
+
     .btn {
         padding: 12px 26px;
     }
+
     .form-control.border,
     .form-control.border::placeholder {
         font-size: 14px;
     }
+
     .form-control.border {
         padding: 14px 16px;
     }
+
+    .how-it-works-wrap .sec-heading,
+    .built-for-company .sec-heading,
+    .truck-op-platform .sec-heading {
+        margin-bottom: 50px;
+    }
+
     /* end */
     /* Hero banner */
     .subtitle {
@@ -38,39 +73,87 @@
         line-height: 1;
         padding: 8px 14px;
     }
+
     .h-banner-title {
         margin: 10px 0 0;
     }
+
     .h-banner-features {
         padding-top: 18px;
         margin: 30px 0 0;
     }
+
     .h-feature-item {
-        font-size: 12px;
+        font-size: 13px;
     }
+
     .hero-content-wrap {
         padding: 330px 0 80px;
     }
+
     /* end */
+
+    /* About us */
+    .review-stars img {
+        width: 18px;
+    }
+
+    .review-stars {
+        gap: 4px;
+    }
+
+    /* end */
+
+    /* How its work */
+    .timeline-number {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 20px;
+        font-size: 20px;
+    }
+
+    .cm-tabs .nav-link {
+        padding: 12px 22px;
+    }
+
+    .how-it-works-wrap .cm-tab-content {
+        min-height: 220px;
+    }
+
+    .how-it-works-wrap .timeline .gap20 {
+        gap: 15px;
+    }
+
+    .timeline-line {
+        margin-top: 26px;
+    }
+
+    /* end */
+
     /**** FAQs ****/
     .fta-title {
         font-size: 22px;
         margin-top: 18px;
     }
+
     .faqs-ta-wrap .accordion-button {
         font-size: 22px;
     }
+
     .faqs-ta-wrap .accordion-item {
         padding: 20px 0px;
     }
+
     .faqs-ta-wrap .accordion-button::before {
         background-size: 25px 25px;
         width: 25px;
         height: 25px;
     }
+
     .faqs-ta-wrap .nav-link {
         font-size: 18px;
     }
+
     .faqs-ta-wrap .accordion-body {
         font-size: 16px;
         margin-top: 10px;
@@ -84,187 +167,339 @@
         width: 40px;
         height: 40px;
     }
+
     .about-contact-label {
         font-size: 14px;
     }
+
     .about-contact-value {
         font-size: 18px;
     }
+
     .about-stat-icon {
         width: 50px;
         height: 50px;
     }
+
     .about-stat-num {
         font-size: 26px;
     }
+
     .about-stat-label {
         font-size: 14px;
     }
+
     .about-contact-item {
         margin-bottom: 40px;
     }
+
     .about-stats-row {
         padding-top: 40px;
         grid-template-columns: repeat(3, 1fr);
     }
+
     /* end */
 }
 
 @media (max-width: 1499px) {
+
     /**** FAQs ****/
     .faqs-ta-wrap .accordion-button {
         font-size: 18px;
     }
+
     .faqs-ta-wrap .accordion-item {
         padding: 18px 0px;
     }
+
     .faqs-ta-wrap .accordion-body {
         font-size: 15px;
     }
+
     .fta-title {
         font-size: 20px;
     }
+
     .faqs-ta-wrap .nav-link {
         font-size: 16px;
     }
+
     .faqs-ta-wrap .accordion-button::before {
         background-size: 22px 22px;
         width: 22px;
         height: 22px;
     }
+
     /* Trusted by Professionals */
     .testi-text {
         font-size: 18px;
     }
+
     .testi-name {
         font-size: 20px;
     }
+
     .profess-slider-wrap {
         margin-top: 0px;
     }
+
     /* end */
 }
 
 @media (max-width: 1399px) {
+
     /* Root */
     .btn {
         font-size: 13px;
         padding: 14px 24px;
         letter-spacing: 0.8px;
     }
+
     .container {
         padding: 0 50px;
         max-width: 100%;
     }
+
     /* end */
+
+    /* About us */
+    .about-row-wrap {
+        margin: 30px 0;
+    }
+
+    /* end */
+
+    /* How its work */
+    .how-it-works-wrap .timeline .gap20 {
+        gap: 8px;
+    }
+
+    .cm-tabs .nav-link {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .cm-tabs .work-tab-v {
+        width: 16px;
+        height: 16px;
+    }
+
+    .timeline-number {
+        width: 46px;
+        height: 46px;
+        font-size: 18px;
+    }
+
+    .timeline-line {
+        margin-top: 24px;
+    }
+
+    /* end */
+
     /**** FAQs ****/
     .fta-title {
         font-size: 18px;
     }
+
     .faqs-ta-wrap .nav-link {
         font-size: 15px;
     }
+
     .faqs-ta-wrap .accordion-item {
         padding: 16px 0px;
     }
+
     .faqs-ta-wrap .accordion-button {
         font-size: 18px;
     }
+
     .testi-avatar {
         width: 48px;
         height: 48px;
     }
+
     /* end */
 }
 
 @media (max-width: 1299px) {
-    /* buelt for construction company */
-    .c-img-text-box-wrap.top1 .c-img-pink-box img {
-        max-width: 435px;
-        height: auto;
-    }
-    /* end */
     /* Trusted by Professionals */
     .testi-name {
         font-size: 18px;
     }
+
     .testi-text {
         font-size: 15px;
     }
+
     .testi-quote-icon .quote-icon {
         width: 60px;
         height: 60px;
     }
+
     .profess-sec-left .h-banner-title {
         font-size: 36px;
     }
+
     .profess-sec-left .faqs-title-v1 {
         margin-bottom: 30px;
     }
+
     /* end */
 }
 
 @media (max-width: 1199px) {
+
     /* root */
-     :root {
+    :root {
         --radius16: 14px;
         --radius20: 16px;
         --radius24: 20px;
+        --radius30: 22px;
     }
+
     .container {
         padding: 0 40px;
     }
+
     .sec-padding {
         padding-top: 60px;
         padding-bottom: 60px;
     }
+
+    .how-it-works-wrap .sec-heading,
+    .built-for-company .sec-heading,
+    .truck-op-platform .sec-heading {
+        margin-bottom: 40px;
+    }
+
     /* Hero css */
     .hero-content.right {
         max-width: 700px;
     }
+
     .hero-content-wrap {
         padding: 100px 0 60px;
         min-height: 600px;
         height: 80svh;
     }
+
     .h-feature-item img,
     .h-feature-item svg {
         height: 15px;
     }
+
     .h-feature-item {
         padding: 0 16px;
     }
+
     .subtitle {
         padding: 8px 10px;
         gap: 6px;
     }
+
     .hero-desc {
         padding: 30px 0 10px;
     }
+
     .h-banner-features {
         padding-top: 25px;
     }
+
     /* end */
+
+    /* About us */
+    .about-card-wrap {
+        padding: 22px;
+    }
+
+    .about-us-wrap .support-card {
+        bottom: 22px;
+        left: 22px;
+        padding: 16px;
+    }
+
+    .about-us-wrap .company-image img {
+        max-width: 180px;
+    }
+
+    .review-wrapper {
+        padding-top: 10px;
+        gap: 12px;
+    }
+
+    .review-stars img {
+        width: 15px;
+    }
+
+    .about-us-wrap .about-features .h-feature-item {
+        padding: 4px 0;
+        gap: 6px;
+    }
+
+    .about-card-img img {
+        min-height: 300px;
+    }
+
+    .ab-col-1,
+    .ab-col-2,
+    .ab-col-3 {
+        width: 33.33333333%;
+    }
+
+    /* How its work */
+    .timeline-item {
+        flex-direction: row;
+    }
+
+    .tm-for-verticle {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        text-align: start;
+    }
+
+    .timeline-line {
+        left: 22px;
+        right: auto;
+        top: 0;
+        bottom: 30px;
+        width: 0;
+        border-top: 0;
+        border-left: 2px dashed #f3b8a0;
+    }
+
+    .cm-tab-content {
+        padding: 30px 0 0;
+    }
+
+    .how-it-works-wrap .timeline .gap20 {
+        gap: 20px;
+    }
+
     /* Why Choose Us */
     .wc-check-list li {
         font-size: 16px;
     }
+
     .wc-check-icon {
         width: 20px;
         height: 20px;
         font-size: 10px;
     }
+
     /* end */
     /* Trusted by Professionals */
     .testi-avatar {
         width: 48px;
         height: 48px;
     }
+
     .circleimg {
         width: 40px;
         height: 40px;
         margin-left: -12px;
     }
+
     .profess-sec-wrap .verify-card {
         bottom: 30px;
         left: 30px;
@@ -272,17 +507,20 @@
         border-radius: var(--radius16);
         gap: 16px;
     }
+
     /* end */
     /* Trusted by Professionals */
     .testi-text {
         font-size: 18px;
     }
+
     /* end */
     /* get in touch */
     .connect-wrapper .sub-form-card p {
         color: var(--text-secondary);
         margin-bottom: 30px;
     }
+
     /* end */
     /* australia wide */
     .about-stat-icon .stat-icon {
@@ -298,55 +536,84 @@
 ===========================================================*/
 
 @media (max-width: 991px) {
+
     /* root */
-     :root {
+    :root {
         --radius30: 16px;
     }
+
     .container {
         padding: 0 30px;
     }
+
+    .about-us-wrap.sec-padding {
+        padding-bottom: 20px;
+    }
+
     /* Hero css */
     .header-height {
         padding-top: 65px;
     }
-    /* How it works */
-    .timeline-item {
-        flex-direction: row;
+
+    /* About us */
+    .about-us-wrap .sec-heading {
+        padding: 0 30px;
     }
-    .tm-for-verticle {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        text-align: start;
+
+    .title-image2 img {
+        height: 36px;
+        width: 36px;
     }
-    .timeline-line {
-        left: 22px;
-        right: auto;
-        top: 0;
-        bottom: 0;
-        width: 0;
-        border-top: 0;
-        border-left: 2px dashed #f3b8a0;
+
+    .title-image1 img {
+        max-width: 90px;
     }
+
+    .about-us-wrap .sec-heading .head-title {
+        line-height: 1.2;
+    }
+
+    .about-card-img img {
+        max-height: 500px;
+        min-height: auto;
+        object-position: top;
+    }
+
+    .ab-col-1 {
+        width: 100%;
+    }
+
+    .ab-col-2,
+    .ab-col-3 {
+        width: 50%;
+    }
+
+
+
     /**** FAQs ****/
     .faqs-ta-left {
         width: 100%;
     }
+
     .faqs-ta-left .nav-pills {
         flex-direction: row !important;
         flex-wrap: nowrap;
         overflow-x: auto;
         white-space: nowrap;
     }
+
     .faqs-ta-wrap .nav-item {
         margin-right: 15px;
     }
+
     .faqs-ta-right {
         width: 100%;
     }
+
     .faqs-cp-txt {
         padding-bottom: 20px;
     }
+
     .fta-title {
         margin-top: 15px;
     }
@@ -356,33 +623,41 @@
     .faqs-ta-wrap .accordion-button {
         font-size: 16px;
     }
+
     /* end */
     /* autralia wide */
     .about-map-wrap {
         margin-top: 40px;
     }
+
     .about-stats-row {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .about-contact-value {
         font-size: 16px;
     }
+
     .about-stat-num {
         font-size: 22px;
     }
+
     .faqs-ta-wrap .accordion.accordion-flush .accordion-item {
         padding: 20px;
     }
+
     /* end */
     /* Why Choose Us */
     .why-choose-sec::before {
         display: none;
     }
+
     /* end */
     /* Trusted by Professionals */
     .testi-text {
         font-size: 16px;
     }
+
     /* end */
     /* get in touch */
     .connect-sec-main::before {
@@ -402,6 +677,21 @@
     .connect-wrapper .connect-image .sub-img {
         max-height: 600px;
     }
+
+    /* About us */
+    .about-us-wrap .sec-heading {
+        padding: 0;
+    }
+
+    .about-card-img img {
+        max-height: 400px;
+    }
+
+    .ab-col-2,
+    .ab-col-3 {
+        width: 100%;
+    }
+
     /**** FAQs ****/
     /* .faqs-sec-main {
         background-image: url(../images/faqs-bg-m-img.png);
@@ -416,70 +706,167 @@ Extra small devices (portrait phones, less than 576px)
 ===========================================================*/
 
 @media (max-width: 576px) {
+
     /* Root */
-     :root {
+    :root {
         --radius10: 6px;
+        --radius16: 10px;
     }
+
     .btn {
         font-size: 12px;
         padding: 12px 18px;
     }
+
     .subtitle {
         padding: 8px 8px;
         font-size: 11px;
     }
+
     .minidot {
         width: 7px;
         height: 7px;
     }
+
     .container {
         padding: 0 16px;
     }
+
     .sec-padding {
         padding-top: 40px;
         padding-bottom: 40px;
     }
+
     /* Hero css */
     .hero-content-wrap {
         padding: 100px 0 30px;
         height: 80svh;
         min-height: 500px;
     }
+
     .hero-desc {
         padding: 20px 0 0px;
     }
+
     .h-banner-features {
         margin: 25px 0 0;
         padding-bottom: 25px;
     }
+
+    /* About us */
+    .about-row-wrap {
+        margin: 20px 0;
+    }
+
+    .about-card-wrap {
+        padding: 18px;
+        height: auto;
+    }
+
+    .about-us-wrap .support-card {
+        bottom: 18px;
+        left: 18px;
+        padding: 14px;
+    }
+
+    .about-us-wrap .company-image img {
+        max-width: 160px;
+    }
+
+    .about-card-img img {
+        max-height: 320px;
+    }
+
+    .about-us-wrap .about-features {
+        margin: 16px 0 20px;
+    }
+
+    .title-image2 img {
+        height: 32px;
+        width: 32px;
+    }
+
+    .title-image1 img {
+        height: 32px;
+    }
+
+    .review-wrapper .review-rating,
+    .review-wrapper .review-count {
+        font-size: 16px;
+    }
+
+    .review-stars img {
+        width: 14px;
+    }
+
+    /* How its work */
+    .how-it-works-wrap .sec-heading,
+    .built-for-company .sec-heading,
+    .truck-op-platform .sec-heading {
+        margin-bottom: 30px;
+    }
+
+    .cm-tabs .nav-link {
+        padding: 10px 14px;
+    }
+
+    .how-it-works-wrap .timeline-item p {
+        margin-top: 4px !important;
+    }
+
+    .how-it-works-wrap .cm-tab-content {
+        min-height: auto;
+    }
+
     /* autralia wide */
     .about-stats-row {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .about-contact-item {
         margin-bottom: 20px;
     }
+
     /* end */
     /* Trusted by Professionals */
     .testi-name {
         font-size: 17px;
     }
+
     .testi-role {
         font-size: 14px;
     }
+
     .testi-avatar {
         width: 40px;
         height: 40px;
     }
+
     .testi-text {
         font-size: 14px;
     }
+
     /* end */
 }
 
 @media (max-width: 360px) {
+
     h1,
     .h1 {
         font-size: 32px;
+    }
+
+    h2,
+    .h2 {
+        font-size: 26px;
+    }
+
+    /* About us */
+    .title-image1 img {
+        height: 28px;
+    }
+
+    .review-stars {
+        gap: 2px;
     }
 }
