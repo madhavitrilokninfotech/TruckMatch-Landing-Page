@@ -89,6 +89,7 @@
 
     .hero-content-wrap {
         padding: 330px 0 80px;
+        height: calc(100svh - 78px);
     }
 
     /* end */
@@ -381,8 +382,8 @@
 
     .hero-content-wrap {
         padding: 100px 0 60px;
-        min-height: 600px;
-        height: 80svh;
+        /* min-height: 600px;
+        height: 80svh; */
     }
 
     .h-feature-item img,
@@ -746,8 +747,7 @@ Extra small devices (portrait phones, less than 576px)
     /* Hero css */
     .hero-content-wrap {
         padding: 100px 0 30px;
-        height: 80svh;
-        min-height: 500px;
+        height: calc(100svh - 63px);
     }
 
     .hero-desc {
