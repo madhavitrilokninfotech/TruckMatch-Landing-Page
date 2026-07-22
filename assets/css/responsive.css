@@ -158,6 +158,7 @@
         font-size: 16px;
         margin-top: 10px;
     }
+
     /* .faqs-ta-main {
         padding-bottom: 60px;
     } */
@@ -322,6 +323,7 @@
 }
 
 @media (max-width: 1299px) {
+
     /* Trusted by Professionals */
     .testi-name {
         font-size: 18px;
@@ -453,7 +455,7 @@
 
     .tm-for-verticle {
         display: flex;
-        align-items: center;
+        align-items: start;
         gap: 20px;
         text-align: start;
     }
@@ -462,7 +464,7 @@
         left: 22px;
         right: auto;
         top: 0;
-        bottom: 30px;
+        bottom: 60px;
         width: 0;
         border-top: 0;
         border-left: 2px dashed #f3b8a0;
@@ -527,6 +529,7 @@
         width: 25px;
         height: 25px;
     }
+
     /* end */
 }
 
@@ -617,6 +620,7 @@
     .fta-title {
         margin-top: 15px;
     }
+
     /* .faqs-ta-main {
         padding-bottom: 40px;
     } */
@@ -663,6 +667,7 @@
     .connect-sec-main::before {
         display: none;
     }
+
     /* end */
 }
 
@@ -672,6 +677,7 @@
 ===========================================================*/
 
 @media (max-width: 767px) {
+
     .why-choose-image .wc-img,
     .profess-sec-wrap .profess-image,
     .connect-wrapper .connect-image .sub-img {
@@ -806,8 +812,29 @@ Extra small devices (portrait phones, less than 576px)
         margin-bottom: 30px;
     }
 
+    .cm-tabs {
+        padding: 3px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+        scrollbar-width: thin;
+        white-space: nowrap;
+        align-items: start !important;
+        justify-content: start !important;
+    }
+
     .cm-tabs .nav-link {
-        padding: 10px 14px;
+        padding: 10px 10px;
+        font-size: 12px;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .cm-tabs li.nav-item {
+        max-width: 100%;
+        width: 100%;
     }
 
     .how-it-works-wrap .timeline-item p {
@@ -816,6 +843,24 @@ Extra small devices (portrait phones, less than 576px)
 
     .how-it-works-wrap .cm-tab-content {
         min-height: auto;
+    }
+
+    .timeline-number {
+        width: 40px;
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .how-it-works-wrap .timeline .gap20 {
+        gap: 24px;
+    }
+
+    .timeline-line {
+        left: 19px;
+    }
+
+    .tm-for-verticle {
+        gap: 15px;
     }
 
     /* autralia wide */
@@ -868,5 +913,11 @@ Extra small devices (portrait phones, less than 576px)
 
     .review-stars {
         gap: 2px;
+    }
+
+    .timeline-number {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
     }
 }

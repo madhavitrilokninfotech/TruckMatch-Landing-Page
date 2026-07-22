@@ -226,6 +226,12 @@
 
 .header-primary-btn:hover,
 .header-primary-btn:active,
+.header-primary-btn:focus {
+    background-color: var(--bg-black);
+}
+
+.header-primary-btn:hover,
+.header-primary-btn:active,
 .header-primary-btn:focus,
 .header-primary-btn:focus-visible {
     transform: none;

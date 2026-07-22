@@ -214,6 +214,10 @@ ul.f-menu li .f-text.f-hover-text img {
     width: 20px;
 }
 
+.social-link .f-menu-name:hover {
+    color: var(--text-primary);
+}
+
 @media (max-width: 1599px) {
     .new-footer-main {
         padding: 50px 0;
