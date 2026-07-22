@@ -480,6 +480,9 @@
     }
 
     /* Why Choose Us */
+    .wc-desc {
+        font-size: 16px;
+    }
     .wc-check-list li {
         font-size: 16px;
     }
@@ -531,6 +534,19 @@
         height: 25px;
     }
 
+    /* end */
+    /* construction platform */
+    .white-overlay::after,
+    .white-overlay::before {
+        height: 60px;
+    }
+    .c-platform-item {
+        padding: 20px;
+        gap: 12px;
+    }
+    .c-landscap-wrap {
+        margin: 40px 0 20px;
+    }
     /* end */
 }
 
@@ -875,6 +891,24 @@ Extra small devices (portrait phones, less than 576px)
     }
 
     /* end */
+    /* why choose us */
+    .wc-desc {
+        font-size: 14px;
+    }
+    .wc-check-list li {
+        font-size: 14px;
+        margin-bottom: 14px;
+    }
+    .wc-check-icon {
+        width: 16px;
+        height: 16px;
+        font-size: 8px;
+    }
+    .wc-check-icon svg {
+        width: 10px;
+        height: 10px;
+    }
+    /* end */
     /* Trusted by Professionals */
     .testi-name {
         font-size: 17px;
@@ -893,6 +927,12 @@ Extra small devices (portrait phones, less than 576px)
         font-size: 14px;
     }
 
+    /* end */
+    /* construction platform */
+    .white-overlay::after,
+    .white-overlay::before {
+        height: 40px;
+    }
     /* end */
 }
 

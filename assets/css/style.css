@@ -494,8 +494,9 @@
 }
 
 .c-img-text-box-wrap.top1 .c-img-pink-box img {
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
+    width: 100%;
 }
 
 .v-scroll-img {
@@ -538,6 +539,7 @@
 .c-img-text-box-wrap.bottom2 .c-img-pink-box img {
     max-width: 320px;
     height: auto;
+    width: 100%;
 }
 
 .img-scroll-up {
@@ -1024,6 +1026,11 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
+}
+
+.wc-check-icon svg {
+    width: 12px;
+    height: 12px;
 }
 
 .wc-cta-title {
