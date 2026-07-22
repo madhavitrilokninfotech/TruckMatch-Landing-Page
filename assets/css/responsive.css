@@ -75,9 +75,9 @@
         font-size: 16px;
         margin-top: 10px;
     }
-    .faqs-ta-main {
+    /* .faqs-ta-main {
         padding-bottom: 60px;
-    }
+    } */
     /* end */
     /* autralia wide */
     .about-contact-icon {
@@ -178,6 +178,12 @@
 }
 
 @media (max-width: 1299px) {
+    /* buelt for construction company */
+    .c-img-text-box-wrap.top1 .c-img-pink-box img {
+        max-width: 435px;
+        height: auto;
+    }
+    /* end */
     /* Trusted by Professionals */
     .testi-name {
         font-size: 18px;
@@ -278,6 +284,12 @@
         margin-bottom: 30px;
     }
     /* end */
+    /* australia wide */
+    .about-stat-icon .stat-icon {
+        width: 25px;
+        height: 25px;
+    }
+    /* end */
 }
 
 
@@ -338,9 +350,9 @@
     .fta-title {
         margin-top: 15px;
     }
-    .faqs-ta-main {
+    /* .faqs-ta-main {
         padding-bottom: 40px;
-    }
+    } */
     .faqs-ta-wrap .accordion-button {
         font-size: 16px;
     }
@@ -368,13 +380,14 @@
     }
     /* end */
     /* Trusted by Professionals */
-    /* end */
-    /* Trusted by Professionals */
     .testi-text {
         font-size: 16px;
     }
     /* end */
     /* get in touch */
+    .connect-sec-main::before {
+        display: none;
+    }
     /* end */
 }
 
@@ -384,12 +397,17 @@
 ===========================================================*/
 
 @media (max-width: 767px) {
+    .why-choose-image .wc-img,
+    .profess-sec-wrap .profess-image,
+    .connect-wrapper .connect-image .sub-img {
+        max-height: 600px;
+    }
     /**** FAQs ****/
-    .faqs-sec-main {
+    /* .faqs-sec-main {
         background-image: url(../images/faqs-bg-m-img.png);
         background-position: top;
         background-size: 100%;
-    }
+    } */
 }
 
 
