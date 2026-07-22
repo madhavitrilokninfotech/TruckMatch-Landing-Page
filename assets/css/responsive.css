@@ -12,6 +12,12 @@
     :root {
         --radius10: 8px;
         --radius20: 20px;
+        --radius30: 24px;
+    }
+
+    h5,
+    .h5 {
+        font-size: 18px;
     }
 
     p,
@@ -21,6 +27,15 @@
 
     .btn {
         padding: 12px 26px;
+    }
+
+    .form-control.border,
+    .form-control.border::placeholder {
+        font-size: 14px;
+    }
+
+    .form-control.border {
+        padding: 14px 16px;
     }
 
     /* end */
@@ -303,6 +318,10 @@
 @media (max-width: 991px) {
 
     /* root */
+    :root {
+        --radius30: 16px;
+    }
+
     .container {
         padding: 0 30px;
     }

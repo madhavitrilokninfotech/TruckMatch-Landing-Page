@@ -155,23 +155,23 @@ FONT-WIGHT
 ========================================================= */
 
 .fw-400 {
-    font-weight: 400;
+    font-weight: 400 !important;
 }
 
 .fw-500 {
-    font-weight: 500;
+    font-weight: 500 !important;
 }
 
 .fw-600 {
-    font-weight: 600;
+    font-weight: 600 !important;
 }
 
 .fw-700 {
-    font-weight: 700;
+    font-weight: 700 !important;
 }
 
 .fw-800 {
-    font-weight: 800;
+    font-weight: 800 !important;
 }
 
 
@@ -180,23 +180,23 @@ COLOR CLASSNAME
 ========================================================= */
 
 .text_primary {
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
 }
 
 .text_theme {
-    color: var(--theme-text);
+    color: var(--theme-text) !important;
 }
 
 .text_secondary {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
 }
 
 .text_white {
-    color: var(--text-white);
+    color: var(--text-white) !important;
 }
 
 .text_dark_gray {
-    color: var(--dark-gray);
+    color: var(--dark-gray) !important;
 }
 
 a {
@@ -303,7 +303,7 @@ ul {
 }
 
 .border1 {
-    border: 1px solid var(--borderColor);
+    border: 1px solid var(--borderColor) ;
 }
 
 
@@ -409,7 +409,7 @@ button {
 
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus{
+.btn-black:focus {
     background-color: var(--bg-theme);
     color: var(--text-white);
 }
@@ -474,6 +474,7 @@ border-color: var(--primary-main);
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
+    text-transform: capitalize;
     padding: 15px 20px;
     border-radius: var(--radius10);
     -webkit-border-radius: var(--radius10);
@@ -524,7 +525,7 @@ textarea {
     left: 0;
     width: 70%;
     height: 30px;
-    clip-path: polygon( 0% 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, calc(100% - 40px) 0%, 100% 100%, 0% 100%);
     z-index: 0;
 }
 
@@ -542,6 +543,6 @@ textarea {
     right: 0;
     width: 70%;
     height: 30px;
-    clip-path: polygon( 50px 0%, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(50px 0%, 100% 0%, 100% 100%, 0% 100%);
     z-index: 0;
 }
