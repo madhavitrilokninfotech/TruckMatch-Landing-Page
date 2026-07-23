@@ -446,6 +446,10 @@
 
 /**** Built For Construction company ****/
 
+.btn-black {
+    padding: 12px 30px;
+}
+
 .c-img-text-box-wrap {
     background-color: var(--bg-white);
     border: 1px solid var(--borderColor);
@@ -526,7 +530,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -607,7 +610,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -625,7 +627,6 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
-
     100% {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -640,6 +641,13 @@
     justify-content: center;
     align-items: center;
     height: 100%;
+}
+
+.img-scroll-up img,
+.img-scroll-down img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
