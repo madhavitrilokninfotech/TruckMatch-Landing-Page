@@ -51,7 +51,10 @@
     }
     .how-it-works-wrap .sec-heading,
     .built-for-company .sec-heading,
-    .truck-op-platform .sec-heading {
+    .truck-op-platform .sec-heading,
+    .profess-sec-left .sec-heading,
+    .faqs-sec-wrap .sec-heading,
+    .connect-wrapper .sec-heading {
         margin-bottom: 50px;
     }
     /* end */
@@ -265,9 +268,18 @@
 }
 
 @media (max-width: 1299px) {
-    /* bueld for construction company */
-    .truck-op-main .c-img-text-box-wrap.top1 {
+    /* bueld for truck company */
+    /* .truck-op-main .c-img-text-box-wrap.top1 {
         flex-direction: column;
+    } */
+    .col-side {
+        width: 50%;
+    }
+    .col-middle {
+        width: 50%;
+    }
+    .truck-op-img {
+        text-align: center;
     }
     /* end */
     /* Trusted by Professionals */
@@ -284,9 +296,9 @@
     .profess-sec-left .h-banner-title {
         font-size: 36px;
     }
-    .profess-sec-left .faqs-title-v1 {
+    /* .profess-sec-left .faqs-title-v1 {
         margin-bottom: 30px;
-    }
+    } */
     /* end */
 }
 
@@ -307,7 +319,10 @@
     }
     .how-it-works-wrap .sec-heading,
     .built-for-company .sec-heading,
-    .truck-op-platform .sec-heading {
+    .truck-op-platform .sec-heading,
+    .profess-sec-left .sec-heading,
+    .faqs-sec-wrap .sec-heading,
+    .connect-wrapper .sec-heading {
         margin-bottom: 40px;
     }
     /* Hero css */
@@ -393,6 +408,8 @@
     .how-it-works-wrap .timeline .gap20 {
         gap: 20px;
     }
+    /* end */
+    /* buiel for truck company */
     /* end */
     /* Why Choose Us */
     .wc-desc {
@@ -519,9 +536,24 @@
         height: 20%;
     }
     /* end */
-    /* bueld for constuction company */
+    /* bueld for constuction platform */
     .join-truckmatch-wrap {
         transform: scale(1.0);
+    }
+    /* end */
+    /* buiel for truck company */
+    .col-side {
+        width: 100%;
+    }
+    .col-middle {
+        width: 100%;
+    }
+    .truck-op-img {
+        text-align: unset;
+    }
+    .col-side .c-img-text-box-wrap .top1 .boxlr {
+        flex-direction: row !important;
+        flex: none;
     }
     /* end */
     /**** FAQs ****/

@@ -386,7 +386,9 @@
 
 .how-it-works-wrap .sec-heading,
 .built-for-company .sec-heading,
-.truck-op-platform .sec-heading {
+.truck-op-platform .sec-heading,
+.faqs-sec-wrap .sec-heading,
+.connect-wrapper .sec-heading {
     margin-bottom: 60px;
 }
 
@@ -498,7 +500,7 @@
 }
 
 .c-img-text-box-wrap.top1 .c-img-pink-box img {
-    max-width: 600px;
+    max-width: 800px;
     height: auto;
     width: 100%;
 }
@@ -673,7 +675,7 @@
 }
 
 .construction-platform .sec-heading p {
-    max-width: 40%;
+    max-width: 450px;
     margin: 0 auto;
 }
 
@@ -837,11 +839,15 @@
 }
 
 .truck-op-main .col-side .c-img-text-box-wrap.top1 .truck-op-img img {
-    max-width: 365px;
+    max-width: 345px;
+    width: 100%;
+    height: auto;
 }
 
 .truck-op-main .col-middle .c-img-text-box-wrap.top1 .truck-op-img img {
     max-width: 470px;
+    width: 100%;
+    height: auto;
 }
 
 
@@ -1234,10 +1240,6 @@ section.profess-sec-main {
     border: 2px solid var(--text-white);
 }
 
-.profess-sec-left .faqs-title-v1 {
-    margin-bottom: 40px;
-}
-
 .profess-slider-wrap {
     position: relative;
     margin-top: 24px;
@@ -1397,10 +1399,6 @@ section.profess-sec-main {
 .faqs-sec-wrap {
     position: relative;
     z-index: 1;
-}
-
-.faqs-title-v1 {
-    margin-bottom: 60px;
 }
 
 

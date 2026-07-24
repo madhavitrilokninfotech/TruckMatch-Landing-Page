@@ -562,7 +562,6 @@
             left: 0;
             width: 100%;
             z-index: 25;
-            /* Increased from 10 to 25 to sit on top of crane-assembly (z-index 20) */
             pointer-events: none;
         }
         
@@ -573,10 +572,6 @@
             stroke-dasharray: 12, 10;
             opacity: 0.5;
             animation: pathTravelFlow 1.5s linear infinite;
-        }
-        
-        .wheel {
-            /* Spin animation styling removed to keep wheels stationary */
         }
         
         .exhaust-smoke {
@@ -711,7 +706,6 @@
                 opacity: 0;
             }
         }
-        /* Entry Transitions */
         
         .scene-fade-left {
             animation: fadeLeftIn 1s cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -762,6 +756,11 @@
                 top: 20px;
                 left: 20px;
             }
+            /* Alignment fixes for responsive view */
+            .description {
+                margin-left: auto;
+                margin-right: auto;
+            }
         }
         
         @media (max-width: 767.98px) {
@@ -778,6 +777,42 @@
             .floating-glass-card {
                 width: 210px;
                 padding: 15px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .crane-arm {
+                position: absolute;
+                top: 140px;
+                left: -110px;
+                width: 500px;
+                height: 18px;
+                background: linear-gradient(90deg, #1D2026 0%, var(--primary-orange) 40%, var(--secondary-orange) 100%);
+                border-radius: 3px;
+                transform-origin: 282px center;
+                animation: armSwing 6s infinite ease-in-out;
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            }
+            .crane-cable {
+                position: absolute;
+                left: 14px;
+                top: 10px;
+                width: 2px;
+                height: 70px;
+                background: rgba(255, 255, 255, 0.25);
+                transform-origin: top center;
+                animation: naturalCableSway 6s infinite ease-in-out;
+            }
+            .crane-tower {
+                position: absolute;
+                bottom: 18px;
+                left: 118px;
+                width: 24px;
+                height: 310px;
+                background: repeating-linear-gradient( 0deg, #1D2026, #1D2026 25px, var(--primary-orange) 25px, var(--primary-orange) 28px);
+                border-left: 2px solid var(--primary-orange);
+                border-right: 2px solid var(--primary-orange);
+                box-shadow: 0 0 15px rgba(242, 101, 34, 0.15);
             }
         }
         
@@ -815,11 +850,11 @@
         <div class="particle-container" id="particleContainer"></div>
     </div>
 
-    <main class="error-wrapper d-flex align-items-center">
+    <main class="error-wrapper d-flex align-items-center justify-content-center">
         <div class="container relative-content">
-            <div class="row align-items-center min-vh-100 py-5">
+            <div class="row align-items-center justify-content-center min-vh-100 py-4 py-lg-5">
 
-                <div class="col-lg-5 text-lg-start text-center mb-5 mb-lg-0 scene-fade-left">
+                <div class="col-lg-5 col-md-10 col-12 mx-auto text-lg-start text-center mb-5 mb-lg-0 scene-fade-left">
                     <span class="error-badge">
                         <span class="badge-pulse"></span> ERROR 404
                     </span>
@@ -842,7 +877,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-7 scene-fade-right">
+                <div class="col-lg-7 col-md-10 col-12 mx-auto scene-fade-right">
                     <div class="interactive-canvas" id="interactiveCanvas">
 
                         <div class="floating-glass-card" id="glassCard">
@@ -901,7 +936,7 @@
                                     <line x1="40" y1="4" x2="40" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
                                     <line x1="50" y1="4" x2="50" y2="33" stroke="rgba(0,0,0,0.15)" stroke-width="2" />
                                     
-                                    <!-- Wheels (Spinning disabled) -->
+                                    <!-- Wheels -->
                                     <g class="wheel">
                                         <circle cx="18" cy="40" r="9" fill="#17191E" stroke="#363B47" stroke-width="3" />
                                         <circle cx="18" cy="40" r="4" fill="#6C7584" />
