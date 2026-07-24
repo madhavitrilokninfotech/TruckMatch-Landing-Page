@@ -329,6 +329,7 @@
 
     .header-main nav.navbar {
         overflow: inherit;
+        line-height: normal;
     }
 
     .header-main .header-right .navbar-toggler:not(.collapsed) {
@@ -379,6 +380,14 @@
         padding: 6px 18px;
         position: relative;
         z-index: 999;
+        border-radius: 10px;
+    }
+
+    .header-main.fixHeader nav.navbar:after,
+    .header-main.fixHeader nav.navbar:before,
+    .header-main nav.navbar:after,
+    .header-main nav.navbar:before {
+        border-radius: 10px;
     }
 
     .header-main .header-inner-main .header-inner {
@@ -407,7 +416,7 @@
         background-color: rgba(255, 255, 255, 65%);
         backdrop-filter: blur(2px);
         padding: 6px 8px;
-        border-radius: 50px;
+        border-radius: 10px;
         width: 42px;
         height: 42px;
     }
@@ -429,7 +438,7 @@
     }
 
     .header-main button.navbar-toggler span.icon-bar:nth-child(1) {
-        top: 10px;
+        top: 9px;
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
@@ -477,7 +486,7 @@
     }
 
     .header-main button.navbar-toggler span.icon-bar:nth-child(3) {
-        top: -8px;
+        top: -9px;
         transform: rotate(-45deg);
         -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
@@ -530,7 +539,7 @@
     }
 
     .h-logo {
-        max-width: 120px;
+        max-width: 130px;
     }
 
     .header-main button.navbar-toggler .icon-bar+.icon-bar {
@@ -547,9 +556,9 @@
     }
 
     .header-main .header-right .navbar-toggler {
-        width: 40px;
-        height: 40px;
-        padding: 2px 8px;
+        width: 42px;
+        height: 42px;
+        padding: 3px 8px 3px;
     }
 
     .header-main button.navbar-toggler span.icon-bar:nth-child(1) {

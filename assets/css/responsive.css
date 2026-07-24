@@ -913,7 +913,7 @@ Extra small devices (portrait phones, less than 576px)
     }
 
     .h-banner-features {
-        margin: 25px 0 0;
+        margin: 40px 0 0;
         padding-bottom: 25px;
     }
 
@@ -1123,8 +1123,27 @@ Extra small devices (portrait phones, less than 576px)
         max-height: 300px;
     }
 
-    .construction-platform .sec-heading .head-title br {
+    .construction-platform .sec-heading .head-title br,
+    .sec-heading h2 br {
         display: none;
+    }
+
+    .wc-desc {
+        margin-bottom: 24px;
+    }
+
+    .how-it-works-wrap .sec-heading,
+    .built-for-company .sec-heading,
+    .truck-op-platform .sec-heading,
+    .profess-sec-left .sec-heading,
+    .faqs-sec-wrap .sec-heading,
+    .connect-wrapper .sec-heading {
+        margin-bottom: 30px;
+    }
+
+    .truck-op-main .about-contact-icon {
+        width: 50px;
+        height: 50px;
     }
 }
 
