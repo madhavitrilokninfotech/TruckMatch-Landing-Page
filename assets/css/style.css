@@ -501,11 +501,17 @@
 
 .c-img-text-box-wrap.top1 .c-img-pink-box img {
     max-width: 800px;
-    height: auto;
+    height: 100%;
     width: 100%;
+    object-fit: contain;
+}
+
+.c-img-text-box-wrap.top1 .c-img-pink-box {
+    flex-grow: 1;
 }
 
 .v-scroll-img {
+    /* height: 320px; */
     height: 320px;
     overflow: hidden;
     position: relative;
@@ -532,6 +538,7 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -612,6 +619,7 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -629,6 +637,7 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
+
     100% {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -760,7 +769,7 @@
 }
 
 .c-platform-container {
-    max-width: 1200px;
+    max-width: 84%;
     margin: 0 auto;
 }
 
@@ -805,6 +814,10 @@
     height: 70px;
 }
 
+.truck-op-main .c-img-pink-box {
+    background-color: var(--bg-light-primary1);
+}
+
 .truck-op-main .about-contact-icon img {
     width: 34px;
     height: 34px;
@@ -821,10 +834,6 @@
     flex-direction: row;
 }
 
-.truck-op-main .c-img-text-box-wrap.top1 .truck-op-img img {
-    max-width: 345px;
-}
-
 .truck-op-main .c-img-text-wrap {
     display: flex;
     flex-direction: column;
@@ -838,16 +847,19 @@
     width: 40%;
 }
 
-.truck-op-main .col-side .c-img-text-box-wrap.top1 .truck-op-img img {
-    max-width: 345px;
-    width: 100%;
+.truck-op-main .c-img-text-box-wrap.top1 .truck-op-img img {
+    /* max-width: 345px; */
+    width: auto;
     height: auto;
+    max-width: unset;
+}
+
+.truck-op-main .col-side .c-img-text-box-wrap.top1 .truck-op-img img {
+    /* max-width: 345px; */
 }
 
 .truck-op-main .col-middle .c-img-text-box-wrap.top1 .truck-op-img img {
-    max-width: 470px;
-    width: 100%;
-    height: auto;
+    /* max-width: 470px; */
 }
 
 
@@ -958,7 +970,9 @@
 }
 
 .why-choose-sec::before,
-.why-choose-sec::after {
+.why-choose-sec::after,
+.faqs-sec-main::before,
+.faqs-sec-main::after {
     content: "";
     position: absolute;
     top: 0;
@@ -969,7 +983,8 @@
     pointer-events: none;
 }
 
-.why-choose-sec::before {
+.why-choose-sec::before,
+.faqs-sec-main::before {
     left: 0;
     background-image: url(../images/wcu-left-bg-img.png);
     background-position: left top;
@@ -977,7 +992,8 @@
     opacity: 0.5;
 }
 
-.why-choose-sec::after {
+.why-choose-sec::after,
+.faqs-sec-main::after {
     right: 0;
     background-image: url(../images/wcu-right-bg-img.png);
     background-position: right top;
@@ -1381,7 +1397,7 @@ section.profess-sec-main {
     z-index: 1;
 }
 
-.faqs-sec-main::before {
+/* .faqs-sec-main::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1394,7 +1410,7 @@ section.profess-sec-main {
     background-size: contain;
     opacity: 0.5;
     z-index: -1;
-}
+} */
 
 .faqs-sec-wrap {
     position: relative;
