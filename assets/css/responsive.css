@@ -973,7 +973,7 @@ Extra small devices (portrait phones, less than 576px)
 
     .cm-tabs {
         padding: 3px;
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap; */
         overflow-x: auto;
         overflow-y: hidden;
         width: 100%;
