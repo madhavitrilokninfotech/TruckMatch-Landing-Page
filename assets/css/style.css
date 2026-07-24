@@ -719,6 +719,7 @@
     -ms-border-radius: var(--radius12);
     -o-border-radius: var(--radius12);
     padding: 12px 30px;
+    line-height: 20px;
     background: linear-gradient(90deg, #D74315 0%, #E94814 100%);
     box-shadow: 0 8px 16px rgba(215, 67, 21, 50%), inset 4px 4px 8px rgba(255, 255, 255, 30%), inset -4px -4px 8px rgba(255, 255, 255, 30%);
 }
@@ -989,7 +990,7 @@
     left: 0;
     background-image: url(../images/wcu-left-bg-img.png);
     background-position: left top;
-    background-size: contain;
+    background-size: 40%;
     opacity: 0.5;
 }
 
