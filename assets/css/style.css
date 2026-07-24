@@ -999,7 +999,7 @@
     right: 0;
     background-image: url(../images/wcu-right-bg-img.png);
     background-position: right top;
-    background-size: contain;
+    background-size: 50%;
     opacity: 0.5;
 }
 
