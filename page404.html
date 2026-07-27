@@ -27,236 +27,57 @@
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
-    <style>
-        .default-page-sec {
-            background: #f3f3f3;
-            padding: 160px 0px 80px;
-        }
+        <style>
+            :root{--bg:#141110;--card:#1c1815;--card-edge:rgba(255,255,255,0.06);--orange:#f97316;--orange-light:#fb923c;--outline:#3a332f;--white:#f5f4f2;--muted:#9a938d;}
+            
+            .page404-main{margin:0;padding:0;height:100%;background:var(--bg);}
+            .page404-main{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:2rem 1rem;position: relative;}
 
-        .default-page-sec h1 {
-            font-size: 46px;
-        }
+            /* ---------- background glow ---------- */
+            .bg-glow{position:absolute;inset:0;z-index:0;background:radial-gradient(600px 500px at 8% 15%,rgba(249,115,22,0.16),transparent 60%),radial-gradient(700px 550px at 92% 85%,rgba(249,115,22,0.10),transparent 60%),var(--bg);}
 
-        .default-page-sec h2 {
-            font-size: 38px;
-        }
-
-        .default-page-sec h3 {
-            font-size: 36px;
-        }
-
-        .default-page-sec h4 {
-            font-size: 28px;
-        }
-
-        .default-page-sec h5 {
-            font-size: 24px;
-        }
-
-        .default-page-sec h6 {
-            font-size: 20px;
-        }
-
-        .default-page-sec h1,
-        .default-page-sec h2,
-        .default-page-sec h3,
-        .default-page-sec h4,
-        .default-page-sec h5,
-        .default-page-sec h6 {
-            line-height: 1.2;
-            font-weight: 700;
-            margin-bottom: 10px;
-            margin-top: 20px;
-        }
-
-        .default-page-sec p {
-            font-size: 18px;
-            line-height: 1.6;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .default-page-sec a {
-            color: #F4A896
-        }
-
-        .default-page-sec ol {
-            list-style-type: decimal;
-            margin: 15px 0px 25px;
-            padding-left: 0px;
-        }
-
-        .default-page-sec ul {
-            list-style: disc;
-            margin: 15px 0px 25px;
-            padding-left: 0px;
-        }
-
-        .default-page-sec li {
-            margin-bottom: 10px;
-            margin-left: 30px;
-            padding-left: .5em;
-            font-size: 18px;
-            color: #000000;
-            line-height: 24px;
-            font-weight: 400;
-        }
-
-        .default-page-sec ol ol {
-            list-style: upper-roman;
-            padding-left: 10px;
-        }
-
-        .default-page-sec ol ol ol {
-            list-style: lower-alpha;
-        }
-
-        .default-page-sec ul ul {
-            list-style: circle;
-            padding-left: 10px;
-        }
-
-        .default-page-sec ul ul li {
-            margin-left: 25px;
-        }
-
-        .default-page-sec ul ol li::marker {
-            font-size: unset;
-        }
-
-        .default-page-sec blockquote {
-            max-width: 100%;
-            text-align: left;
-            margin: 25px 0px;
-            padding: 25px 20px;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 1.4;
-            color: #F4A896;
-            background: #fff;
-            border-left: 4px solid #F4A896;
-        }
-
-        .default-page-sec b,
-        .default-page-sec strong {
-            font-weight: 700
-        }
-
-        .default-page-sec img {
-            max-width: 100%;
-            height: auto;
-            position: relative;
-        }
-
-        @media (max-width:1199px) {
-            .default-page-sec h1 {
-                font-size: 40px;
+            /* floating decorative shapes */
+            .shape{position:absolute;z-index:1;filter:drop-shadow(0 0 18px rgba(249,115,22,0.55)); }
+            .shape.circle{top:15%;left:9%;width:90px;height:90px;border-radius:50%;border:3px solid var(--orange);animation:float-1 5s ease-in-out infinite;}
+            .shape.diamond{top:20%;right:8%;width:60px;height:60px;border:3px solid var(--orange);transform:rotate(20deg);animation:float-2 6s ease-in-out infinite;}
+            @keyframes float-1{
+                0%,100%{transform:translateY(0) rotate(0deg);}
+                50%{transform:translateY(-22px) rotate(10deg);}
+            }
+            @keyframes float-2{
+                0%,100%{transform:translateY(0) rotate(20deg);}
+                50%{transform:translateY(18px) rotate(45deg);}
             }
 
-            .default-page-sec h2 {
-                font-size: 32px;
-            }
+            /* ---------- card ---------- */
+            .card{position:relative;z-index:2;width:min(740px,100%);background:var(--card);border:1px solid var(--card-edge);border-radius:28px;padding:clamp(2.2rem,5vw,4rem) clamp(1.5rem,6vw,4rem);text-align:center;box-shadow:0 30px 80px rgba(0,0,0,0.45);}
+            .logo{display:inline-flex;align-items:center;gap:0.5rem;font-weight:700;font-size:1.1rem;color:var(--white);margin-bottom:1.5rem;letter-spacing:0.02em;}
+            .logo .dot{width:10px;height:10px;border-radius:50%;background:var(--orange);box-shadow:0 0 10px 2px rgba(249,115,22,0.7);}
 
-            .default-page-sec h3 {
-                font-size: 26px;
+            /* ---------- 404 glitch/fill text ---------- */
+            .code{position:relative;font-weight:800;font-size:clamp(4.5rem,14vw,8rem);line-height:1;letter-spacing:0.03em;margin:0 0 1.2rem;-webkit-text-stroke:2px var(--outline);color:transparent;user-select:none;}
+            .code .fill{position:absolute;inset:0;color:var(--orange);-webkit-text-stroke:0px transparent;background:linear-gradient(180deg,var(--orange-light),var(--orange));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;clip-path:inset(100% 0 0 0);filter:drop-shadow(0 0 18px rgba(249,115,22,0.55));animation:fill-rise 3.6s ease-in-out infinite;}
+            @keyframes fill-rise{
+                0%{clip-path:inset(100% 0 0 0);}
+                35%{clip-path:inset(0% 0 0 0);}
+                75%{clip-path:inset(0% 0 0 0);}
+                100%{clip-path:inset(100% 0 0 0);}
             }
+            h1.heading{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:700;color:var(--white);margin:0 0 0.9rem;}
+            .desc{color:var(--muted);font-size:clamp(0.92rem,2vw,1.02rem);line-height:1.7;max-width:32rem;margin:0 auto 2.2rem;}
+            .btn{display:inline-flex;align-items:center;gap:0.5rem;padding:0.85rem 2.2rem;border-radius:999px;background:linear-gradient(180deg,var(--orange-light),var(--orange));color:#fff;font-weight:600;font-size:1rem;text-decoration:none;box-shadow:0 12px 28px rgba(249,115,22,0.35);transition:transform 0.2s ease,box-shadow 0.2s ease;}
+            .btn:hover,.btn:focus-visible{transform:translateY(-3px);box-shadow:0 16px 34px rgba(249,115,22,0.5);}
+            .btn:focus-visible{outline:2px solid var(--white);outline-offset:3px;}
 
-            .default-page-sec h4 {
-                font-size: 24px;
+            /* ---------- responsive ---------- */
+            @media (max-width:640px){
+                .shape.circle{width:56px;height:56px;top:6%;left:5%;}
+                .shape.diamond{width:40px;height:40px;top:8%;right:6%;}
+                .card{border-radius:20px;}
             }
-
-            .default-page-sec h5 {
-                font-size: 22px;
+            @media (prefers-reduced-motion:reduce){
+                *{animation-duration:0.001ms!important;animation-iteration-count:1!important;}
             }
-
-            .default-page-sec h6 {
-                font-size: 18px;
-            }
-
-            .default-page-sec p {
-                font-size: 16px;
-            }
-
-            .default-page-sec li {
-                font-size: 15px;
-            }
-
-            .default-page-sec ul li a {
-                font-size: 15px;
-            }
-
-            .default-page-sec {
-                padding: 100px 0px 60px;
-            }
-        }
-
-        @media (max-width:767px) {
-            .default-page-sec h1 {
-                font-size: 34px;
-            }
-
-            .default-page-sec h2 {
-                font-size: 28px;
-            }
-
-            .default-page-sec h3 {
-                font-size: 24px;
-            }
-
-            .default-page-sec h4 {
-                font-size: 22px;
-            }
-
-            .default-page-sec h5 {
-                font-size: 20px;
-            }
-
-            .default-page-sec h6 {
-                font-size: 16px;
-            }
-
-            .default-page-sec p {
-                font-size: 14px;
-            }
-
-            .default-page-sec li {
-                font-size: 14px;
-            }
-
-            .default-page-sec ul li a {
-                font-size: 14px;
-            }
-
-            .default-page-sec {
-                padding: 80px 0px 60px;
-            }
-        }
-
-        @media (max-width:481px) {
-            .default-page-sec h1 {
-                font-size: 28px;
-            }
-
-            .default-page-sec h2 {
-                font-size: 24px;
-            }
-
-            .default-page-sec h3 {
-                font-size: 22px;
-            }
-
-            .default-page-sec h4 {
-                font-size: 20px;
-            }
-
-            .default-page-sec h5 {
-                font-size: 18px;
-            }
-
-            .default-page-sec h6 {
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 
@@ -339,325 +160,27 @@
         </header>
 
         <!-- Main Content -->
-        <div class="default-page-sec   flex-shrink-0 flex-grow-1">
-
-
-            <div class="container">
-                <h1>Default Page</h1>
-
-                <p><strong>Effective Date:</strong> Lorem Ipsum<br><strong>Last Updated:</strong> Lorem Ipsum</p>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum Dolor</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                    <li>Quis nostrud exercitation.</li>
-                    <li>Ullamco laboris nisi.</li>
-                </ul>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum Dolor Sit</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                </ul>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum Dolor</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum Dolor Sit Amet</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                    <li>Quis nostrud exercitation.</li>
-                    <li>Ullamco laboris nisi.</li>
-                    <li>Aliquip ex ea commodo.</li>
-                    <li>Duis aute irure dolor.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                    <li>Quis nostrud exercitation.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                </ul>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                </ul>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                    <li>Incididunt ut labore.</li>
-                    <li>Et dolore magna aliqua.</li>
-                    <li>Ut enim ad minim veniam.</li>
-                </ul>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-                <p>Lorem ipsum dolor sit amet:</p>
-
-                <ul>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Consectetur adipiscing elit.</li>
-                    <li>Sed do eiusmod tempor.</li>
-                </ul>
-
-                <hr>
-
-                <h4><strong>Lorem Ipsum</strong></h4>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+        <div class="page-main page404-main flex-grow-0 flex-shrink-1">
+            <div class="bg-glow"></div>
+            <div class="shape circle" aria-hidden="true"></div>
+            <div class="shape diamond" aria-hidden="true"></div>
+
+            <div class="card">
+
+                <div class="code" aria-label="404">
+                    404
+                    <span class="fill" aria-hidden="true">404</span>
+                </div>
+
+                <h1 class="heading">Oops! Page Not Found</h1>
+                <p class="desc">The page you're looking for doesn't exist or has been moved. Let's get you back to the homepage.
+                </p>
+                <div>
+                    <a class="btn" href="/">Go Back Home</a>
+                </div>
 
             </div>
+           
 
         </div>
 
