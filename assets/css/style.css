@@ -543,7 +543,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -624,7 +623,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -642,7 +640,6 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
-
     100% {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -973,10 +970,9 @@
 .why-choose-sec {
     position: relative;
     overflow: hidden;
+    background-color: var(--bg-light-primary2);
 }
 
-.why-choose-sec::before,
-.why-choose-sec::after,
 .faqs-sec-main::before,
 .faqs-sec-main::after {
     content: "";
@@ -989,7 +985,6 @@
     pointer-events: none;
 }
 
-.why-choose-sec::before,
 .faqs-sec-main::before {
     left: 0;
     background-image: url(../images/wcu-left-bg-img.png);
@@ -1402,6 +1397,7 @@ section.profess-sec-main {
     overflow: hidden;
     z-index: 1;
 }
+
 
 /* .faqs-sec-main::before {
     content: "";
