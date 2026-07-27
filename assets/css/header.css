@@ -234,7 +234,28 @@
 .header-primary-btn:active,
 .header-primary-btn:focus,
 .header-primary-btn:focus-visible {
-    transform: none;
+    transform: none !important;
+    -webkit-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -o-transform: none !important;
+}
+
+.signup-btn.header-primary-btn {
+    background-color: var(--bg-black);
+}
+
+.signup-btn.header-primary-btn:hover,
+.header-primary-btn:active,
+.header-primary-btn:focus {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+}
+
+.header-btn-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .no-scroll {
@@ -242,6 +263,10 @@
 }
 
 @media (max-width: 1599px) {
+    .header-main .header-inner-main .header-menu-inner {
+        gap: 40px;
+    }
+
     .header-height {
         padding-top: 80px;
     }
@@ -286,10 +311,6 @@
         margin: 0 12px;
     }
 
-    .header-main .header-inner-main .header-menu-inner {
-        gap: 40px;
-    }
-
     .header-main .header-inner-main .header-inner {
         padding: 6px 6px 6px 14px;
     }
@@ -300,6 +321,10 @@
 
     .btn.header-primary-btn {
         padding: 14px 24px;
+    }
+
+    .header-btn-main {
+        gap: 6px;
     }
 }
 
@@ -524,6 +549,15 @@
 @media (max-width: 767px) {}
 
 @media (max-width: 576px) {
+    .header-btn-main {
+        flex-direction: column;
+        max-width: 260px;
+        width: 100%;
+    }
+
+    .btn.header-primary-btn {
+        width: 100%;
+    }
 
     .navbar-container,
     .hero-banner-main .container-fluid {

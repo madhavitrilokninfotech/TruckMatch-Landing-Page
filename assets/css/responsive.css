@@ -24,10 +24,6 @@
         width: 33.33%;
     }
 
-    .truck-op-main .c-img-text-box-wrap.top1 .truck-op-img img {
-        max-width: 300px;
-        width: 100%;
-    }
 }
 
 @media(min-width:1700px) {
@@ -240,6 +236,8 @@
     .truck-op-main .col-middle .c-img-text-box-wrap.top1 .truck-op-img img {
         max-height: 350px;
     }
+
+
 }
 
 @media (max-width: 1499px) {
@@ -287,6 +285,11 @@
     /* end */
     .truck-op-main .c-img-text-box-wrap.top1 {
         flex-direction: column;
+    }
+
+    .truck-op-main .c-img-text-box-wrap.top1 .truck-op-img img {
+        max-width: 300px;
+        width: 100%;
     }
 }
 

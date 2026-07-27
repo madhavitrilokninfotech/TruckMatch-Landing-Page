@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="color-scheme" content="light">
+    <meta name="supported-color-schemes" content="light">
+    <title>TruckMatch Admin</title>
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            font-family: helvetica, 'helvetica neue', arial, verdana, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color: #F1F1F1 !important;
+            color: #000000 !important;
+        }
+
+        /* Force light mode - override any dark mode */
+
+        :root {
+            color-scheme: light only;
+        }
+
+        * {
+            -webkit-color-scheme: light;
+            color-scheme: light;
+        }
+
+        td {
+            box-sizing: border-box;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .col4 {
+                width: 100% !important;
+                display: block !important;
+            }
+
+            td.font,
+            p.font {
+                font-size: 20px !important;
+            }
+        }
+    </style>
+</head>
+
+<body style="background-color: #f1f1f1;">
+    <div class="es-wrapper-color">
+        <table align="center" cellpadding="0" cellspacing="0"
+            style="margin: 0 auto; padding: 30px 0; background-position: center top; max-width: 600px;">
+            <tbody>
+                <tr>
+                    <td valign="top">
+                        <!-- Header Logo -->
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0"
+                            style="padding: 28px 0 18px;background-image: url('https://cdn.phototourl.com/free/2026-07-14-9c3164d1-ab69-42e8-9615-46b9cbf7bbc5.png'); background-repeat: no-repeat; background-position: center;background-size: cover;">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <table width="100%" align="center" cellpadding="0" cellspacing="0"
+                                            style="background-color: transparent; ">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left" width="20%"
+                                                        style="width:35%; height:40px;  text-align: center; padding: 0 15px;">
+                                                        <a href="#"
+                                                            style="width: 217px; height: auto; display: inline-block;">
+                                                            <img style="width: 100%; max-width: 100%; height: auto;"
+                                                                src="./header-logo.png" alt="logo"></a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <!-- Middle Content -->
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+                            style="background-color: #fff; padding: 0 20px; border-top: 1px solid #f0f0f0;">
+                            <tbody>
+                                <tr>
+                                    <td height="30"></td>
+                                </tr>
+                                <tr>
+                                    <td align="start ">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td align="left"
+                                                        style="font-size:26px; font-weight: 800; color:#161212;line-height: 1.2;">
+                                                         Congratulations!
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" style="font-size:18px; line-height:1.6; color:#4a4a4a;">
+                                                        You’ve just received a new lead. <br> Best of luck!
+                                                    </td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <table width="100% " align="center " cellspacing="0 " cellpadding="0 "
+                            style="background-color: #fff;">
+                            <tbody>
+                                <!-- Contact card -->
+                                <tr>
+                                    <td style="padding: 30px 20px;" align="start ">
+                                        <table width="100%" cellpadding="0" cellspacing="0"
+                                            style="padding: 20px; background-color:#F8FAFC; border:1px solid #EAECF0; border-radius:12px">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="pad-mobile">
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td>
+                                                                    <p
+                                                                        style="margin: 0; font-size: 16px; color: #d74315; line-height: 1; font-weight: bold; display: inline-block;">
+                                                                        User Details
+                                                                    </p>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <!-- Divider -->
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td
+                                                                    style="padding: 6px 0; border-bottom:1px solid #EAECF0;">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <!-- Divider -->
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                                                            <tr>
+                                                                <td style="padding: 6px 0 0;"></td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <!-- First Name row -->
+                                                        <table align="left " class="col4" style="width: 50%;"
+                                                            cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left " style="padding-right: 10px;">
+                                                                        <table align="left " cellpadding="0 "
+                                                                            cellspacing="0 ">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="15"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:11px; font-weight:bold; color:#98A2B3; text-transform:uppercase; letter-spacing:0.4px;">
+                                                                                            First Name</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td height="4"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:14px; color:#344054; font-weight:bold; word-break:break-word;">
+                                                                                            John</p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <!-- Last name row -->
+                                                        <table align="left " class="col4" style="width: 50%;"
+                                                            cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left ">
+                                                                        <table align="left " cellpadding="0 "
+                                                                            cellspacing="0 ">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="15"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:11px; font-weight:bold; color:#98A2B3; text-transform:uppercase; letter-spacing:0.4px;">
+                                                                                            Last Name</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td height="4"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:14px; color:#344054; font-weight:bold; word-break:break-word;">
+                                                                                            Doe
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <!-- Email row -->
+                                                        <table align="left " class="col4" style="width: 50%;"
+                                                            cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left" style="padding-right: 10px;">
+                                                                        <table align="left " cellpadding="0 "
+                                                                            cellspacing="0 ">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="15"></td>
+                                                                                </tr>
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:11px; font-weight:bold; color:#98A2B3; text-transform:uppercase; letter-spacing:0.4px;">
+                                                                                            Email</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td height="4"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <a href="mailto:johndoe@gmail.com"
+                                                                                            style="font-size:14px; color:#344054; font-weight:bold; text-decoration: none; word-break:break-word;">johndoetesting123@gmail.com</a>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+
+                                                        <!-- Phone row -->
+                                                        <table align="left " class="col4" style="width: 50%;"
+                                                            cellpadding="0" cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left ">
+                                                                        <table align="left " cellpadding="0 "
+                                                                            cellspacing="0 ">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="15"></td>
+                                                                                </tr>
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:11px; font-weight:bold; color:#98A2B3; text-transform:uppercase; letter-spacing:0.4px;">
+                                                                                            Phone</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td height="4"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <a href="tel:+61412345678"
+                                                                                            style="font-size:14px; color:#344054; font-weight:bold; text-decoration: none;  word-break:break-word;">+61
+                                                                                            412 345 678</a>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                        <!-- Message -->
+                                                        <table align="left " width="100%" cellpadding="0"
+                                                            cellspacing="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td align="left ">
+                                                                        <table align="left " cellpadding="0 "
+                                                                            cellspacing="0 ">
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td height="15"></td>
+                                                                                </tr>
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:11px; font-weight:bold; color:#98A2B3; text-transform:uppercase; letter-spacing:0.4px;">
+                                                                                            Message</p>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                                <tr>
+                                                                                    <td height="4"></td>
+                                                                                </tr>
+
+                                                                                <tr align="left ">
+                                                                                    <td>
+                                                                                        <p
+                                                                                            style="margin:0; font-size:14px; color:#344054; font-weight:bold; word-break:break-word; ">
+                                                                                            [your-message]
+                                                                                        </p>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                        <!-- START LIGHT YELLOW BOX -->
+                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+                            style="padding: 0px 15px; background-color: #fff; background-repeat: no-repeat; background-position: center;background-size: cover; min-width: 100%;">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+                                            style="min-width: 100%;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="20"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="social-links" width="70%" align="left">
+                                                        <table class="social" cellspacing="0" cellpadding="0"
+                                                            style=" text-align: left;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="4" align="left"
+                                                                        style="color:#000; font-size:14px; font-weight: 500;line-height: 1.4;text-align: left; margin-bottom: 20px; ">
+                                                                        Follow Us</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 10px 5px 0px;">
+                                                                        <a target="_blank"
+                                                                            style="display: inline-block;"
+                                                                            href="https://www.facebook.com/clouddownunder/">
+                                                                            <img title="Facebook"
+                                                                                src="https://cdn.phototourl.com/free/2026-07-14-84d2b9cb-ef81-441e-b590-4af6e5868240.png"
+                                                                                alt="Facebook" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 10px 5px 0px;">
+                                                                        <a target="_blank"
+                                                                            style="display: inline-block;"
+                                                                            href="https://x.com/clouddownunder">
+                                                                            <img title="twitter"
+                                                                                src="https://cdn.phototourl.com/free/2026-07-14-2711a5b9-061b-4c11-af50-0f4bbdf2e097.png"
+                                                                                alt="twitter" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 10px 5px 0px;">
+                                                                        <a target="_blank"
+                                                                            style="display: inline-block;"
+                                                                            href="https://www.instagram.com/clouddownunder/">
+                                                                            <img title="Instagram"
+                                                                                src="https://cdn.phototourl.com/free/2026-07-14-a1b4387a-1ea7-44ab-92fe-6525e2cdea8f.png"
+                                                                                alt="Instagram" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 10px 5px 0px;">
+                                                                        <a target="_blank"
+                                                                            style="display: inline-block;" href="#">
+                                                                            <img title="youtube"
+                                                                                src="https://cdn.phototourl.com/free/2026-07-14-a543f2c0-171c-4bf4-84c7-528f0b177ec5.png"
+                                                                                alt="youtube" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                    <td class="social-links" width="30%" align="right">
+                                                        <table class="social" cellspacing="0" cellpadding="0"
+                                                            style=" text-align: right;">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td colspan="2" align="right"
+                                                                        style="color:#000; font-size:14px; font-weight: 500;line-height: 1.4;text-align: right; margin-bottom: 20px; ">
+                                                                        Contact Us</td>
+                                                                </tr>
+
+
+                                                                <tr>
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 0px 5px 10px;">
+                                                                        <a style="display: inline-block;"
+                                                                            href="tel:(+61) 745 841 996">
+                                                                            <img title="Facebook"
+                                                                                src="https://www.clouddownunder.com.au/wp-content/themes/cdu/assets/images/email-img/fill-icon/icon-call.png"
+                                                                                alt="call" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+                                                                    <td class="icon" valign="top" align="center"
+                                                                        style="padding:5px 0px 5px 10px;">
+                                                                        <a style="display: inline-block;"
+                                                                            href="mailto:info@truckmatch.au">
+                                                                            <img title="twitter"
+                                                                                src="https://www.clouddownunder.com.au/wp-content/themes/cdu/assets/images/email-img/fill-icon/icon-mail.png"
+                                                                                alt="mail" width="32" height="32">
+                                                                        </a>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td height="20"></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <!-- END LIGHT YELLOW BOX  -->
+
+                        <!-- Footer -->
+                        <table width="100%" align="center" cellpadding="0" cellspacing="0"
+                            style="background-color: #fff; border-radius: 0 0 10px 10px">
+                            <tbody>
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" align="center" cellpadding="0" cellspacing="0"
+                                            style="background-color: transparent; padding: 0 20px;">
+                                            <tbody>
+                                                <tr>
+                                                    <td height="10 "></td>
+                                                </tr>
+                                                <tr>
+                                                    <td width="50%" style="text-align: right;padding:0px 10px; ">
+                                                        <a href="#"
+                                                            style="font-family: 'Libre Franklin', sans-serif;font-size: 12px;color: #000;line-height: 10px;font-weight: 500;text-decoration: underline;">Terms
+                                                            & Conditions</a>
+                                                    </td>
+                                                    <td width="50%" style="text-align: left;padding:0px 10px; ">
+                                                        <a href="#"
+                                                            style="font-family: 'Libre Franklin', sans-serif;font-size: 12px;color: #000;line-height: 10px;font-weight: 500; text-decoration: underline;">Privacy
+                                                            Policy</a>
+                                                    </td>
+
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+                                            style="padding: 0px 15px; background:#fff; min-width: 100%;">
+
+                                            <!-- <tr>
+                                                <td align="left"
+                                                    style="color:#5C5C5C; font-size:13px; font-weight: 400;line-height: 1.4;text-align: center; ">
+                                                    <p
+                                                        style="color:#5C5C5C; font-size:12px; font-weight: 400;line-height: 1.4; margin:0px">
+                                                        Level 7/757 Ann St, Fortitude Valley QLD 4006</p>
+                                                </td>
+                                            </tr> -->
+                                            <tr>
+                                                <td height="15"></td>
+                                            </tr>
+                                            <tr>
+                                                <td align="left"
+                                                    style="color:#5C5C5C; font-size:13px; font-weight: 400;line-height: 1.4;text-align: center; ">
+                                                    <p
+                                                        style="color:#5C5C5C; font-size:13px; font-weight: 400;line-height: 1.4; margin:0px">
+                                                        © 2026 TruckMatch</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="30"></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
