@@ -117,12 +117,16 @@
     font-size: 16px;
     font-weight: 200;
     display: inline-flex !important;
-    align-items: center;
+    align-items: start;
     gap: 5px;
     padding: 0 20px;
     text-transform: capitalize;
 }
 
+.h-feature-item img,
+.h-feature-item svg {
+    margin-top: 3px;
+}
 
 /**** About Us Section ****/
 
@@ -709,7 +713,7 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 
 @supports (-webkit-touch-callout: none) {
@@ -884,20 +888,10 @@
 }
 
 .truck-op-main .c-img-text-box-wrap.top1 .truck-op-img img {
-    /* max-width: 345px; */
     width: auto;
     height: auto;
-    max-width: unset;
+    max-width: 305px;
 }
-
-.truck-op-main .col-side .c-img-text-box-wrap.top1 .truck-op-img img {
-    /* max-width: 345px; */
-}
-
-.truck-op-main .col-middle .c-img-text-box-wrap.top1 .truck-op-img img {
-    /* max-width: 470px; */
-}
-
 
 /* divide css */
 
@@ -1072,7 +1066,7 @@
 
 .wc-check-list li {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: 12px;
     font-size: 18px;
     color: var(--theme-text);
@@ -1090,6 +1084,7 @@
     align-items: center;
     justify-content: center;
     font-size: 12px;
+    margin-top: 3px;
 }
 
 .wc-check-icon svg {
@@ -1271,6 +1266,7 @@
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }

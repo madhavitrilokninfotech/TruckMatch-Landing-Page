@@ -317,6 +317,9 @@ BUTTON
     font-weight: 700;
     padding: 14px 34px;
     display: inline-block;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     text-align: center;
     cursor: pointer;
     text-transform: uppercase;
@@ -382,9 +385,38 @@ button {
 .btn-primary:hover,
 .btn-primary:active {
     background: var(--bg-primary);
-    background-color: var(--bg-black);
 }
 
+/* Primary Hover Animation */
+.btn-primary::before,
+.btn-primary::after {
+    width: 0%;
+    height: 0%;
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    transition: var(--transition) cubic-bezier(0.7, 0, 0.2, 1);
+    -webkit-transition: var(--transition) cubic-bezier(0.7, 0, 0.2, 1);
+    -moz-transition: var(--transition) cubic-bezier(0.7, 0, 0.2, 1);
+    -ms-transition: var(--transition) cubic-bezier(0.7, 0, 0.2, 1);
+    -o-transition: var(--transition) cubic-bezier(0.7, 0, 0.2, 1);
+}
+
+.btn-primary:hover::before,
+.btn-primary:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.btn-primary:hover::before {
+    transition: all 0.7s ease-in;
+}
+
+.btn-primary:hover::after {
+    transition: all 0.5s ease-in;
+}
+
+/* end */
 .btn-secondary {
     background: var(--bg-white);
     color: var(--theme-text);
