@@ -387,7 +387,9 @@ button {
     background: var(--bg-primary);
 }
 
+
 /* Primary Hover Animation */
+
 .btn-primary::before,
 .btn-primary::after {
     width: 0%;
@@ -416,7 +418,9 @@ button {
     transition: all 0.5s ease-in;
 }
 
+
 /* end */
+
 .btn-secondary {
     background: var(--bg-white);
     color: var(--theme-text);
@@ -506,7 +510,7 @@ border-color: var(--primary-main);
     font-size: 16px;
     line-height: 1.2;
     font-weight: 400;
-    text-transform: capitalize;
+    text-transform: unset;
     padding: 15px 20px;
     border-radius: var(--radius10);
     -webkit-border-radius: var(--radius10);
@@ -518,6 +522,7 @@ border-color: var(--primary-main);
 .form-control.border::placeholder {
     font-size: 16px;
     color: var(--theme-text);
+    text-transform: capitalize;
 }
 
 .form-control.border:focus {
