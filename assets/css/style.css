@@ -285,10 +285,33 @@
     bottom: 0;
 }
 
+/* Animation Truck */
 .about-us-wrap .company-image img {
     max-width: 220px;
+    opacity: 0;
+    transition: transform 2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2s ease-out;
+    will-change: transform, opacity;
+    -webkit-transition: transform 2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2s ease-out;
+    -moz-transition: transform 2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2s ease-out;
+    -ms-transition: transform 2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2s ease-out;
+    -o-transition: transform 2s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 2s ease-out;
+    transform: translateX(180px);
+    -webkit-transform: translateX(180px);
+    -moz-transform: translateX(180px);
+    -ms-transform: translateX(180px);
+    -o-transform: translateX(180px);
 }
 
+.truck-in-view .company-image img {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+
+/* end */
 .about-us-wrap .about-features {
     margin: 24px 0;
     display: flex;
@@ -543,6 +566,7 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -623,6 +647,7 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
+
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -640,6 +665,7 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
+
     100% {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -683,6 +709,13 @@
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    background-attachment: fixed;
+}
+
+@supports (-webkit-touch-callout: none) {
+    .construction-platform::before {
+        background-attachment: scroll;
+    }
 }
 
 .construction-platform .sec-heading p {

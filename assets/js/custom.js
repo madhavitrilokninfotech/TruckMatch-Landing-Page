@@ -1,3 +1,4 @@
+
 /************************ Header Fixed *****************************/
 function fixedHeader() {
     var sticky = $(".header-main"),
@@ -6,30 +7,30 @@ function fixedHeader() {
     else sticky.removeClass("fixHeader");
 }
 fixedHeader();
-$(window).scroll(function(e) {
+$(window).scroll(function (e) {
     fixedHeader();
 });
 
 
-$('.navbar-nav li a').on('click', function() {
+$('.navbar-nav li a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
 
-$(".navbar-toggler").click(function() {
+$(".navbar-toggler").click(function () {
     $("body").toggleClass("no-scroll");
 });
 
-$(".header-menu a").click(function() {
+$(".header-menu a").click(function () {
     $("body").removeClass("no-scroll");
 });
 
-$('.header-btn-main a').on('click', function() {
+$('.header-btn-main a').on('click', function () {
     $('.navbar-collapse').collapse('hide');
 });
 
 
 const navLinks = $("#menu-main-menu a");
-navLinks.on("click", function(e) {
+navLinks.on("click", function (e) {
     const fullHref = $(this).attr("href");
     const targetHash = fullHref.includes("#") ? fullHref.substring(fullHref.indexOf("#")) : null;
 
@@ -46,10 +47,10 @@ navLinks.on("click", function(e) {
 });
 
 // Scroll highlight logic
-$(window).on("scroll", function() {
+$(window).on("scroll", function () {
     const scrollPosition = $(window).scrollTop();
 
-    navLinks.each(function() {
+    navLinks.each(function () {
         const fullHref = $(this).attr("href");
         const targetHash = fullHref.includes("#") ? fullHref.substring(fullHref.indexOf("#")) : null;
         const targetSection = $(targetHash);
@@ -67,11 +68,10 @@ $(window).on("scroll", function() {
 });
 
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     /************************ Current Year *****************************/
-    // $("#currentYear").text(new Date().getFullYear());
-
+    $("#currentYear").text(new Date().getFullYear());
 
 
     /************************ Slick Slider Hero Features *****************************/
@@ -89,38 +89,38 @@ $(document).ready(function() {
         pauseOnFocus: false,
         variableWidth: true,
         responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    variableWidth: true
-                }
-            },
-            {
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 2,
-                    variableWidth: true
-                }
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 3,
+                variableWidth: true
             }
+        },
+        {
+            breakpoint: 576,
+            settings: {
+                slidesToShow: 2,
+                variableWidth: true
+            }
+        }
         ]
     });
-});
 
-/************************ Trusted by Professionals *****************************/
-$('.profess-slick-slider').slick({
-    slidesToShow: 2,
-    slidesToScroll: 1,
-    dots: true,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    // responsive: [{
-    //     breakpoint: 768,
-    //     settings: {
-    //         slidesToShow: 1
-    //     }
-    // }]
-    responsive: [{
+
+    /************************ Trusted by Professionals *****************************/
+    $('.profess-slick-slider').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        dots: true,
+        arrows: false,
+        infinite: true,
+        autoplay: true,
+        // responsive: [{
+        //     breakpoint: 768,
+        //     settings: {
+        //         slidesToShow: 1
+        //     }
+        // }]
+        responsive: [{
             breakpoint: 1200,
             settings: {
                 slidesToShow: 1
@@ -138,5 +138,43 @@ $('.profess-slick-slider').slick({
                 slidesToShow: 1
             }
         }
-    ]
+        ]
+    });
+
 });
+
+
+/************************ Truck in View Animation *****************************/
+let truckAnimated = false;
+
+function checkTruckSection() {
+
+    if (truckAnimated) return;
+
+    const section = document.querySelector(".about-us-wrap");
+    if (!section) return;
+
+    const rect = section.getBoundingClientRect();
+
+    const sectionCenter = rect.top + rect.height / 2;
+    const viewportCenter = window.innerHeight / 2;
+
+    // Trigger range
+    let trigger = 30;
+
+    // Mobile (<575px)
+    if (window.innerWidth < 575) {
+        trigger = 60; 
+    }
+
+    if (Math.abs(sectionCenter - viewportCenter) <= trigger) {
+        section.classList.add("truck-in-view");
+        truckAnimated = true;
+    }
+}
+
+// Check after page loads
+window.addEventListener("load", checkTruckSection);
+
+// Check while scrolling (top → bottom & bottom → top)
+window.addEventListener("scroll", checkTruckSection);

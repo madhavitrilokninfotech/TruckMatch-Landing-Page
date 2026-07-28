@@ -140,7 +140,6 @@ ul.f-menu li:last-child .f-text.f-hover-text {
 
 .greadientbox {
     position: relative;
-    overflow: hidden;
     z-index: 1;
     display: inline-flex;
     align-items: center;
@@ -161,13 +160,19 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(220deg,
-            #FF8F3D 0%,
-            #D74315 50%,
-            #8F2308 100%);
+    background: linear-gradient(220deg, #FF8F3D 0%, #D74315 50%, #8F2308 100%);
     opacity: 0;
-    transition: opacity .3s ease;
     z-index: -1;
+    border-radius: var(--radius10);
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    -o-transition: opacity .3s ease;
+    -webkit-border-radius: var(--radius10);
+    -moz-border-radius: var(--radius10);
+    -ms-border-radius: var(--radius10);
+    -o-border-radius: var(--radius10);
 }
 
 .greadientbox:hover {
