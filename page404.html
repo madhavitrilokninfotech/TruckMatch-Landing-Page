@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <style>
-        :root {
+         :root {
             --bg: #141110;
             --card: #1c1815;
             --card-edge: rgba(255, 255, 255, 0.06);
@@ -38,14 +38,14 @@
             --white: #f5f4f2;
             --muted: #9a938d;
         }
-
+        
         .page404-main {
             margin: 0;
             padding: 0;
             height: 100%;
             background: var(--bg);
         }
-
+        
         .page404-main {
             min-height: 100vh;
             display: flex;
@@ -56,24 +56,22 @@
             padding: 2rem 1rem;
             position: relative;
         }
-
         /* ---------- background glow ---------- */
-
+        
         .bg-glow {
             position: absolute;
             inset: 0;
             z-index: 0;
             background: radial-gradient(600px 500px at 8% 15%, rgba(249, 115, 22, 0.16), transparent 60%), radial-gradient(700px 550px at 92% 85%, rgba(249, 115, 22, 0.10), transparent 60%), var(--bg);
         }
-
         /* floating decorative shapes */
-
+        
         .shape {
             position: absolute;
             z-index: 1;
             filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.55));
         }
-
+        
         .shape.circle {
             top: 15%;
             left: 9%;
@@ -83,7 +81,7 @@
             border: 3px solid var(--bg-primary);
             animation: float-1 5s ease-in-out infinite;
         }
-
+        
         .shape.diamond {
             bottom: 20%;
             right: 8%;
@@ -93,33 +91,28 @@
             transform: rotate(20deg);
             animation: float-2 6s ease-in-out infinite;
         }
-
+        
         @keyframes float-1 {
-
             0%,
             100% {
                 transform: translateY(0) rotate(0deg);
             }
-
             50% {
                 transform: translateY(-22px) rotate(10deg);
             }
         }
-
+        
         @keyframes float-2 {
-
             0%,
             100% {
                 transform: translateY(0) rotate(20deg);
             }
-
             50% {
                 transform: translateY(18px) rotate(45deg);
             }
         }
-
         /* ---------- card ---------- */
-
+        
         .card {
             position: relative;
             z-index: 2;
@@ -131,7 +124,7 @@
             text-align: center;
             box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
         }
-
+        
         .logo {
             display: inline-flex;
             align-items: center;
@@ -142,7 +135,7 @@
             margin-bottom: 1.5rem;
             letter-spacing: 0.02em;
         }
-
+        
         .logo .dot {
             width: 10px;
             height: 10px;
@@ -150,9 +143,8 @@
             background: var(--bg-primary);
             box-shadow: 0 0 10px 2px rgba(249, 115, 22, 0.7);
         }
-
         /* ---------- 404 glitch/fill text ---------- */
-
+        
         .code {
             position: relative;
             font-weight: 800;
@@ -164,7 +156,7 @@
             color: transparent;
             user-select: none;
         }
-
+        
         .code .fill {
             position: absolute;
             inset: 0;
@@ -178,32 +170,29 @@
             filter: drop-shadow(0 0 18px rgba(249, 115, 22, 0.55));
             animation: fill-rise 3.6s ease-in-out infinite;
         }
-
+        
         @keyframes fill-rise {
             0% {
                 clip-path: inset(100% 0 0 0);
             }
-
             35% {
                 clip-path: inset(0% 0 0 0);
             }
-
             75% {
                 clip-path: inset(0% 0 0 0);
             }
-
             100% {
                 clip-path: inset(100% 0 0 0);
             }
         }
-
+        
         h1.heading {
             font-size: clamp(1.5rem, 4vw, 2.1rem);
             font-weight: 700;
             color: var(--white);
             margin: 0 0 0.9rem;
         }
-
+        
         .desc {
             color: var(--muted);
             font-size: clamp(0.92rem, 2vw, 1.02rem);
@@ -211,31 +200,30 @@
             max-width: 32rem;
             margin: 0 auto 2.2rem;
         }
-
-
+        
         .btn-404:hover,
         .btn-404:focus-visible {
             box-shadow: 0 16px 34px rgba(249, 115, 22, 0.5);
         }
-
+        
         .btn-404:focus-visible {
             outline: 2px solid var(--white);
             outline-offset: 3px;
         }
-
+        
         .btn-404 {
             background: var(--bg-primary);
             color: var(--text-white);
             box-shadow: 0 12px 28px rgba(249, 115, 22, 0.35);
+            border-radius: var(--radius50px);
         }
-
+        
         .btn-404:hover {
             background: var(--bg-primary);
             transform: translateY(-3px);
         }
-
         /* ---------- responsive ---------- */
-
+        
         @media (max-width:640px) {
             .shape.circle {
                 width: 56px;
@@ -243,19 +231,17 @@
                 top: 12%;
                 left: 5%;
             }
-
             .shape.diamond {
                 width: 40px;
                 height: 40px;
                 bottom: 8%;
                 right: 6%;
             }
-
             .card {
                 border-radius: 20px;
             }
         }
-
+        
         @media (prefers-reduced-motion:reduce) {
             * {
                 animation-duration: 0.001ms !important;
@@ -276,8 +262,7 @@
                             <!-- Logo -->
                             <div class="header-logo">
                                 <a href="#">
-                                    <svg class="h-logo" width="217" height="36" viewBox="0 0 217 36" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="h-logo" width="217" height="36" viewBox="0 0 217 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <g clip-path="url(#clip0_11823_3559)">
                                             <path
                                                 d="M28.314 7.56855H25.1845C24.8387 5.88672 23.9236 4.37556 22.5934 3.28975C21.2633 2.20394 19.5996 1.60989 17.8825 1.60773H7.45109C5.47568 1.61009 3.58186 2.39587 2.18503 3.7927C0.788204 5.18952 0.00242727 7.08335 6.10352e-05 9.05876L6.10352e-05 22.4706C0.00380712 23.8053 0.455375 25.1001 1.28244 26.1476C2.1095 27.1952 3.2642 27.9348 4.56158 28.2481C4.42115 28.9939 4.44515 29.7613 4.63191 30.4969C4.81866 31.2324 5.16368 31.9183 5.64287 32.5068C6.12206 33.0952 6.7239 33.572 7.40636 33.9039C8.08883 34.2357 8.8355 34.4147 9.59426 34.4282C10.353 34.4417 11.1056 34.2895 11.7994 33.9822C12.4933 33.6749 13.1118 33.2198 13.6116 32.6488C14.1115 32.0779 14.4807 31.4047 14.6936 30.6762C14.9064 29.9478 14.9578 29.1817 14.844 28.4314H20.927C20.8887 28.678 20.8683 28.927 20.8659 29.1765C20.8659 30.5598 21.4154 31.8865 22.3936 32.8646C23.3717 33.8427 24.6983 34.3923 26.0816 34.3923C27.4649 34.3923 28.7916 33.8427 29.7697 32.8646C30.7479 31.8865 31.2974 30.5598 31.2974 29.1765C31.2957 28.8649 31.2652 28.5542 31.2065 28.2481C32.5033 27.9343 33.6573 27.1943 34.4838 26.1469C35.3103 25.0994 35.7614 23.8049 35.765 22.4706V15.0196C35.7626 13.0442 34.9769 11.1503 33.58 9.75352C32.1832 8.35669 30.2894 7.57092 28.314 7.56855ZM32.7846 15.0196V16.5098H25.3336V10.549H28.314C29.4997 10.549 30.6368 11.02 31.4752 11.8584C32.3136 12.6968 32.7846 13.8339 32.7846 15.0196ZM2.98047 22.4706V9.05876C2.98047 7.87308 3.45148 6.73596 4.28989 5.89755C5.12829 5.05915 6.26541 4.58814 7.45109 4.58814H17.8825C19.0682 4.58814 20.2053 5.05915 21.0437 5.89755C21.8821 6.73596 22.3531 7.87308 22.3531 9.05876V25.451H5.96088C5.17043 25.451 4.41235 25.137 3.85341 24.5781C3.29448 24.0191 2.98047 23.2611 2.98047 22.4706ZM11.9217 29.1765C11.9217 29.7694 11.6862 30.3379 11.267 30.7571C10.8478 31.1763 10.2792 31.4118 9.6864 31.4118C9.09356 31.4118 8.525 31.1763 8.1058 30.7571C7.68659 30.3379 7.45109 29.7694 7.45109 29.1765C7.45201 28.9218 7.49896 28.6694 7.58968 28.4314H11.7831C11.8738 28.6694 11.9208 28.9218 11.9217 29.1765ZM26.0787 31.4118C25.4858 31.4118 24.9173 31.1763 24.4981 30.7571C24.0789 30.3379 23.8434 29.7694 23.8434 29.1765C23.844 28.9218 23.891 28.6693 23.9819 28.4314H28.1754C28.2664 28.6693 28.3133 28.9218 28.314 29.1765C28.314 29.7694 28.0785 30.3379 27.6593 30.7571C27.2401 31.1763 26.6715 31.4118 26.0787 31.4118ZM29.8042 25.451H25.3336V19.4902H32.7846V22.4706C32.7846 23.2611 32.4706 24.0191 31.9116 24.5781C31.3527 25.137 30.5946 25.451 29.8042 25.451Z"
@@ -302,8 +287,7 @@
                             <!-- Menu -->
                             <div class="header-inner d-flex">
                                 <div class="header-right">
-                                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                                        data-bs-target="#navbarNavDropdown" aria-expanded="false">
+                                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-expanded="false">
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
                                         <span class="icon-bar"></span>
@@ -313,8 +297,7 @@
                                         <div class="header-menu-inner">
                                             <ul class="navbar-nav" id="menu-main-menu">
                                                 <li class="nav-item">
-                                                    <a class="nav-link active" aria-current="page"
-                                                        href="index.html">Home</a>
+                                                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                                                 </li>
                                                 <li class="nav-item"><a href="#AboutUs" class="nav-link">About Us</a>
                                                 </li>
@@ -360,11 +343,10 @@
                 </div>
 
                 <h1 class="heading">Oops! Page Not Found</h1>
-                <p class="desc">The page you're looking for doesn't exist or has been moved. Let's get you back to the
-                    homepage.
+                <p class="desc">The page you're looking for doesn't exist or has been moved. Let's get you back to the homepage.
                 </p>
                 <div>
-                    <a class="btn-404" href="/">Go Back Home</a>
+                    <a class="btn btn-404" href="/">Go Back Home</a>
                 </div>
 
             </div>
@@ -381,10 +363,8 @@
                             <div class="col-xl-4 col-sm-12">
                                 <div class="new-footer-upper">
                                     <div class="footer-logo">
-                                        <a href="https://www.clouddownunder.com.au" class="footer-logo-link"
-                                            target="_blank">
-                                            <svg class="footer-logo h-logo" width="217" height="36" viewBox="0 0 217 36"
-                                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <a href="https://www.clouddownunder.com.au" class="footer-logo-link" target="_blank">
+                                            <svg class="footer-logo h-logo" width="217" height="36" viewBox="0 0 217 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <g clip-path="url(#clip0_11823_3559)">
                                                     <path
                                                         d="M28.314 7.56855H25.1845C24.8387 5.88672 23.9236 4.37556 22.5934 3.28975C21.2633 2.20394 19.5996 1.60989 17.8825 1.60773H7.45109C5.47568 1.61009 3.58186 2.39587 2.18503 3.7927C0.788204 5.18952 0.00242727 7.08335 6.10352e-05 9.05876L6.10352e-05 22.4706C0.00380712 23.8053 0.455375 25.1001 1.28244 26.1476C2.1095 27.1952 3.2642 27.9348 4.56158 28.2481C4.42115 28.9939 4.44515 29.7613 4.63191 30.4969C4.81866 31.2324 5.16368 31.9183 5.64287 32.5068C6.12206 33.0952 6.7239 33.572 7.40636 33.9039C8.08883 34.2357 8.8355 34.4147 9.59426 34.4282C10.353 34.4417 11.1056 34.2895 11.7994 33.9822C12.4933 33.6749 13.1118 33.2198 13.6116 32.6488C14.1115 32.0779 14.4807 31.4047 14.6936 30.6762C14.9064 29.9478 14.9578 29.1817 14.844 28.4314H20.927C20.8887 28.678 20.8683 28.927 20.8659 29.1765C20.8659 30.5598 21.4154 31.8865 22.3936 32.8646C23.3717 33.8427 24.6983 34.3923 26.0816 34.3923C27.4649 34.3923 28.7916 33.8427 29.7697 32.8646C30.7479 31.8865 31.2974 30.5598 31.2974 29.1765C31.2957 28.8649 31.2652 28.5542 31.2065 28.2481C32.5033 27.9343 33.6573 27.1943 34.4838 26.1469C35.3103 25.0994 35.7614 23.8049 35.765 22.4706V15.0196C35.7626 13.0442 34.9769 11.1503 33.58 9.75352C32.1832 8.35669 30.2894 7.57092 28.314 7.56855ZM32.7846 15.0196V16.5098H25.3336V10.549H28.314C29.4997 10.549 30.6368 11.02 31.4752 11.8584C32.3136 12.6968 32.7846 13.8339 32.7846 15.0196ZM2.98047 22.4706V9.05876C2.98047 7.87308 3.45148 6.73596 4.28989 5.89755C5.12829 5.05915 6.26541 4.58814 7.45109 4.58814H17.8825C19.0682 4.58814 20.2053 5.05915 21.0437 5.89755C21.8821 6.73596 22.3531 7.87308 22.3531 9.05876V25.451H5.96088C5.17043 25.451 4.41235 25.137 3.85341 24.5781C3.29448 24.0191 2.98047 23.2611 2.98047 22.4706ZM11.9217 29.1765C11.9217 29.7694 11.6862 30.3379 11.267 30.7571C10.8478 31.1763 10.2792 31.4118 9.6864 31.4118C9.09356 31.4118 8.525 31.1763 8.1058 30.7571C7.68659 30.3379 7.45109 29.7694 7.45109 29.1765C7.45201 28.9218 7.49896 28.6694 7.58968 28.4314H11.7831C11.8738 28.6694 11.9208 28.9218 11.9217 29.1765ZM26.0787 31.4118C25.4858 31.4118 24.9173 31.1763 24.4981 30.7571C24.0789 30.3379 23.8434 29.7694 23.8434 29.1765C23.844 28.9218 23.891 28.6693 23.9819 28.4314H28.1754C28.2664 28.6693 28.3133 28.9218 28.314 29.1765C28.314 29.7694 28.0785 30.3379 27.6593 30.7571C27.2401 31.1763 26.6715 31.4118 26.0787 31.4118ZM29.8042 25.451H25.3336V19.4902H32.7846V22.4706C32.7846 23.2611 32.4706 24.0191 31.9116 24.5781C31.3527 25.137 30.5946 25.451 29.8042 25.451Z"
@@ -405,9 +385,7 @@
                                             </svg>
                                         </a>
                                         <p class="m-0 pt-xl-3 pt-2 text_white fw-400">
-                                            Australia's dedicated construction logistics marketplace connecting
-                                            construction companies with trusted transport operators and equipment
-                                            providers.
+                                            Australia's dedicated construction logistics marketplace connecting construction companies with trusted transport operators and equipment providers.
                                         </p>
                                     </div>
 
@@ -417,21 +395,21 @@
                                                 <a href="" target="_blank" class="f-social-icon greadientbox">
                                                     <img src="assets/images/linkedin.svg" alt="linkedIn">
                                                 </a>
-                                            <li>
-                                                <a href="" target="_blank" class="f-social-icon greadientbox">
-                                                    <img src="assets/images/facebook.svg" alt="facebook">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" target="_blank" class="f-social-icon greadientbox">
-                                                    <img src="assets/images/instagram.svg" alt="instagram">
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="" target="_blank" class="f-social-icon greadientbox">
-                                                    <img src="assets/images/twitter.svg" alt="twitter">
-                                                </a>
-                                            </li>
+                                                <li>
+                                                    <a href="" target="_blank" class="f-social-icon greadientbox">
+                                                        <img src="assets/images/facebook.svg" alt="facebook">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" target="_blank" class="f-social-icon greadientbox">
+                                                        <img src="assets/images/instagram.svg" alt="instagram">
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="" target="_blank" class="f-social-icon greadientbox">
+                                                        <img src="assets/images/twitter.svg" alt="twitter">
+                                                    </a>
+                                                </li>
                                         </ul>
                                     </div>
                                 </div>
@@ -442,8 +420,7 @@
                                         <li><span class="f-menu-title h5 fw-700">Quick Link</span></li>
                                         <li>
                                             <a href="index.html" class="f-text f-hover-text">
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.8858 7.71079C4.97952 7.61783 5.05392 7.50723 5.10469 7.38537C5.15546 7.26351 5.18159 7.1328 5.18159 7.00079C5.18159 6.86878 5.15546 6.73807 5.10469 6.61622C5.05392 6.49436 4.97952 6.38376 4.8858 6.29079L0.295796 1.71079C0.202068 1.61783 0.127673 1.50723 0.0769043 1.38537C0.0261359 1.26351 -1.90735e-06 1.1328 -1.90735e-06 1.00079C-1.90735e-06 0.868781 0.0261359 0.738075 0.0769043 0.616216C0.127673 0.494356 0.202068 0.383755 0.295796 0.290792C0.483159 0.104542 0.736611 0 1.0008 0C1.26498 0 1.51843 0.104542 1.7058 0.290792L6.2958 4.88079C6.8576 5.44329 7.17316 6.20579 7.17316 7.00079C7.17316 7.79579 6.8576 8.55829 6.2958 9.12079L1.7058 13.7108C1.51954 13.8955 1.26814 13.9997 1.0058 14.0008C0.87419 14.0016 0.743727 13.9763 0.621889 13.9266C0.500052 13.8768 0.389236 13.8035 0.295796 13.7108C0.202068 13.6178 0.127673 13.5072 0.0769043 13.3854C0.0261359 13.2635 -1.90735e-06 13.1328 -1.90735e-06 13.0008C-1.90735e-06 12.8688 0.0261359 12.7381 0.0769043 12.6162C0.127673 12.4944 0.202068 12.3838 0.295796 12.2908L4.8858 7.71079Z"
                                                         fill="#D74315" />
@@ -452,8 +429,7 @@
                                         </li>
                                         <li>
                                             <a href="#AboutUs" class="f-text f-hover-text">
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.8858 7.71079C4.97952 7.61783 5.05392 7.50723 5.10469 7.38537C5.15546 7.26351 5.18159 7.1328 5.18159 7.00079C5.18159 6.86878 5.15546 6.73807 5.10469 6.61622C5.05392 6.49436 4.97952 6.38376 4.8858 6.29079L0.295796 1.71079C0.202068 1.61783 0.127673 1.50723 0.0769043 1.38537C0.0261359 1.26351 -1.90735e-06 1.1328 -1.90735e-06 1.00079C-1.90735e-06 0.868781 0.0261359 0.738075 0.0769043 0.616216C0.127673 0.494356 0.202068 0.383755 0.295796 0.290792C0.483159 0.104542 0.736611 0 1.0008 0C1.26498 0 1.51843 0.104542 1.7058 0.290792L6.2958 4.88079C6.8576 5.44329 7.17316 6.20579 7.17316 7.00079C7.17316 7.79579 6.8576 8.55829 6.2958 9.12079L1.7058 13.7108C1.51954 13.8955 1.26814 13.9997 1.0058 14.0008C0.87419 14.0016 0.743727 13.9763 0.621889 13.9266C0.500052 13.8768 0.389236 13.8035 0.295796 13.7108C0.202068 13.6178 0.127673 13.5072 0.0769043 13.3854C0.0261359 13.2635 -1.90735e-06 13.1328 -1.90735e-06 13.0008C-1.90735e-06 12.8688 0.0261359 12.7381 0.0769043 12.6162C0.127673 12.4944 0.202068 12.3838 0.295796 12.2908L4.8858 7.71079Z"
                                                         fill="#D74315" />
@@ -462,8 +438,7 @@
                                         </li>
                                         <li>
                                             <a href="#Features" class="f-text f-hover-text">
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.8858 7.71079C4.97952 7.61783 5.05392 7.50723 5.10469 7.38537C5.15546 7.26351 5.18159 7.1328 5.18159 7.00079C5.18159 6.86878 5.15546 6.73807 5.10469 6.61622C5.05392 6.49436 4.97952 6.38376 4.8858 6.29079L0.295796 1.71079C0.202068 1.61783 0.127673 1.50723 0.0769043 1.38537C0.0261359 1.26351 -1.90735e-06 1.1328 -1.90735e-06 1.00079C-1.90735e-06 0.868781 0.0261359 0.738075 0.0769043 0.616216C0.127673 0.494356 0.202068 0.383755 0.295796 0.290792C0.483159 0.104542 0.736611 0 1.0008 0C1.26498 0 1.51843 0.104542 1.7058 0.290792L6.2958 4.88079C6.8576 5.44329 7.17316 6.20579 7.17316 7.00079C7.17316 7.79579 6.8576 8.55829 6.2958 9.12079L1.7058 13.7108C1.51954 13.8955 1.26814 13.9997 1.0058 14.0008C0.87419 14.0016 0.743727 13.9763 0.621889 13.9266C0.500052 13.8768 0.389236 13.8035 0.295796 13.7108C0.202068 13.6178 0.127673 13.5072 0.0769043 13.3854C0.0261359 13.2635 -1.90735e-06 13.1328 -1.90735e-06 13.0008C-1.90735e-06 12.8688 0.0261359 12.7381 0.0769043 12.6162C0.127673 12.4944 0.202068 12.3838 0.295796 12.2908L4.8858 7.71079Z"
                                                         fill="#D74315" />
@@ -472,8 +447,7 @@
                                         </li>
                                         <li>
                                             <a href="#HowItsWork" class="f-text f-hover-text">
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.8858 7.71079C4.97952 7.61783 5.05392 7.50723 5.10469 7.38537C5.15546 7.26351 5.18159 7.1328 5.18159 7.00079C5.18159 6.86878 5.15546 6.73807 5.10469 6.61622C5.05392 6.49436 4.97952 6.38376 4.8858 6.29079L0.295796 1.71079C0.202068 1.61783 0.127673 1.50723 0.0769043 1.38537C0.0261359 1.26351 -1.90735e-06 1.1328 -1.90735e-06 1.00079C-1.90735e-06 0.868781 0.0261359 0.738075 0.0769043 0.616216C0.127673 0.494356 0.202068 0.383755 0.295796 0.290792C0.483159 0.104542 0.736611 0 1.0008 0C1.26498 0 1.51843 0.104542 1.7058 0.290792L6.2958 4.88079C6.8576 5.44329 7.17316 6.20579 7.17316 7.00079C7.17316 7.79579 6.8576 8.55829 6.2958 9.12079L1.7058 13.7108C1.51954 13.8955 1.26814 13.9997 1.0058 14.0008C0.87419 14.0016 0.743727 13.9763 0.621889 13.9266C0.500052 13.8768 0.389236 13.8035 0.295796 13.7108C0.202068 13.6178 0.127673 13.5072 0.0769043 13.3854C0.0261359 13.2635 -1.90735e-06 13.1328 -1.90735e-06 13.0008C-1.90735e-06 12.8688 0.0261359 12.7381 0.0769043 12.6162C0.127673 12.4944 0.202068 12.3838 0.295796 12.2908L4.8858 7.71079Z"
                                                         fill="#D74315" />
@@ -492,8 +466,7 @@
                                     </li> -->
                                         <li>
                                             <a href="#Faqs" class="f-text f-hover-text">
-                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
+                                                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path
                                                         d="M4.8858 7.71079C4.97952 7.61783 5.05392 7.50723 5.10469 7.38537C5.15546 7.26351 5.18159 7.1328 5.18159 7.00079C5.18159 6.86878 5.15546 6.73807 5.10469 6.61622C5.05392 6.49436 4.97952 6.38376 4.8858 6.29079L0.295796 1.71079C0.202068 1.61783 0.127673 1.50723 0.0769043 1.38537C0.0261359 1.26351 -1.90735e-06 1.1328 -1.90735e-06 1.00079C-1.90735e-06 0.868781 0.0261359 0.738075 0.0769043 0.616216C0.127673 0.494356 0.202068 0.383755 0.295796 0.290792C0.483159 0.104542 0.736611 0 1.0008 0C1.26498 0 1.51843 0.104542 1.7058 0.290792L6.2958 4.88079C6.8576 5.44329 7.17316 6.20579 7.17316 7.00079C7.17316 7.79579 6.8576 8.55829 6.2958 9.12079L1.7058 13.7108C1.51954 13.8955 1.26814 13.9997 1.0058 14.0008C0.87419 14.0016 0.743727 13.9763 0.621889 13.9266C0.500052 13.8768 0.389236 13.8035 0.295796 13.7108C0.202068 13.6178 0.127673 13.5072 0.0769043 13.3854C0.0261359 13.2635 -1.90735e-06 13.1328 -1.90735e-06 13.0008C-1.90735e-06 12.8688 0.0261359 12.7381 0.0769043 12.6162C0.127673 12.4944 0.202068 12.3838 0.295796 12.2908L4.8858 7.71079Z"
                                                         fill="#D74315" />
@@ -511,8 +484,7 @@
                                         </li>
 
                                         <li>
-                                            <a href="mailto:info@truckmatch.au"
-                                                class="f-text f-hover-text align-items-start">
+                                            <a href="mailto:info@truckmatch.au" class="f-text f-hover-text align-items-start">
                                                 <img src="assets/images/mail.svg" alt="mail">
                                                 <span>info@truckmatch.au</span>
                                             </a>
@@ -531,13 +503,11 @@
                                     <ul class="f-menu">
                                         <li><span class="f-menu-title h5 fw-700">Subscribe to our newsletter</span></li>
                                         <p class="m-0 f-text">
-                                            Subscribe to our newsletter and get the latest updates, features and
-                                            industry insights to your inbox.
+                                            Subscribe to our newsletter and get the latest updates, features and industry insights to your inbox.
                                         </p>
                                         <form class="newsletter-form">
                                             <div class="form-flex d-flex">
-                                                <input type="email" class="form-control border"
-                                                    placeholder="Enter Email Address">
+                                                <input type="email" class="form-control border" placeholder="Enter Email Address">
                                                 <a class="greadientbox newsletter-btn" href="#">
                                                     <img src="assets/images/paper-plan.svg" alt="paper-plane">
                                                 </a>
@@ -575,8 +545,7 @@
                                         </div>
                                         <div class="footer-rights-devl">
                                             <a href="https://www.appgurus.com.au/" target="_blank">
-                                                <img src="assets/images/appgurus-logo-black.svg" class="img-fluid"
-                                                    alt="Image">
+                                                <img src="assets/images/appgurus-logo-black.svg" class="img-fluid" alt="Image">
                                             </a>
                                         </div>
                                     </div>
@@ -584,8 +553,7 @@
                             </div>
                             <div class="col-xl-4 col-12 align-self-center">
                                 <div class="copy-right-text">
-                                    <p class="mb-0">Copyright © <span id="currentYear"></span> <span
-                                            class="text_primary fw-500">TruckMatch Pty Ltd</span>. All Rights Reserved.
+                                    <p class="mb-0">Copyright © <span id="currentYear"></span> <span class="text_primary fw-500">TruckMatch Pty Ltd</span>. All Rights Reserved.
                                     </p>
                                 </div>
 
