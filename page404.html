@@ -83,7 +83,7 @@
         }
         
         .shape.diamond {
-            top: 20%;
+            bottom: 20%;
             right: 8%;
             width: 60px;
             height: 60px;
@@ -201,7 +201,9 @@
             margin: 0 auto 2.2rem;
         }
         
-        .btn {
+        .btn-404 {
+            background: var(--bg-primary);
+            color: var(--text-white);
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
@@ -214,21 +216,6 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
         
-        .btn:hover,
-        .btn:focus-visible {
-            box-shadow: 0 16px 34px rgba(249, 115, 22, 0.5);
-        }
-        
-        .btn:focus-visible {
-            outline: 2px solid var(--white);
-            outline-offset: 3px;
-        }
-        
-        .btn-404 {
-            background: var(--bg-primary);
-            color: var(--text-white);
-        }
-        
         .btn-404:hover {
             background: var(--bg-primary);
             transform: translateY(-3px);
@@ -239,13 +226,13 @@
             .shape.circle {
                 width: 56px;
                 height: 56px;
-                top: 6%;
+                top: 12%;
                 left: 5%;
             }
             .shape.diamond {
                 width: 40px;
                 height: 40px;
-                top: 8%;
+                bottom: 8%;
                 right: 6%;
             }
             .card {
@@ -357,7 +344,7 @@
                 <p class="desc">The page you're looking for doesn't exist or has been moved. Let's get you back to the homepage.
                 </p>
                 <div>
-                    <a class="btn btn-404" href="/">Go Back Home</a>
+                    <a class="btn-404" href="/">Go Back Home</a>
                 </div>
 
             </div>
