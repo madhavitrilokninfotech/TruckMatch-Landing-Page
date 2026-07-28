@@ -1548,9 +1548,13 @@ section.profess-sec-main {
 
 .faqs-ta-wrap .accordion.accordion-flush .accordion-item {
     padding: 25px;
-    border-radius: var(--radius12);
+    border-radius: var(--radius16);
     margin-bottom: 20px;
     border: 2px solid var(--text-gray1);
+    -webkit-border-radius: var(--radius16);
+    -moz-border-radius: var(--radius16);
+    -ms-border-radius: var(--radius16);
+    -o-border-radius: var(--radius16);
 }
 
 .faqs-ta-wrap .accordion.accordion-flush .accordion-item:last-child {
@@ -1609,7 +1613,7 @@ section.profess-sec-main {
 .faqs-ta-wrap .accordion-item:has(.accordion-button:not(.collapsed)) {
     background-color: var(--bg-light-primary4);
     border-color: var(--bg-light-primary4);
-    border-left: 4px solid var(--text-primary);
+    box-shadow: inset 3px 0 0 0px var(--bg-primary, #e14b3d);
 }
 
 
