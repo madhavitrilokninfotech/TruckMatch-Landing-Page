@@ -188,6 +188,18 @@ ul.f-menu li:last-child .f-text.f-hover-text {
 }
 
 .newsletter-form .newsletter-btn {
+    background-color: transparent;
+    border-color: transparent;
+    background-image: url(../images/paper-plan.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+.newsletter-form .greadientbox {
     display: flex;
     min-height: 52px;
     min-width: 52px;
@@ -195,7 +207,7 @@ ul.f-menu li:last-child .f-text.f-hover-text {
     border-color: transparent;
 }
 
-.newsletter-form .newsletter-btn.greadientbox::before {
+.newsletter-form .greadientbox::before {
     opacity: 1;
 }
 
@@ -218,8 +230,7 @@ ul.f-menu li .f-text.f-hover-text img {
     flex: 0 0 auto;
 }
 
-.f-social-icon img,
-.newsletter-form .newsletter-btn img {
+.f-social-icon img {
     height: 20px;
     width: 20px;
 }
@@ -229,6 +240,10 @@ ul.f-menu li .f-text.f-hover-text img {
 }
 
 @media (max-width: 1599px) {
+    .newsletter-form .newsletter-btn {
+        background-size: 16px;
+    }
+
     .new-footer-main {
         padding: 50px 0;
     }
@@ -258,14 +273,14 @@ ul.f-menu li .f-text.f-hover-text img {
         height: 40px;
     }
 
-    .newsletter-form .newsletter-btn {
+    .newsletter-form .greadientbox {
         min-height: 48px;
         min-width: 48px;
         margin-left: 8px;
+
     }
 
-    .f-social-icon img,
-    .newsletter-form .newsletter-btn img {
+    .f-social-icon img {
         height: 17px;
         width: 17px;
     }
@@ -324,6 +339,7 @@ ul.f-menu li .f-text.f-hover-text img {
 @media (max-width: 1299px) {}
 
 @media (max-width: 1199px) {
+
     .new-footer-main {
         padding: 40px 0;
     }
@@ -372,7 +388,7 @@ ul.f-menu li .f-text.f-hover-text img {
         height: 100%;
     }
 
-    .newsletter-form .newsletter-btn {
+    .newsletter-form .greadientbox {
         min-height: 45px;
         min-width: 45px;
     }
