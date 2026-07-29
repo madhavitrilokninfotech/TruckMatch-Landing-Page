@@ -129,6 +129,7 @@
     margin-top: 3px;
 }
 
+
 /**** About Us Section ****/
 
 .about-us-wrap .sec-heading {
@@ -290,7 +291,9 @@
     bottom: 0;
 }
 
+
 /* Animation Truck */
+
 .about-us-wrap .company-image img {
     max-width: 220px;
     opacity: 0;
@@ -316,7 +319,9 @@
     -o-transform: translateX(0);
 }
 
+
 /* end */
+
 .about-us-wrap .about-features {
     margin: 24px 0;
     display: flex;
@@ -571,7 +576,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -652,7 +656,6 @@
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
     }
-
     100% {
         transform: translateY(-50%);
         -webkit-transform: translateY(-50%);
@@ -670,7 +673,6 @@
         -ms-transform: translateY(-50%);
         -o-transform: translateY(-50%);
     }
-
     100% {
         transform: translateY(0);
         -webkit-transform: translateY(0);
@@ -893,6 +895,7 @@
     height: auto;
     max-width: 305px;
 }
+
 
 /* divide css */
 
@@ -1267,7 +1270,6 @@
     from {
         transform: rotate(0deg);
     }
-
     to {
         transform: rotate(360deg);
     }
@@ -1701,7 +1703,9 @@ select.custom-select {
     color: var(--theme-text);
 }
 
+
 /* For WordPress Validation Style */
+
 .wpcf7-not-valid-tip {
     color: var(--danger);
     font-size: 14px;
@@ -1712,7 +1716,7 @@ select.custom-select {
     border: none;
     padding: 8px 0;
     font-size: 14px;
-    line-height: 1.2;
+    line-height: 1.4;
     color: var(--danger);
     display: inline-flex;
     align-items: start;
@@ -1752,4 +1756,48 @@ select.custom-select {
     margin: 0 14px;
     vertical-align: middle;
     background-color: var(--bg-primary);
+}
+
+
+/* capcha */
+
+.dscf7captcha {
+    font-size: 16px;
+    color: #161212;
+}
+
+.dscf7captcha .dscf7_refresh_captcha {
+    background: #fff;
+    padding: 2px;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    line-height: 1;
+    border-radius: 3px;
+    margin-left: 8px
+}
+
+.dscf7captcha .dscf7_refresh_captcha img {
+    max-width: 100%
+}
+
+.dscf7captcha .wpcf7-form-control-wrap {
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px
+}
+
+.dscf7captcha .wpcf7-form-control-wrap input {
+    width: 100% !important;
+    max-width: 200px;
+    background: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 5px 10px;
+    color: #161212;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: unset;
+    padding: 15px 20px;
 }
