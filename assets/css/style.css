@@ -1725,7 +1725,7 @@ select.custom-select {
 
 .wpcf7 form .wpcf7-response-output:before {
     content: "";
-    background-image: url("../images/close-stroke.svg");
+    background-image: url("../images/warning-fill.svg");
     display: inline-block;
     width: 14px;
     height: 14px;
@@ -1742,7 +1742,7 @@ select.custom-select {
 
 .wpcf7 form.sent .wpcf7-response-output::before {
     content: "";
-    background-image: url("../images/success-stroke.svg");
+    background-image: url("../images/success-fill.svg");
     display: inline-block;
     width: 14px;
     height: 14px;
