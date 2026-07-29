@@ -613,7 +613,7 @@
         width: 100%;
     }
     .truck-op-main .col-side .c-img-text-box-wrap.top1 {
-        flex-direction: column-reverse !important;
+        flex-direction: column !important;
     }
     /* end */
     /**** FAQs ****/

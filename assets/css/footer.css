@@ -244,6 +244,13 @@ ul.f-menu li .f-text.f-hover-text img {
     color: var(--text-primary);
 }
 
+.newsletter-form .greadientbox .wpcf7-spinner{
+    flex-shrink: 0;
+    opacity: 1;
+    background-color: var(--bg-primary);
+    position: absolute;
+    z-index: 2;
+}
 @media (max-width: 1599px) {
     .newsletter-form .newsletter-btn {
         background-size: 16px;
