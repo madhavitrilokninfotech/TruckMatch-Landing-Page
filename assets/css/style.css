@@ -1644,7 +1644,7 @@ section.profess-sec-main {
     overflow: hidden;
 }
 
-.sub-form-card span {
+.sub-form-card .h2 span {
     text-transform: uppercase;
 }
 
@@ -1698,4 +1698,51 @@ select.custom-select {
     cursor: pointer;
     padding-right: 45px;
     color: var(--theme-text);
+}
+
+/* For WordPress Validation Style */
+.wpcf7-not-valid-tip {
+    color: var(--danger);
+    font-size: 14px;
+}
+
+.wpcf7 form .wpcf7-response-output {
+    margin: 0;
+    border: none;
+    padding: 8px 0;
+    font-size: 14px;
+    line-height: 1.2;
+    color: var(--danger);
+    display: inline-flex;
+    align-items: start;
+    gap: 6px;
+}
+
+.wpcf7 form .wpcf7-response-output:before {
+    content: "";
+    background-image: url("../images/close-stroke.svg");
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.wpcf7 form.sent .wpcf7-response-output {
+    color: var(--success);
+    border: none;
+}
+
+.wpcf7 form.sent .wpcf7-response-output::before {
+    content: "";
+    background-image: url("../images/success-stroke.svg");
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 3px;
+    flex-shrink: 0;
 }

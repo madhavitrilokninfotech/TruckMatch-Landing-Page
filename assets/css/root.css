@@ -29,6 +29,11 @@ html {
     --text-white: #ffffff;
     --text-black: #000000;
     --theme-text: #161212;
+
+    --danger: #dc3232;
+    --success: #198754;
+    --warning: #ffc107;
+
     --text-primary: #d74315;
     --text-secondary: #797979;
     --text-disabled: #9ca3af;
@@ -197,6 +202,18 @@ COLOR CLASSNAME
 
 .text_dark_gray {
     color: var(--dark-gray) !important;
+}
+
+.text-success{
+    color: var(--success);
+}
+
+.text-warning{
+    color: var(--warning);
+}
+
+.text-danger{
+    color: var(--danger);
 }
 
 a {
