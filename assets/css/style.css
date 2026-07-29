@@ -1020,7 +1020,7 @@
     left: 0;
     background-image: url(../images/wcu-left-bg-img.png);
     background-position: left top;
-    background-size: 40%;
+    background-size: 50%;
     opacity: 0.5;
 }
 
@@ -1655,24 +1655,6 @@ section.profess-sec-main {
     color: var(--text-secondary);
     margin-bottom: 50px;
 }
-
-
-/* .connect-btn {
-    border: none;
-    border-radius: 12px;
-    padding: 14px 34px;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 0.3px;
-    transition: 0.3s;
-    color: var(--text-white);
-    background-color: var(--bg-primary);
-}
-
-.connect-btn:hover {
-    transform: translateY(-2px);
-    background-color: var(--bg-black);
-} */
 
 .connect-wrapper .connect-image {
     position: relative;
