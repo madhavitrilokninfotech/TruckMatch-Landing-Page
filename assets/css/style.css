@@ -96,6 +96,7 @@
     overflow: hidden;
     border-top: 1px solid var(--text-white);
     padding-top: 20px;
+    padding-bottom: 10px;
     margin: 36px 0 0;
 }
 
