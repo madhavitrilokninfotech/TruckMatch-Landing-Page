@@ -65,7 +65,7 @@
 }
 
 .hero-content-wrap {
-    padding: 370px 0 100px;
+    padding: 370px 0 80px;
     display: flex;
     flex-flow: column;
     justify-content: end;
@@ -1649,7 +1649,7 @@ section.profess-sec-main {
     text-transform: uppercase;
 }
 
-.connect-wrapper .sub-form-card p {
+.connect-wrapper .sub-form-card>p {
     color: var(--text-secondary);
     margin-bottom: 50px;
 }
@@ -1746,4 +1746,10 @@ select.custom-select {
     background-repeat: no-repeat;
     margin-top: 3px;
     flex-shrink: 0;
+}
+
+.wpcf7-spinner {
+    margin: 0 14px;
+    vertical-align: middle;
+    background-color: var(--bg-primary);
 }
