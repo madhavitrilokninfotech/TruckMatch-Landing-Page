@@ -1740,6 +1740,9 @@ select.custom-select {
     background-color: var(--bg-primary);
 }
 
+.sub-form-group p {
+    margin-bottom: 0;
+}
 
 /* capcha */
 
